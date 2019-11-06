@@ -1,2 +1,3 @@
 # chazzox.github.io
-reeeeeeeeeeeeeeeeeeee
+## todo:
+- [] redo half website
