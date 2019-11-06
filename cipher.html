@@ -1,0 +1,99 @@
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="/assets/global/other/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/assets/global/scripts/global.css">
+    <link rel="stylesheet" href="/assets/cipher/scripts/main.css">
+    <script src="/assets/global/scripts/touchscreen.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div include="/assets/global.Includes/header.html"></div>
+
+    <div class="wrapper">
+    <div class="aside bigbox">
+        <h3>Purpose of the site</h3>
+        <p>This part of my site was made initally for a project at home controlling LED's with a raspberry pi (a morse
+            code thingy) however, in my cs class we had to write some code for the ceaser and vurnham cipher. So I thought'd
+            I just put it here.<br> I'm still writing parts for my vernham cipher vause I wanted to write parts for hex
+            and binary
+        configurations, that'll be done soon... maybe</p>
+    </div>
+
+    <div class="aside bigbox" style="text-align: center;">
+        <h3>Mode</h3>
+        <p>Choose your method of enciphering</p>
+        <form>
+            <p>Morse:   <input onclick="un_check(this)" id="mors" type="checkbox" class="main"></p>
+            <p>Ceaser:  <input onclick="un_check(this)" id="ceas" type="checkbox" class="main"></p>
+            <p>Vernham: <input onclick="un_check(this)" id="vern" type="checkbox" class="main"></p>
+        </form>
+        <div class="center">
+                <button id="upload">Upload File</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="wrapper">
+        <div class="aside bigbox">
+            <h3>User input</h3>
+            <p>This section is the section that you can write to:</p>
+            <form class="vernham">
+                <span>Formatting of One-time pad</span>
+                <p>
+                    String: <input class="vern" onclick="un_check(this)" type="checkbox" id="vern00">
+                    Hex: <input class="vern" onclick="un_check(this)" type="checkbox" id="vern01">
+                    Byte: <input class="vern" onclick="un_check(this)" type="checkbox" id="vern02"></p>
+                    <input autocomplete=off type="text" placeholder="One time pad" id="vernkey">
+                </form>
+            <form class="vernham">
+                <span>Formatting of the vernham plaintext</span>
+                <p>String: <input class="vern"  onclick="un_check(this)" type="checkbox" id="vern10">
+                Hex: <input class="vern" onclick="un_check(this)" type="checkbox" id="vern11">
+                Byte: <input class="vern" onclick="un_check(this)" type="checkbox" id="vern12"></p>
+            </form>
+            <div class="ceaser">
+                <input autocomplete=off type="text" placeholder="shift num" id="num">
+            </div>
+            <form class="morse">
+                <span>Formatting of One-time pad</span>
+                <p>Text -> Morse: <input class="vern" onclick="un_check(this)" type="checkbox" id="mors00">
+                Morse -> Text: <input class="vern" onclick="un_check(this)" type="checkbox" id="mors01"></p>
+            </form>
+
+            <textarea id="in"></textarea>
+            <div class="center">
+                <button id="submit" onlick="translate()">Submit</button>
+            </div>
+        </div>
+
+        <div class="aside bigbox">
+            <h3>Computed output</h3>
+                <form class="vernham"><p>
+                    Hex: <input class="vern"  onclick="un_check(this)" type="checkbox" id="vern20">
+                    Byte: <input class="vern" onclick="un_check(this)" type="checkbox" id="vern21"></p>
+                </form>
+            <textarea style="height: 30vh" readonly id="out" placeholder="cipher text will apear once plaintext is submitted"></textarea>
+            <div class="center">
+            <a class="morse" href="/tone.html#..//..">
+              <button>Tone to Morse</button>
+            </a></div>
+        </div>
+    </div>
+
+    <div class="popupWrapper" id="alertBox">
+        <div class="popupWindow">
+            <img src="assets/global/other/logo.png" alt="my logo" width="50" height="50" style="float: left;padding-right: 10px">
+            <h1 style="font-size:18pt;">Charlie's website</h1>
+            <p id="alertPlaintext">yes</p>
+        </div>
+    </div>
+
+    <div id="footer" include="/assets/global.Includes/footer.html"></div>
+</body>
+<head>
+    <script src="/assets/cipher/scripts/main.js"></script>
+    <script src="/assets/global/scripts/include.js"></script>
+</head>
+
+</html>

@@ -1,0 +1,17 @@
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: calc(50% - 80px);
+  bottom: 0; 
+  right: 0;
+  left:0;
+}
+
+.bigbox{
+  width: 33%;
+  text-align: center;
+}
+
+html{
+	overflow:hidden;
+}
