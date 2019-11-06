@@ -1,3 +1,3 @@
 # chazzox.github.io
 ## todo:
--[X] redo half website
+# [checkbox:unchecked] redo half website
