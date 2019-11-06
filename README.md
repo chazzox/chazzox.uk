@@ -1,3 +1,3 @@
 # chazzox.github.io
 ## todo:
-- redo half website [x]
+[x] redo half website
