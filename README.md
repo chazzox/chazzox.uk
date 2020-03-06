@@ -1,4 +1,8 @@
 # chazzox.github.io
+
 ## todo:
-- [ ] redo half website
-- [ ] finish the other half
+
+-   complete battleships rewrite
+-   make index page 'previous projects button work, along with esc key detection
+
+#### bruh

@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Pattern lock</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/pattern/scripts/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/global/other/favicon.ico"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="assets/pattern/scripts/main.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/global/other/favicon.ico"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
-    <link rel="stylesheet" href="assets/global/scripts/global.css">
+    <link rel="stylesheet" href="assets/global/scripts/global.css" />
     <script src="assets/pattern/scripts/main.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-</head>
-<body>
-<div class="main">
-    <div include="/assets/global.Includes/header.html"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="main">
+      <div include="/assets/global.Includes/header.html"></div>
 
-    <div class="bigbox">
+      <div class="bigbox">
         <h3>Pattern Lock - Proof of Concept</h3>
-        <p>I did this mainly because I wanted to see I could, its probably not gonna change into anything too big
-        as these things aren't very secure.</p>
+        <p>
+          I did this mainly because I wanted to see I could, its probably not
+          gonna change into anything too big as these things aren't very secure.
+        </p>
         <h3>The pin</h3>
         <p>This is the pin you entered:</p>
-        <input type="text" id="lmao" readonly>
-    </div>
+        <input type="text" id="lmao" readonly />
+      </div>
 
-    <div class="bigbox">
-            <h3>The lock</h3>
-            <p>Just click on the circles and it should draw the patterns as you go along</p>
-            <div class="center" id="lol"></div>
-            </div>
+      <div class="bigbox">
+        <h3>The lock</h3>
+        <p>
+          Just click on the circles and it should draw the patterns as you go
+          along
+        </p>
+        <div class="center" id="lol"></div>
+      </div>
     </div>
 
     <div class="popupWrapper">
-        <div class="popupWindow">
-            <img src="assets/global/other/logo.png" alt="my logo" width="50" height="50" style="float: left;padding-right: 10px">
-            <h1 style="font-size:18pt;">Charlie's website</h1>
-            <p>Sorry but this site isn't supported at this resolution!
-                <br>Please get a larger display!</p>
-            <a href="https://chazzox.github.io">
-                <div class="boxforlink">
-                    <p>Go Back Home</p>
-                </div>
-            </a>
-        </div>
+      <div class="popupWindow">
+        <img
+          src="assets/global/other/logo.png"
+          alt="my logo"
+          width="50"
+          height="50"
+          style="float: left;padding-right: 10px"
+        />
+        <h1 style="font-size:18pt;">Charlie's website</h1>
+        <p>
+          Sorry but this site isn't supported at this resolution! <br />Please
+          get a larger display!
+        </p>
+        <a href="https://chazzox.github.io">
+          <div class="boxforlink">
+            <p>Go Back Home</p>
+          </div>
+        </a>
+      </div>
     </div>
     <div id="footer" include="/assets/global.Includes/footer.html"></div>
-</body>
+  </body>
 
-<head>
+  <head>
     <script src="/assets/global/scripts/include.js"></script>
-</head>
+  </head>
 </html>

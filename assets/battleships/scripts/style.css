@@ -14,5 +14,6 @@ table{
 }
 
 li{
+	display: inline-flex;
 	margin: 15px;
 }
