@@ -1,19 +1,19 @@
-form{
-    display: block;
+form {
+	display: block;
 }
 
-th{
+th {
 	height: 45px;
 	width: 45px;
 	background: white;
 }
 
-table{
-	margin-left:auto;
-	margin-right:auto;
+table {
+	margin-left: auto;
+	margin-right: auto;
 }
 
-li{
+li {
 	display: inline-flex;
 	margin: 15px;
 }
