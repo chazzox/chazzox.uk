@@ -1,6 +1,6 @@
-let len = 10;
+let len = 11;
 let players = [new Array(len), new Array(len)];
-let playerIndex = 0
+let playerIndex = 0;
 let battle_len = 2;
 let positions = new Array();
 let mode = false;
@@ -10,13 +10,20 @@ let sketch = function(p) {
 		positions.push([1, 1]);
 		p.background(20);
 		c = p.color(107);
-		let width = Math.round(p.displayHeight * (5 / 80)) * 10;
+		let width =
+			p.windowWidth < p.windowHeight
+				? Math.round(p.windowWidth * (5 / 80)) * 10
+				: Math.round(p.windowHeight * (5 / 80)) * 10;
 		p.createCanvas(width, width);
 		for (let playerIndex = 0; playerIndex < players.length; playerIndex++) {
 			for (let y = 0; y < len; y++) {
 				players[playerIndex][y] = new Array(len);
 				for (let x = 0; x < len; x++) {
-					players[playerIndex][y][x] = new square((x / len) * p.width, (y / len) * p.height, c);
+					players[playerIndex][y][x] = new square(
+						(x / len) * p.width,
+						(y / len) * p.height,
+						c
+					);
 					players[playerIndex][y][x].show(c);
 				}
 			}
@@ -39,15 +46,18 @@ let sketch = function(p) {
 					// if the square is different to the last, push new cords to positions array
 					// otherwise clean grid off
 					if (positions[positions.length - 1].x == players[playerIndex][y][x].x) {
-						positions.push([players[playerIndex][y][x].x, players[playerIndex][y][x].y]);
+						positions.push([
+							players[playerIndex][y][x].x,
+							players[playerIndex][y][x].y
+						]);
 					} else {
 						clear();
 					}
 					// drawing rectange where mosue is
 					p.fill(0);
 					p.rect(
-						players[playerIndex][y][x + (x == 9 && mode ? -1 : 0)].x,
-						players[playerIndex][y + (y == 9 && !mode ? -1 : 0)][x].y,
+						players[playerIndex][y][x + (x == len - 1 && mode ? -1 : 0)].x,
+						players[playerIndex][y + (y == len - 1 && !mode ? -1 : 0)][x].y,
 						// if the mode is horizontal, then times the width by the length of the battleship
 						(p.width / len) * (mode ? battle_len : 1),
 						// same but 4 vertical
@@ -72,8 +82,8 @@ let sketch = function(p) {
 							// not entierly sure
 							let selectorNode =
 								players[playerIndex][
-									y + (mode ? 0 : shipLen) + (y == 9 && !mode ? -1 : 0)
-								][x + (mode ? shipLen : 0) + (x == 9 && mode ? -1 : 0)];
+									y + (mode ? 0 : shipLen) + (y == len - 1 && !mode ? -1 : 0)
+								][x + (mode ? shipLen : 0) + (x == len - 1 && mode ? -1 : 0)];
 							selectorNode.boolPressed = !selectorNode.boolPressed;
 						}
 					}
@@ -112,7 +122,7 @@ function un_check(x) {
 			mode = x.id[x.id.length - 1] == 1;
 		} else if (x.id.slice(6, -1) == '1') {
 			battle_len = x.id[x.id.length - 1];
-		} else if(x.id.slice(6, -1) == '2') {
+		} else if (x.id.slice(6, -1) == '2') {
 			playerIndex = x.id[x.id.length - 1];
 		}
 		if (y % 2 == 0) {
