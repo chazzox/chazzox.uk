@@ -1,4 +1,4 @@
-let len = 11;
+let len = 10;
 let players = [new Array(len), new Array(len)];
 let playerIndex = 0;
 let battle_len = 2;
@@ -12,8 +12,8 @@ let sketch = function(p) {
 		c = p.color(107);
 		let width =
 			p.windowWidth < p.windowHeight
-				? Math.round(p.windowWidth * (5 / 80)) * 10
-				: Math.round(p.windowHeight * (5 / 80)) * 10;
+				? Math.round(p.windowWidth * (5 / 800)) * 100
+				: Math.round(p.windowHeight * (5 / 800)) * 100;
 		p.createCanvas(width, width);
 		for (let playerIndex = 0; playerIndex < players.length; playerIndex++) {
 			for (let y = 0; y < len; y++) {
@@ -34,7 +34,7 @@ let sketch = function(p) {
 	p.draw = function() {
 		for (var y = 0; y < players[playerIndex].length; y++) {
 			for (var x = 0; x < players[playerIndex].length; x++) {
-				// looping through every equare
+				// looping through every square
 
 				//checking if mouse hovering over a given square
 				if (
@@ -45,24 +45,22 @@ let sketch = function(p) {
 				) {
 					// if the square is different to the last, push new cords to positions array
 					// otherwise clean grid off
-					if (positions[positions.length - 1].x == players[playerIndex][y][x].x) {
-						positions.push([
-							players[playerIndex][y][x].x,
-							players[playerIndex][y][x].y
-						]);
-					} else {
-						clear();
-					}
+					clear();
 					// drawing rectange where mosue is
-					p.fill(0);
-					p.rect(
-						players[playerIndex][y][x + (x == len - 1 && mode ? -1 : 0)].x,
-						players[playerIndex][y + (y == len - 1 && !mode ? -1 : 0)][x].y,
-						// if the mode is horizontal, then times the width by the length of the battleship
-						(p.width / len) * (mode ? battle_len : 1),
-						// same but 4 vertical
-						(p.width / len) * (mode ? 1 : battle_len)
-					);
+					// p.fill(0);
+					// mouse hover with boundary detection built in
+					// p.rect(
+					// 	players[playerIndex][y][
+					// 		x > len - battle_len - 1 && mode ? len - battle_len : x
+					// 	].x,
+					// 	players[playerIndex][
+					// 		y > len - battle_len - 1 && !mode ? len - battle_len : y
+					// 	][x].y,
+					// 	// if the mode is horizontal, then times the width by the length of the battleship
+					// 	(p.width / len) * (mode ? battle_len : 1),
+					// 	// same but 4 vertical
+					// 	(p.width / len) * (mode ? 1 : battle_len)
+					// );
 				}
 			}
 		}
@@ -71,26 +69,50 @@ let sketch = function(p) {
 		p.mouseClicked = function() {
 			for (var y = 0; y < players[playerIndex].length; y++) {
 				for (var x = 0; x < players[playerIndex].length; x++) {
-					players[playerIndex][y][x].show(c);
 					if (
 						p.mouseX > players[playerIndex][y][x].x &&
 						p.mouseX < players[playerIndex][y][x].x + p.width / 10 &&
 						p.mouseY > players[playerIndex][y][x].y &&
-						p.mouseY < players[playerIndex][y][x].y + p.width / 10
+						p.mouseY < players[playerIndex][y][x].y + p.width / 10 //&&
+						// routePath(x, y) == false
 					) {
 						for (var shipLen = 0; shipLen < battle_len; shipLen++) {
-							// not entierly sure
-							let selectorNode =
-								players[playerIndex][
-									y + (mode ? 0 : shipLen) + (y == len - 1 && !mode ? -1 : 0)
-								][x + (mode ? shipLen : 0) + (x == len - 1 && mode ? -1 : 0)];
+							console.log(!(y > len - battle_len) && !mode);
+							yIndex =
+								y +
+								(!(y > len - battle_len) && !mode ? shipLen : 0) +
+								(y > len - battle_len && !mode ?  - (shipLen) : 0);
+							console.log(yIndex);
+							let selectorNode = players[playerIndex][yIndex][x];
+							// toggling the property of what ever the fuck it is
 							selectorNode.boolPressed = !selectorNode.boolPressed;
 						}
 					}
+					players[playerIndex][y][x].show(c);
 				}
 			}
 		};
 	};
+
+	// overlay detection when trying to
+	function routePath(xCoord, yCoord) {
+		var pressCounter = 0;
+		for (var nodeIterator = 0; nodeIterator < battle_len; nodeIterator++) {
+			if (
+				players[playerIndex][
+					yCoord > len - battle_len - 1 && !mode ? len - battle_len : yCoord
+				][xCoord > len - battle_len - 1 && mode ? len - battle_len : xCoord].boolPressed
+			) {
+				pressCounter++;
+			}
+		}
+		if (pressCounter == 0 || pressCounter == battle_len) {
+			// return false if there are no colored sqaures on the path
+			return false;
+		} else {
+			return true;
+		}
+	}
 
 	class square {
 		constructor(x, y, c) {
@@ -121,7 +143,7 @@ function un_check(x) {
 		if (x.id.slice(6, -1) == '0') {
 			mode = x.id[x.id.length - 1] == 1;
 		} else if (x.id.slice(6, -1) == '1') {
-			battle_len = x.id[x.id.length - 1];
+			battle_len = parseInt(x.id[x.id.length - 1]);
 		} else if (x.id.slice(6, -1) == '2') {
 			playerIndex = x.id[x.id.length - 1];
 		}
