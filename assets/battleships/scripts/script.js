@@ -4,9 +4,9 @@ let playerIndex = 0;
 let battle_len = 2;
 let positions = new Array();
 let mode = true;
-let sketch = function (p) {
+let sketch = function(p) {
 	// only ran when page loads
-	p.setup = function () {
+	p.setup = function() {
 		positions.push([1, 1]);
 		p.background(20);
 		c = p.color(107);
@@ -31,7 +31,7 @@ let sketch = function (p) {
 	};
 
 	// ran many times a second
-	p.draw = function () {
+	p.draw = function() {
 		for (var y = 0; y < players[playerIndex].length; y++) {
 			for (var x = 0; x < players[playerIndex].length; x++) {
 				// looping through every square
@@ -47,7 +47,7 @@ let sketch = function (p) {
 					// otherwise clean grid off
 					clear();
 					// drawing rectange where mosue is
-					p.fill(0);
+					p.fill(routePath(x, y) ? p.color(255, 255, 0) : 0);
 					// mouse hover with boundary detection built in
 					p.rect(
 						players[playerIndex][y][
@@ -66,7 +66,7 @@ let sketch = function (p) {
 		}
 
 		// adding a new sqare to board
-		p.mouseClicked = function () {
+		p.mouseClicked = function() {
 			for (var y = 0; y < players[playerIndex].length; y++) {
 				for (var x = 0; x < players[playerIndex].length; x++) {
 					if (
@@ -81,10 +81,10 @@ let sketch = function (p) {
 								y +
 								(!(y > len - battle_len) && !mode ? shipLen : 0) +
 								(y > len - battle_len && !mode ? -y + len - battle_len + shipLen : 0);
-							xIndex = x +
+							xIndex =
+								x +
 								(!(x > len - battle_len) && mode ? shipLen : 0) +
 								(x > len - battle_len && mode ? -x + len - battle_len + shipLen : 0);
-							console.log(`x:${xIndex},y:${yIndex}`)
 							let selectorNode = players[playerIndex][yIndex][xIndex];
 							// toggling the property of what ever the fuck it is
 							selectorNode.boolPressed = !selectorNode.boolPressed;
@@ -102,8 +102,18 @@ let sketch = function (p) {
 		for (var nodeIterator = 0; nodeIterator < battle_len; nodeIterator++) {
 			if (
 				players[playerIndex][
-					yCoord > len - battle_len - 1 && !mode ? len - battle_len : yCoord
-				][xCoord > len - battle_len - 1 && mode ? len - battle_len : xCoord].boolPressed
+					yCoord +
+						(!(yCoord > len - battle_len) && !mode ? nodeIterator : 0) +
+						(yCoord > len - battle_len && !mode
+							? -yCoord + len - battle_len + nodeIterator
+							: 0)
+				][
+					xCoord +
+						(!(xCoord > len - battle_len) && mode ? nodeIterator : 0) +
+						(xCoord > len - battle_len && mode
+							? -xCoord + len - battle_len + nodeIterator
+							: 0)
+				].boolPressed
 			) {
 				pressCounter++;
 			}
@@ -129,7 +139,7 @@ let sketch = function (p) {
 		}
 	}
 
-	p.windowResized = function () {
+	p.windowResized = function() {
 		p.setup();
 	};
 };
