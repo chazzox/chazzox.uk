@@ -3,10 +3,10 @@ let players = [new Array(len), new Array(len)];
 let playerIndex = 0;
 let battle_len = 2;
 let positions = new Array();
-let mode = false;
-let sketch = function(p) {
+let mode = true;
+let sketch = function (p) {
 	// only ran when page loads
-	p.setup = function() {
+	p.setup = function () {
 		positions.push([1, 1]);
 		p.background(20);
 		c = p.color(107);
@@ -31,7 +31,7 @@ let sketch = function(p) {
 	};
 
 	// ran many times a second
-	p.draw = function() {
+	p.draw = function () {
 		for (var y = 0; y < players[playerIndex].length; y++) {
 			for (var x = 0; x < players[playerIndex].length; x++) {
 				// looping through every square
@@ -47,43 +47,45 @@ let sketch = function(p) {
 					// otherwise clean grid off
 					clear();
 					// drawing rectange where mosue is
-					// p.fill(0);
+					p.fill(0);
 					// mouse hover with boundary detection built in
-					// p.rect(
-					// 	players[playerIndex][y][
-					// 		x > len - battle_len - 1 && mode ? len - battle_len : x
-					// 	].x,
-					// 	players[playerIndex][
-					// 		y > len - battle_len - 1 && !mode ? len - battle_len : y
-					// 	][x].y,
-					// 	// if the mode is horizontal, then times the width by the length of the battleship
-					// 	(p.width / len) * (mode ? battle_len : 1),
-					// 	// same but 4 vertical
-					// 	(p.width / len) * (mode ? 1 : battle_len)
-					// );
+					p.rect(
+						players[playerIndex][y][
+							x > len - battle_len - 1 && mode ? len - battle_len : x
+						].x,
+						players[playerIndex][
+							y > len - battle_len - 1 && !mode ? len - battle_len : y
+						][x].y,
+						// if the mode is horizontal, then times the width by the length of the battleship
+						(p.width / len) * (mode ? battle_len : 1),
+						// same but 4 vertical
+						(p.width / len) * (mode ? 1 : battle_len)
+					);
 				}
 			}
 		}
 
 		// adding a new sqare to board
-		p.mouseClicked = function() {
+		p.mouseClicked = function () {
 			for (var y = 0; y < players[playerIndex].length; y++) {
 				for (var x = 0; x < players[playerIndex].length; x++) {
 					if (
 						p.mouseX > players[playerIndex][y][x].x &&
 						p.mouseX < players[playerIndex][y][x].x + p.width / 10 &&
 						p.mouseY > players[playerIndex][y][x].y &&
-						p.mouseY < players[playerIndex][y][x].y + p.width / 10 //&&
-						// routePath(x, y) == false
+						p.mouseY < players[playerIndex][y][x].y + p.width / 10 &&
+						routePath(x, y) == false
 					) {
 						for (var shipLen = 0; shipLen < battle_len; shipLen++) {
-							console.log(!(y > len - battle_len) && !mode);
 							yIndex =
 								y +
 								(!(y > len - battle_len) && !mode ? shipLen : 0) +
-								(y > len - battle_len && !mode ?  - (shipLen) : 0);
-							console.log(yIndex);
-							let selectorNode = players[playerIndex][yIndex][x];
+								(y > len - battle_len && !mode ? -y + len - battle_len + shipLen : 0);
+							xIndex = x +
+								(!(x > len - battle_len) && mode ? shipLen : 0) +
+								(x > len - battle_len && mode ? -x + len - battle_len + shipLen : 0);
+							console.log(`x:${xIndex},y:${yIndex}`)
+							let selectorNode = players[playerIndex][yIndex][xIndex];
 							// toggling the property of what ever the fuck it is
 							selectorNode.boolPressed = !selectorNode.boolPressed;
 						}
@@ -127,7 +129,7 @@ let sketch = function(p) {
 		}
 	}
 
-	p.windowResized = function() {
+	p.windowResized = function () {
 		p.setup();
 	};
 };
