@@ -63,7 +63,7 @@
 
 		<div class="header" id="header">
 			<h1>Charlie Aylott</h1>
-			<h2>Programmer</h2>
+			<h2>Professional gAmEr</h2>
 		</div>
 
 		<div class="mainContent">
@@ -71,8 +71,8 @@
 
 			<p>
 				Hello, my name is Charlie. I'm an aspiring programmer based in Surrey who is always
-				open to join a project for expierence. You can get in touch with me using the
-				contact details located on the sidebar.
+				open to join a project for expierence. You can get in touch with me using the contact
+				details located on the sidebar.
 			</p>
 
 			<div class="subtitle">Education</div>
