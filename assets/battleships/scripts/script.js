@@ -79,16 +79,14 @@ let sketch = function(p) {
 						for (var shipLen = 0; shipLen < battle_len; shipLen++) {
 							yIndex =
 								y +
-								(!(y > len - battle_len) && !mode ? shipLen : 0) +
+								(!mode ? shipLen : 0) +
 								(y > len - battle_len && !mode
-									? -y + len - battle_len + shipLen
+									? -y + len - battle_len
 									: 0);
 							xIndex =
 								x +
-								(!(x > len - battle_len) && mode ? shipLen : 0) +
-								(x > len - battle_len && mode
-									? -x + len - battle_len + shipLen
-									: 0);
+								(mode ? shipLen : 0) +
+								(x > len - battle_len && mode ? -x + len - battle_len : 0);
 							let selectorNode = players[playerIndex][yIndex][xIndex];
 							// toggling the property of what ever the fuck it is
 							selectorNode.boolPressed = !selectorNode.boolPressed;
