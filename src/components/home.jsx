@@ -26,10 +26,10 @@ export default class Home extends React.PureComponent {
 							this isn't exactly a great representation of what i can do now
 						</p>
 						<div className="projectContainer">
-							<Link to="/shortcuts" className="project">
+							<a href="https://chazzox.github.io/shortcuts/" className="project">
 								<div className="pseudoElement" style={{ backgroundImage: `url(${shortcutPreview})` }} />
 								<div>Shortcuts</div>
-							</Link>
+							</a>
 							<Link to="/cipher" className="project">
 								<div className="pseudoElement" style={{ backgroundImage: `url(${cipherPreview})` }} />
 								<div>Cipher Translator</div>

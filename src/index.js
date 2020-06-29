@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 
 import Home from './components/home';
 import Pattern from './components/pattern';
@@ -12,7 +12,7 @@ import CV from './components/cv';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<BrowserRouter>
+		<HashRouter>
 			<Switch>
 				<Route exact path="/CV" render={() => <CV />} />
 				<Route exact path="/privacy" render={() => <Privacy />} />
@@ -22,7 +22,7 @@ ReactDOM.render(
 				<Route exact path="/" render={() => <Home />} />
 				<Route component={NoMatchPage} />
 			</Switch>
-		</BrowserRouter>
+		</HashRouter>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
