@@ -15,6 +15,9 @@
 	float: left;
 }
 
-.logo:hover {
-	opacity: 0.5;
+.logo {
+	height: 70px;
+	&:hover {
+		opacity: 0.5;
+	}
 }

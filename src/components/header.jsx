@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import '../styles/nav.scss';
 import logo from '../assets/logo.png';
 
-export default class Header extends React.PureComponent  {
+export default class Header extends React.PureComponent {
 	render() {
 		return (
 			<ul className="headul">
 				<li className="headli">
 					<Link to="/">
-						<img className="logo" src={logo} alt="my logo" width="150" height="150" />
+						<img className="logo" src={logo} alt="my logo" />
 					</Link>
 				</li>
 				<li className="headli">

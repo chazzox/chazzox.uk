@@ -10,39 +10,46 @@ import patternPreview from '../assets/websiteScreenshots/pattern.jpg';
 
 import Header from './header';
 import '../styles/main.scss';
+import '../styles/global.scss';
+
 export default class Home extends React.PureComponent {
 	render() {
 		return (
-			<>
+			<div id="homepageBackground">
 				<Header />
 
-				<div className="bigBox">
-					<h1>hey,</h1>
-					<p>i am currently redesigning the site, come back later to see the new style changes</p>
-					<div className="oldProjects">
+				<div className="bigBox absCenter">
+					<div id="mainContent">
+						<h1>hey,</h1>
+						<p>i am currently redesigning the site, come back later to see the new style changes</p>
 						<p>
 							these are some of the of my old projects, i have recently ported them to reactJS so i cant
 							guarantee that they're working. i wrote a couple of these when i was first learning to program so
 							this isn't exactly a great representation of what i can do now
 						</p>
-						<div className="projectContainer">
-							<a href="https://chazzox.github.io/shortcuts/" className="project">
-								<div className="pseudoElement" style={{ backgroundImage: `url(${shortcutPreview})` }} />
-								<div>Shortcuts</div>
-							</a>
-							<Link to="/cipher" className="project">
-								<div className="pseudoElement" style={{ backgroundImage: `url(${cipherPreview})` }} />
-								<div>Cipher Translator</div>
-							</Link>
-							<Link to="/pattern" className="project">
-								<div className="pseudoElement" style={{ backgroundImage: `url(${patternPreview})` }} />
-								<div>Android pattern lock PoC</div>
-							</Link>
-							<Link to="/battleships" className="project">
-								<div className="pseudoElement" style={{ backgroundImage: `url(${battleshipsPreview})` }} />
-								<div>Battleships</div>
-							</Link>
-						</div>
+					</div>
+
+					<div id="sidebar">
+						<a
+							href="https://chazzox.github.io/shortcuts/"
+							className="project"
+							style={{ backgroundColor: '#667eff' }}
+						>
+							<div className="pseudoElement" style={{ backgroundImage: `url(${shortcutPreview})` }} />
+							<span className="absCenter">Shortcuts</span>
+						</a>
+						<Link to="/cipher" className="project" style={{ backgroundColor: '#9f7ed5' }}>
+							<div className="pseudoElement" style={{ backgroundImage: `url(${cipherPreview})` }} />
+							<span className="absCenter">Cipher Translator</span>
+						</Link>
+						<Link to="/pattern" className="project" style={{ backgroundColor: '#ac70a6' }}>
+							<div className="pseudoElement" style={{ backgroundImage: `url(${patternPreview})` }} />
+							<span className="absCenter">Android pattern lock PoC</span>
+						</Link>
+						<Link to="/battleships" className="project" style={{ backgroundColor: '#ff849d' }}>
+							<div className="pseudoElement" style={{ backgroundImage: `url(${battleshipsPreview})` }} />
+							<span className="absCenter">Battleships</span>
+						</Link>
 					</div>
 				</div>
 
@@ -62,7 +69,7 @@ export default class Home extends React.PureComponent {
 						}}
 					/>
 				)}
-			</>
+			</div>
 		);
 	}
 }

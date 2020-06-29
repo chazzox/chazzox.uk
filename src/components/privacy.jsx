@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header';
 
-export default class Privacy extends React.PureComponent  {
+export default class Privacy extends React.PureComponent {
 	render() {
 		return (
 			<div id="main">
@@ -9,7 +9,7 @@ export default class Privacy extends React.PureComponent  {
 				<div className="generalContainer">
 					<h1>Privacy Policy for Chazzox inc</h1>
 					<p>
-						At Shortcuts, accessible from
+						At Shortcuts, accessible from{' '}
 						<a
 							style={{ color: 'LightBlue', textDecoration: 'underline' }}
 							href={'https://chazzox.github.io/shortcuts/'}
