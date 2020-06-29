@@ -1,0 +1,96 @@
+/*Importing font from file system*/
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('../assets/fonts/SF-Pro-Display-Regular.otf');
+}
+
+/*Basic font styling for everything*/
+* {
+	font-family: 'SF Pro Display';
+	color: white;
+}
+
+html {
+	background: linear-gradient(153deg, #667eff 5%, #ff849d 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.bigBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(100vw - 20px);
+	max-width: 900px;
+	background-color: #f7eaea;
+	box-shadow: 27px 43px 92px -6px rgba(0, 0, 0, 0.75);
+	.oldProjects {
+		width: 100%;
+		.projectContainer {
+			width: 100%;
+			display: inline-block;
+			text-align: center;
+			.project {
+				box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.473);
+				width: 200px;
+				&:hover {
+					.pseudoElement {
+						background-size: 200%;
+					}
+				}
+				overflow: hidden;
+				position: relative;
+				.pseudoElement {
+					position: absolute;
+					z-index: -1;
+					height: 200%;
+					width: 200%;
+					top: -50%;
+					left: -50%;
+					background-repeat: no-repeat;
+					background-size: 150%;
+					background-position: center;
+					transform: rotate(30deg);
+					transition: background-size 0.3s ease;
+					-webkit-transition: background-size 0.3s ease;
+					-moz-transition: background-size 0.3s ease;
+					-o-transition: background-size 0.3s ease;
+					-ms-transition: background-size 0.3s ease;
+				}
+				display: inline-block;
+				margin: 0 5px;
+				border-radius: 25px;
+
+				min-height: 120px;
+			}
+		}
+	}
+	h1,
+	p {
+		color: #875fb3;
+	}
+
+	h1 {
+		font-size: 45px;
+	}
+
+	p {
+		font-size: 25px;
+	}
+	padding: 15px;
+	box-sizing: border-box;
+	border-radius: 55px;
+}
+
+#particles {
+	position: 'fixed';
+	top: 0;
+	z-index: -99;
+}
