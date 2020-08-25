@@ -1,12 +1,8 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import { Link } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 
 import shortcutPreview from '../assets/websiteScreenshots/shortcuts.jpg';
-import cipherPreview from '../assets/websiteScreenshots/cipher.jpg';
-import battleshipsPreview from '../assets/websiteScreenshots/battleships.jpg';
-import patternPreview from '../assets/websiteScreenshots/pattern.jpg';
 
 import Header from './header';
 import '../styles/main.scss';
@@ -38,18 +34,22 @@ export default class Home extends React.PureComponent {
 							<div className="pseudoElement" style={{ backgroundImage: `url(${shortcutPreview})` }} />
 							<span className="absCenter">Shortcuts</span>
 						</a>
-						<Link to="/cipher" className="project" style={{ backgroundColor: '#9f7ed5' }}>
-							<div className="pseudoElement" style={{ backgroundImage: `url(${cipherPreview})` }} />
-							<span className="absCenter">Cipher Translator</span>
-						</Link>
-						<Link to="/pattern" className="project" style={{ backgroundColor: '#ac70a6' }}>
-							<div className="pseudoElement" style={{ backgroundImage: `url(${patternPreview})` }} />
-							<span className="absCenter">Android pattern lock PoC</span>
-						</Link>
-						<Link to="/battleships" className="project" style={{ backgroundColor: '#ff849d' }}>
-							<div className="pseudoElement" style={{ backgroundImage: `url(${battleshipsPreview})` }} />
-							<span className="absCenter">Battleships</span>
-						</Link>
+						<a
+							href="https://chazzox.github.io/organiseMe/"
+							className="project"
+							style={{ backgroundColor: '#667eff' }}
+						>
+							<div className="pseudoElement" style={{ backgroundImage: `url(${shortcutPreview})` }} />
+							<span className="absCenter">Shortcuts</span>
+						</a>
+						<a
+							href="https://chazzox.github.io/Hydrova/"
+							className="project"
+							style={{ backgroundColor: '#667eff' }}
+						>
+							<div className="pseudoElement" style={{ backgroundImage: `url(${shortcutPreview})` }} />
+							<span className="absCenter">Shortcuts</span>
+						</a>
 					</div>
 				</div>
 
