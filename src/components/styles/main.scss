@@ -1,14 +1,28 @@
-/*Importing font from file system*/
-@font-face {
-	font-family: 'SF Pro Display';
-	src: url('../assets/fonts/SF-Pro-Display-Regular.otf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 /*Basic font styling for everything*/
 * {
-	font-family: 'SF Pro Display';
-	color: white;
+	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
+	color: white;
+}
+
+.generalContainer {
+	background: #2f3439;
+	box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.507), 0 2px 50px 0 rgba(0, 0, 0, 0.945);
+	border-radius: 30px;
+	padding: 15px 30px;
+	margin: 35px auto;
+	width: calc(100vw - 150px);
+	max-width: 1200px;
+	line-height: 1;
+}
+
+.absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 html {
@@ -40,6 +54,13 @@ body {
 		height: calc(100% - 30px);
 		width: calc(50% - 60px);
 		height: 100%;
+		h1 {
+			margin-bottom: 10px;
+		}
+		h2 {
+			margin-top: 0px;
+			margin-bottom: 30px;
+		}
 	}
 	#sidebar {
 		position: absolute;
@@ -73,6 +94,7 @@ body {
 				-o-transition: all 0.3s ease;
 				-ms-transition: all 0.3s ease;
 			}
+
 			.pseudoElement {
 				position: absolute;
 				height: 250%;
@@ -89,6 +111,7 @@ body {
 				-o-transition: all 0.3s ease;
 				-ms-transition: all 0.3s ease;
 			}
+
 			&:hover {
 				height: 40% !important;
 				.pseudoElement {
@@ -112,12 +135,13 @@ body {
 		}
 	}
 	h1,
+	h2,
 	p {
 		color: #875fb3;
 	}
 
 	h1 {
-		font-size: 48pt;
+		font-size: 40pt;
 		font-weight: 900;
 	}
 
