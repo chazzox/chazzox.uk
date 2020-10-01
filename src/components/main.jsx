@@ -21,7 +21,9 @@ export default function Home() {
 				</a>
 				<a href="https://chazzox.github.io/organiseMe/" className="project" style={{ backgroundColor: '#776FD9' }}>
 					<div className="pseudoElement" style={{ backgroundImage: `url('../organiseMe.jpg')` }} />
-					<span className="absCenter">organiseMe</span>
+					<span className="absCenter" style={{ color: 'black' }}>
+						organiseMe
+					</span>
 				</a>
 				<a href="https://chazzox.github.io/Hydrova/" className="project" style={{ backgroundColor: '#875fb3' }}>
 					<div
@@ -31,7 +33,6 @@ export default function Home() {
 							transform: 'translate(-10%, -60px) rotate(30deg)'
 						}}
 					/>
-					<span className="absCenter">Hydrova</span>
 				</a>
 			</div>
 		</div>

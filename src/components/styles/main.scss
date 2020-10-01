@@ -68,14 +68,21 @@ body {
 		top: 30px;
 		width: calc(50% - 60px);
 		height: calc(100% - 60px);
+		display: flex;
+		flex-direction: column;
 		overflow: hidden;
-		border-radius: 40px;
 		.project {
+			&:first-child {
+				border-radius: 40px 40px 0 0;
+			}
+			&:last-child {
+				border-radius: 0 0 40px 40px;
+			}
 			text-decoration: none;
 			width: 100%;
 			display: block;
 			text-align: center;
-			height: 33%;
+			flex: 1;
 			overflow: hidden;
 			position: relative;
 			transition: all 0.3s ease;
@@ -94,7 +101,6 @@ body {
 				-o-transition: all 0.3s ease;
 				-ms-transition: all 0.3s ease;
 			}
-
 			.pseudoElement {
 				position: absolute;
 				height: 250%;
@@ -113,7 +119,7 @@ body {
 			}
 
 			&:hover {
-				height: 40% !important;
+				flex: 2;
 				.pseudoElement {
 					opacity: 1 !important;
 					background-size: 130%;
