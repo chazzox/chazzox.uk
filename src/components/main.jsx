@@ -6,11 +6,12 @@ export default function Home() {
 	return (
 		<div className="bigBox absCenter">
 			<div id="mainContent">
-				<h1>Charlie Aylott</h1>
-				<h2>hobbyist programmer</h2>
+				<h1>Charlie</h1>
+				<h2>Hobbyist programmer</h2>
+				<p>Hi, i'm chazzox, also known as charlie.</p>
 				<p>
 					I like to make things, I learn languages as I go depending on where a project takes me, check out a
-					couple of my projects to see what I'm working on right now
+					couple of my projects to see what I'm working on right now.
 				</p>
 			</div>
 

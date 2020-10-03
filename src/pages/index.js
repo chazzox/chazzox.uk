@@ -1,6 +1,7 @@
 import React from 'react'
 import Particles from 'react-particles-js'
 import { isMobile } from 'react-device-detect'
+import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Main from '../components/main'
