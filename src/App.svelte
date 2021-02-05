@@ -1,14 +1,50 @@
 <script>
 	import Particles from 'svelte-particles';
-	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 
 	export let particlesConfig;
 </script>
+
+<div class="center">
+	<div class="container">
+		<div id="projectContainer">
+			<a href="https://chazzox.github.io/shortcuts/" class="project" style="background-color: #667eff">
+				<div
+					class="pseudoElement"
+					style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
+				/>
+			</a>
+			<a href="https://chazzox.github.io/Hydrova/" class="project" style="background-color: #875fb3">
+				<div
+					class="pseudoElement"
+					style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
+				/>
+			</a>
+		</div>
+		<div>
+			<h1>Charlie</h1>
+			<h2>Hobbyist programmer</h2>
+			<p>Hi, I'm chazzox, also known as charlie.</p>
+			<p>
+				I like to make things, I learn languages as I go depending on where a project takes me, check out a couple of
+				my projects to see what I'm working on right now.
+			</p>
+		</div>
+	</div>
+</div>
+<Footer />
+<Particles id="tsparticles" options={particlesConfig} />
+
+<svelte:head>
+	<title>Chazzox's Website</title>
+</svelte:head>
 
 <style type="text/scss">
 	:global(body, html) {
 		margin: 0;
 		padding: 0;
+		display: flex;
+		flex-direction: column;
 	}
 	:global(html) {
 		background: linear-gradient(153deg, #667eff 5%, #ff849d 100%);
@@ -26,6 +62,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex: 1 0 auto;
+		align-self: auto;
 	}
 	.container {
 		max-width: 900px;
@@ -38,6 +76,7 @@
 		border-radius: 55px;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap-reverse;
 		> #projectContainer {
 			display: flex;
 			flex-direction: column;
@@ -82,35 +121,3 @@
 		}
 	}
 </style>
-
-<Header />
-<div class="center">
-	<div class="container">
-		<div id="projectContainer">
-			<a href="https://chazzox.github.io/shortcuts/" class="project" style="background-color: #667eff">
-				<div
-					class="pseudoElement"
-					style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)" />
-			</a>
-			<a href="https://chazzox.github.io/Hydrova/" class="project" style="background-color: #875fb3">
-				<div
-					class="pseudoElement"
-					style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)" />
-			</a>
-		</div>
-		<div>
-			<h1>Charlie</h1>
-			<h2>Hobbyist programmer</h2>
-			<p>Hi, i'm chazzox, also known as charlie.</p>
-			<p>
-				I like to make things, I learn languages as I go depending on where a project takes me, check out a couple of
-				my projects to see what I'm working on right now.
-			</p>
-		</div>
-	</div>
-</div>
-<Particles id="tsparticles" options={particlesConfig} />
-
-<svelte:head>
-	<title>Chazzox's Website</title>
-</svelte:head>
