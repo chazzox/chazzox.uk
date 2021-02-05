@@ -5,6 +5,9 @@
 	export let particlesConfig;
 </script>
 
+<svelte:head>
+	<title>Chazzox's Website</title>
+</svelte:head>
 <div class="center">
 	<div class="container">
 		<div id="projectContainer">
@@ -34,10 +37,6 @@
 </div>
 <Footer />
 <Particles id="tsparticles" options={particlesConfig} />
-
-<svelte:head>
-	<title>Chazzox's Website</title>
-</svelte:head>
 
 <style type="text/scss">
 	:global(body, html) {
@@ -70,7 +69,6 @@
 		background-color: #f7eaea;
 		box-shadow: 27px 43px 92px -6px rgba(0, 0, 0, 0.75);
 		width: calc(100vw - 50px);
-		height: calc(100vh - 200px);
 		padding: 30px;
 		box-sizing: border-box;
 		border-radius: 55px;
@@ -79,6 +77,7 @@
 		flex-wrap: wrap-reverse;
 		> #projectContainer {
 			z-index: 1;
+			min-height: 600px;
 			display: flex;
 			flex-direction: column;
 			overflow: hidden;
@@ -118,7 +117,8 @@
 			}
 		}
 		> div {
-			width: calc(50% - 30px);
+			flex: 1 1 250px;
+			margin: 15px;
 		}
 	}
 </style>
