@@ -8,42 +8,42 @@
 <svelte:head>
 	<title>Chazzox's Website</title>
 </svelte:head>
-<div class="center">
-	<div class="container">
-		<div id="projectContainer">
-			<a href="https://chazzox.github.io/shortcuts/" class="project" style="background-color: #667eff">
-				<div
-					class="pseudoElement"
-					style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
-				/>
-			</a>
-			<a href="https://chazzox.github.io/Hydrova/" class="project" style="background-color: #875fb3">
-				<div
-					class="pseudoElement"
-					style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
-				/>
-			</a>
-		</div>
-		<div>
-			<h1>Charlie</h1>
-			<h2>Hobbyist programmer</h2>
-			<p>Hi, I'm chazzox, also known as charlie.</p>
-			<p>
-				I like to make things, I learn languages as I go depending on where a project takes me, check out a couple of
-				my projects to see what I'm working on right now.
-			</p>
+<section class="app">
+	<div class="center">
+		<div class="container">
+			<div id="projectContainer">
+				<a href="https://chazzox.github.io/shortcuts/" class="project" style="background-color: #667eff">
+					<div
+						class="pseudoElement"
+						style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
+					/>
+				</a>
+				<a href="https://chazzox.github.io/Hydrova/" class="project" style="background-color: #875fb3">
+					<div
+						class="pseudoElement"
+						style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
+					/>
+				</a>
+			</div>
+			<div>
+				<h1>Charlie</h1>
+				<h2>Hobbyist programmer</h2>
+				<p>Hi, I'm chazzox, also known as charlie.</p>
+				<p>
+					I like to make things, I learn languages as I go depending on where a project takes me, check out a
+					couple of my projects to see what I'm working on right now.
+				</p>
+			</div>
 		</div>
 	</div>
-</div>
-<Footer />
+	<Footer />
+</section>
 <Particles id="tsparticles" options={particlesConfig} />
 
 <style type="text/scss">
 	:global(body, html) {
 		margin: 0;
 		padding: 0;
-		display: flex;
-		flex-direction: column;
 	}
 	:global(html) {
 		background: linear-gradient(153deg, #667eff 5%, #ff849d 100%);
@@ -56,6 +56,15 @@
 		width: 100%;
 		height: 100%;
 		z-index: -999;
+	}
+	.app {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		overflow: auto;
 	}
 	.center {
 		display: flex;
