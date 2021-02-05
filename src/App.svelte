@@ -78,6 +78,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap-reverse;
 		> #projectContainer {
+			z-index: 1;
 			display: flex;
 			flex-direction: column;
 			overflow: hidden;
