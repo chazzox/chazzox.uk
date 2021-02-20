@@ -12,23 +12,31 @@
 	.footerWrapper {
 		display: flex;
 		justify-content: center;
-		margin-top: auto;
-		margin-bottom: 5px;
+		margin-top: 60px;
+		margin-bottom: 15px;
 	}
 	.footerContainer {
 		background-color: #f7eaea;
-		padding: 10px;
+		padding: 15px;
 		border-radius: 55px;
 	}
 	.profileLink {
 		text-decoration: none;
 		border-radius: 55px;
-		padding: 2px 5px;
+		padding: 5px;
 		color: white;
+		font-size: 15px;
+		font-weight: bold;
+		transition: padding 0.2s ease;
+		line-height: 18px;
+		&:hover {
+			font-size: 18px;
+			padding: 7px 10px;
+		}
 	}
 
 	#github {
-		background: linear-gradient(-120deg, #999999, #666666, #999999);
+		background: linear-gradient(to right, #040d21, #3a3da0);
 	}
 
 	#spotify {
@@ -44,6 +52,6 @@
 	}
 
 	#discord {
-		background: linear-gradient(to right, #83a1da, #6380b4);
+		background: linear-gradient(to right, #7289da, #21357d);
 	}
 </style>
