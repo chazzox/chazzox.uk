@@ -5,6 +5,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -45,8 +46,11 @@ export default {
 			},
 			preprocess: preprocess()
 		}),
-		// extracting stylesheets into separate bundle
-		css({ output: 'bundle.css' }),
+		postcss({
+			extract: 'global.css',
+			sourceMap: false,
+			minimize: true
+		}),
 		// for yarn dependencies
 		resolve({
 			browser: true,

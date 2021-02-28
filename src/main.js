@@ -1,4 +1,5 @@
 import App from './App.svelte';
+import './global.css';
 
 const Index = new App({
 	target: document.body,
