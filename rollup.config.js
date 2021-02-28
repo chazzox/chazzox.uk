@@ -41,7 +41,9 @@ export default {
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production
-				dev: !production
+				dev: !production,
+				// replaces the svelte- prefix in the html class names
+				cssHash: ({ hash, css, name, filename }) => `site-${hash(css)}`
 			},
 			preprocess: preprocess()
 		}),
