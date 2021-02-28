@@ -1,14 +1,45 @@
+<script>
+	import copy from 'copy-to-clipboard';
+	import { tweened } from 'svelte/motion';
+	import { backInOut } from 'svelte/easing';
+
+	const show = tweened(-32, {
+		duration: 400,
+		easing: backInOut
+	});
+</script>
+
+<div id="success" style={`top: ${$show}px`}>Copied!</div>
+
 <div class="footerWrapper">
 	<div class="footerContainer">
 		<a class="profileLink" id="github" href="https://github.com/chazzox">Github</a>
 		<a class="profileLink" id="spotify" href="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk">Spotify</a>
 		<a class="profileLink" id="reddit" href="https://chazzox.github.io/Hydrova/#/u/chazzox/">Reddit</a>
 		<a class="profileLink" id="twitter" href="https://twitter.com/_chazzox_">Twitter</a>
-		<span class="profileLink" id="discord">Discord</span>
+		<span
+			class="profileLink"
+			id="discord"
+			on:click={() => {
+				copy('chazzox#8286');
+				show.set(5);
+				setTimeout(() => show.set(-32), 800);
+			}}
+			>Discord
+		</span>
 	</div>
 </div>
 
 <style lang="scss">
+	#success {
+		color: white;
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 2px 5px;
+		border-radius: 5px;
+		background-color: #43b581;
+	}
 	.footerWrapper {
 		display: flex;
 		justify-content: center;
@@ -53,5 +84,10 @@
 
 	#discord {
 		background: linear-gradient(to right, #7289da, #21357d);
+		&:hover {
+			&::after {
+				content: ': chazzox#8286';
+			}
+		}
 	}
 </style>

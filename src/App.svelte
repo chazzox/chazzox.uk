@@ -30,7 +30,7 @@
 				<h2>Hobbyist programmer</h2>
 				<p>Hi, I'm chazzox, also known as charlie.</p>
 				<p>
-					I like to make things, I learn languages as I go depending on where a project takes me, check out a
+					I like to make things. I learn languages as I go depending on where a project takes me, check out a
 					couple of my projects to see what I'm working on right now.
 				</p>
 			</div>
