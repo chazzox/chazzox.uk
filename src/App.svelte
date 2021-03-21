@@ -8,6 +8,7 @@
 <svelte:head>
 	<title>Chazzox's Website</title>
 </svelte:head>
+
 <section class="app">
 	<div class="center">
 		<div class="container">
@@ -32,6 +33,16 @@
 				<p>
 					I like to make things. I learn languages as I go depending on where a project takes me, check out a
 					couple of my projects to see what I'm working on right now.
+				</p>
+				<p>
+					I'm currently a full time student. So my time is shared between these projects and my work at uni, I try
+					and spend a good amount of time on the projects though, as they are things that I am to eventually use (I
+					already use Hydrova)
+				</p>
+				<p>
+					My interests lie in web development, software engineering and cyber security. And I usually make projects
+					around these interests. If you want to contact me on a project then email me at
+					<a href="mailto:31caylo13@gmail.com">31caylo13@gmail.com</a>
 				</p>
 			</div>
 		</div>
