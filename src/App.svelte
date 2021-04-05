@@ -1,4 +1,5 @@
 <script>
+	import DeviceDetector from 'svelte-device-detector';
 	import Particles from 'svelte-particles';
 	import Footer from './Footer.svelte';
 
@@ -49,7 +50,9 @@
 	</div>
 	<Footer />
 </section>
-<Particles id="tsparticles" options={particlesConfig} />
+<DeviceDetector showInDevice="desktop">
+	<Particles id="tsparticles" options={particlesConfig} />
+</DeviceDetector>
 
 <style type="text/scss">
 	:global(body, html) {
