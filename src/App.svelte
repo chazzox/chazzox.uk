@@ -20,7 +20,7 @@
 						style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
 					/>
 				</a>
-				<a href="https://chazzox.github.io/Hydrova/" class="project" style="background-color: #875fb3">
+				<a href="https://hydrova.netlify.app/" class="project" style="background-color: #875fb3">
 					<div
 						class="pseudoElement"
 						style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
