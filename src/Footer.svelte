@@ -1,7 +1,7 @@
 <script>
 	import copy from 'copy-to-clipboard';
 	import { tweened } from 'svelte/motion';
-	import { backInOut, elasticIn } from 'svelte/easing';
+	import { backInOut, linear } from 'svelte/easing';
 
 	const show = tweened(-32, {
 		duration: 400,
@@ -9,8 +9,8 @@
 	});
 
 	const text = tweened(0, {
-		duration: 50,
-		easing: elasticIn
+		duration: 40,
+		easing: linear
 	});
 </script>
 
