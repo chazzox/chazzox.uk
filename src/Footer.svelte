@@ -1,11 +1,16 @@
 <script>
 	import copy from 'copy-to-clipboard';
 	import { tweened } from 'svelte/motion';
-	import { backInOut } from 'svelte/easing';
+	import { backInOut, elasticIn } from 'svelte/easing';
 
 	const show = tweened(-32, {
 		duration: 400,
 		easing: backInOut
+	});
+
+	const text = tweened(0, {
+		duration: 50,
+		easing: elasticIn
 	});
 </script>
 
@@ -25,7 +30,9 @@
 				show.set(5);
 				setTimeout(() => show.set(-32), 800);
 			}}
-			>Discord
+			on:mouseenter={() => text.set(': chazzox#8286'.length)}
+			on:mouseleave={() => text.set(0)}
+			>Discord{': chazzox#8286'.slice(0, $text)}
 		</span>
 	</div>
 </div>
@@ -84,10 +91,6 @@
 
 	#discord {
 		background: linear-gradient(to right, #7289da, #21357d);
-		&:hover {
-			&::after {
-				content: ': chazzox#8286';
-			}
-		}
+		cursor: pointer;
 	}
 </style>
