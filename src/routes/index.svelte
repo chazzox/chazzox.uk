@@ -122,22 +122,7 @@
 		height: 100%;
 		z-index: -999;
 	}
-	.app {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		overflow: auto;
-	}
-	.center {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex: 1 0 auto;
-		align-self: auto;
-	}
+
 	.container {
 		max-width: 900px;
 		background-color: #f7eaea;

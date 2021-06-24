@@ -1,17 +1,18 @@
-<div class="content">
-	<h1>Site under construction</h1>
+<script>
+	import Footer from '../components/Footer.svelte';
+</script>
+
+<div class="app">
+	<div class="center">
+		<h1>Site under construction</h1>
+	</div>
+
+	<Footer />
 </div>
 
 <style lang="scss">
-	.content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 100%;
-		& > h1 {
-			color: white;
-			font-size: 75px;
-		}
+	h1 {
+		color: white;
+		font-size: 75px;
 	}
 </style>
