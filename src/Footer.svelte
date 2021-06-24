@@ -14,7 +14,7 @@
 	});
 </script>
 
-<div id="success" style={`top: ${$show}px`}>Copied!</div>
+<div id="success" style={`z-index:999; top: ${$show}px`}>Copied!</div>
 
 <div class="footerWrapper">
 	<div class="footerContainer">
@@ -72,23 +72,18 @@
 			padding: 7px 10px;
 		}
 	}
-
 	#github {
 		background: linear-gradient(to right, #040d21, #3a3da0);
 	}
-
 	#spotify {
 		background: linear-gradient(to right, #33c065, #302b2b);
 	}
-
 	#reddit {
 		background: linear-gradient(to right, #ff4c02, #ed0a21);
 	}
-
 	#twitter {
 		background: linear-gradient(to right, #55acef, #0a76e7);
 	}
-
 	#discord {
 		background: linear-gradient(to right, #7289da, #21357d);
 		cursor: pointer;

@@ -26,6 +26,7 @@
 						style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
 					/>
 				</a>
+				<a href="/tutoring" class="project" style="background-color: #875fb3"><div class="text">Tutoring</div></a>
 			</div>
 			<div>
 				<h1>Charlie</h1>
@@ -106,12 +107,34 @@
 			overflow: hidden;
 			border-radius: 40px;
 			.project {
+				text-decoration: none;
+
 				&,
 				.pseudoElement {
 					transition: all 0.3s ease;
 					-webkit-transition: all 0.3s ease;
 					-o-transition: all 0.3s ease;
 					-ms-transition: all 0.3s ease;
+				}
+				.text {
+					display: flex;
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
+					font-weight: 700;
+					font-size: 50px;
+					color: white;
+					text-decoration: none;
+					transform: rotate(45deg);
+					transition: all 0.1s linear;
+					-webkit-transition: all 0.1s linear;
+					-o-transition: all 0.1s linear;
+					-ms-transition: all 0.1s linear;
+				}
+				.text:hover {
+					font-size: 75px;
+					transform: rotate(0deg);
 				}
 
 				flex: 1;
