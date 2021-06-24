@@ -1,8 +1,9 @@
-name: Deploy Master Branch
+name: Deploy Site
 on:
     push:
         branches:
             - source
+
 jobs:
     build:
         name: Build Svelte Site
