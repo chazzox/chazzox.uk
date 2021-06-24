@@ -115,17 +115,6 @@
 
 <!-- </DeviceDetector> -->
 <style type="text/scss">
-	:global(body) {
-		margin: 0;
-		padding: 0;
-	}
-	:global(html) {
-		background: linear-gradient(153deg, #667eff 5%, #ff849d 100%);
-		background-repeat: no-repeat;
-		background-size: cover;
-		margin: 0;
-		padding: 0;
-	}
 	:global(#tsparticles) {
 		position: fixed;
 		top: 0;
