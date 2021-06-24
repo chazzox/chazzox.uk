@@ -1,9 +1,68 @@
 <script>
-	import DeviceDetector from 'svelte-device-detector';
+	// import DeviceDetector from 'svelte-device-detector';
 	import Particles from 'svelte-particles';
-	import Footer from './Footer.svelte';
-
-	export let particlesConfig;
+	import Footer from '../components/Footer.svelte';
+	let particlesConfig = {
+		particles: {
+			number: {
+				value: 100,
+				density: {
+					enable: true,
+					value_area: 1000
+				},
+				max: -1
+			},
+			color: { value: '#FFF' },
+			shape: {
+				type: 'circle',
+				polygon: { sides: 5 },
+				image: { src: '', width: 100, height: 100 }
+			},
+			stroke: { width: 0, color: '#000000' },
+			opacity: {
+				value: 0.5,
+				random: !1,
+				anim: { enable: !0, speed: 1, minimumValue: 0.1, sync: !1 }
+			},
+			size: {
+				value: 1,
+				random: !1,
+				anim: { enable: !1, speed: 40, minimumValue: 0, sync: !1 }
+			},
+			links: {
+				enable: !0,
+				distance: 150,
+				color: '#FFF',
+				opacity: 0.6,
+				width: 1,
+				shadow: { enable: !1, blur: 5, color: 'lime' }
+			},
+			move: {
+				enable: !0,
+				speed: 3,
+				direction: 'none',
+				random: !1,
+				straight: !1,
+				outMode: 'bounce',
+				bounce: !0,
+				attract: { enable: !1, rotateX: 3e3, rotateY: 3e3 }
+			}
+		},
+		detectRetina: !0,
+		fpsLimit: 999,
+		polygon: {
+			enable: !1,
+			scale: 1,
+			type: 'inline',
+			inline: { arrangement: 'onePerPoint' },
+			draw: {
+				enable: !1,
+				stroke: { width: 0.5, color: 'rgba(255, 255, 255, .1)' }
+			},
+			move: { radius: 10, type: 'path' },
+			url: ''
+		}
+	};
 </script>
 
 <svelte:head>
@@ -38,8 +97,8 @@
 				</p>
 				<p>
 					I'm currently a full time student. So my time is shared between these projects and my work at uni, I try
-					and spend a good amount of time on the projects though, as they are things that I aim to eventually use (I
-					already use Hydrova)
+					and spend a good amount of time on the projects though, as they are things that I aim to eventually use
+					(I already use Hydrova)
 				</p>
 				<p>
 					My interests lie in web development, software engineering and cyber security. And I usually make projects
@@ -51,12 +110,12 @@
 	</div>
 	<Footer />
 </section>
-<DeviceDetector showInDevice="desktop">
-	<Particles id="tsparticles" options={particlesConfig} />
-</DeviceDetector>
+<!-- <DeviceDetector showInDevice="desktop"> -->
+<!-- <Particles id="tsparticles" options={particlesConfig} /> -->
 
+<!-- </DeviceDetector> -->
 <style type="text/scss">
-	:global(body, html) {
+	:global(body) {
 		margin: 0;
 		padding: 0;
 	}
@@ -64,6 +123,8 @@
 		background: linear-gradient(153deg, #667eff 5%, #ff849d 100%);
 		background-repeat: no-repeat;
 		background-size: cover;
+		margin: 0;
+		padding: 0;
 	}
 	:global(#tsparticles) {
 		position: fixed;
@@ -108,7 +169,6 @@
 			border-radius: 40px;
 			.project {
 				text-decoration: none;
-
 				&,
 				.pseudoElement {
 					transition: all 0.3s ease;
@@ -136,11 +196,9 @@
 					font-size: 75px;
 					transform: rotate(0deg);
 				}
-
 				flex: 1;
 				overflow: hidden;
 				position: relative;
-
 				.pseudoElement {
 					position: absolute;
 					height: 250%;

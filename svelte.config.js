@@ -1,5 +1,13 @@
-const preprocess = require('svelte-preprocess');
+import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static';
 
-module.exports = {
-	preprocess: preprocess()
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	preprocess: preprocess(),
+	kit: {
+		adapter: adapter(),
+		target: '#main'
+	}
 };
+
+export default config;

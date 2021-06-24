@@ -2,12 +2,10 @@
 	import copy from 'copy-to-clipboard';
 	import { tweened } from 'svelte/motion';
 	import { backInOut, linear } from 'svelte/easing';
-
 	const show = tweened(-32, {
 		duration: 400,
 		easing: backInOut
 	});
-
 	const text = tweened(0, {
 		duration: 40,
 		easing: linear
