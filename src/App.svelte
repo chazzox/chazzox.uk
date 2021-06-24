@@ -38,7 +38,7 @@
 				</p>
 				<p>
 					I'm currently a full time student. So my time is shared between these projects and my work at uni, I try
-					and spend a good amount of time on the projects though, as they are things that I am to eventually use (I
+					and spend a good amount of time on the projects though, as they are things that I aim to eventually use (I
 					already use Hydrova)
 				</p>
 				<p>

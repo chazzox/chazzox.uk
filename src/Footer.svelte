@@ -20,7 +20,7 @@
 	<div class="footerContainer">
 		<a class="profileLink" id="github" href="https://github.com/chazzox">Github</a>
 		<a class="profileLink" id="spotify" href="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk">Spotify</a>
-		<a class="profileLink" id="reddit" href="https://chazzox.github.io/Hydrova/#/u/chazzox/">Reddit</a>
+		<a class="profileLink" id="reddit" href="https://hydrova.netlify.app/u/chazzox">Reddit</a>
 		<a class="profileLink" id="twitter" href="https://twitter.com/_chazzox_">Twitter</a>
 		<span
 			class="profileLink"
@@ -30,7 +30,7 @@
 				show.set(5);
 				setTimeout(() => show.set(-32), 800);
 			}}
-			on:mouseenter={() => text.set(': chazzox#8286'.length)}
+			on:mouseenter={() => text.set(': chazzox#5555'.length)}
 			on:mouseleave={() => text.set(0)}
 			>Discord{': chazzox#8286'.slice(0, $text)}
 		</span>
