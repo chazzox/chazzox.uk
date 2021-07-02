@@ -73,7 +73,12 @@
 	<div class="center">
 		<div class="container">
 			<div id="projectContainer">
-				<a href="https://chazzox.github.io/shortcuts/" class="project" style="background-color: #667eff">
+				<a
+					href="https://chazzox.github.io/shortcuts/"
+					class="project"
+					style="background-color: #667eff"
+					target="_parent"
+				>
 					<div
 						class="pseudoElement"
 						style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
@@ -85,7 +90,7 @@
 						style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
 					/>
 				</a>
-				<a href="/tutoring" class="project" style="background-color: #875fb3"><div class="text">Tutoring</div></a>
+				<a href="./tutoring" class="project" style="background-color: #875fb3"><div class="text">Tutoring</div></a>
 			</div>
 			<div>
 				<h1>Charlie</h1>
