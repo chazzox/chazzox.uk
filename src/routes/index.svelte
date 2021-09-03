@@ -69,56 +69,50 @@
 	<title>Chazzox's Website</title>
 </svelte:head>
 
-<section class="app">
-	<div class="center">
-		<div class="container">
-			<div id="projectContainer">
-				<a
-					href="https://chazzox.github.io/shortcuts/"
-					class="project"
-					style="background-color: #667eff"
-					target="_parent"
-				>
-					<div
-						class="pseudoElement"
-						style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
-					/>
-				</a>
-				<a href="https://hydrova.netlify.app/" class="project" style="background-color: #875fb3">
-					<div
-						class="pseudoElement"
-						style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
-					/>
-				</a>
-				<a href="./tutoring" class="project" style="background-color: #875fb3"><div class="text">Tutoring</div></a>
-			</div>
-			<div>
-				<h1>Charlie</h1>
-				<h2>Hobbyist programmer</h2>
-				<p>Hi, I'm chazzox, also known as charlie.</p>
-				<p>
-					I like to make things. I learn languages as I go depending on where a project takes me, check out a
-					couple of my projects to see what I'm working on right now.
-				</p>
-				<p>
-					I'm currently a full time student. So my time is shared between these projects and my work at uni, I try
-					and spend a good amount of time on the projects though, as they are things that I aim to eventually use
-					(I already use Hydrova)
-				</p>
-				<p>
-					My interests lie in web development, software engineering and cyber security. And I usually make projects
-					around these interests. If you want to contact me on a project then email me at
-					<a href="mailto:31caylo13@gmail.com">31caylo13@gmail.com</a>
-				</p>
-			</div>
+<div class="center">
+	<div class="container">
+		<div id="projectContainer">
+			<a
+				href="https://chazzox.github.io/shortcuts/"
+				class="project"
+				style="background-color: #667eff"
+				target="_parent"
+			>
+				<div
+					class="pseudoElement"
+					style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
+				/>
+			</a>
+			<a href="https://hydrova.netlify.app/" class="project" style="background-color: #875fb3">
+				<div
+					class="pseudoElement"
+					style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
+				/>
+			</a>
+		</div>
+		<div>
+			<h1>Charlie</h1>
+			<h2>Hobbyist programmer</h2>
+			<p>Hi, I'm chazzox, also known as charlie.</p>
+			<p>
+				I like to make things. I learn languages as I go depending on where a project takes me, check out a couple of
+				my projects to see what I'm working on right now.
+			</p>
+			<p>
+				I'm currently a full time student. So my time is shared between these projects and my work at uni, I try and
+				spend a good amount of time on the projects though, as they are things that I aim to eventually use (I
+				already use Hydrova)
+			</p>
+			<p>
+				My interests lie in web development, software engineering and cyber security. And I usually make projects
+				around these interests. If you want to contact me on a project then email me at
+				<a href="mailto:31caylo13@gmail.com">31caylo13@gmail.com</a>
+			</p>
 		</div>
 	</div>
-	<Footer />
-</section>
-<!-- <DeviceDetector showInDevice="desktop"> -->
-<!-- <Particles id="tsparticles" options={particlesConfig} /> -->
+</div>
+<Footer />
 
-<!-- </DeviceDetector> -->
 <style type="text/scss">
 	:global(#tsparticles) {
 		position: fixed;
@@ -151,29 +145,6 @@
 				&,
 				.pseudoElement {
 					transition: all 0.3s ease;
-					-webkit-transition: all 0.3s ease;
-					-o-transition: all 0.3s ease;
-					-ms-transition: all 0.3s ease;
-				}
-				.text {
-					display: flex;
-					width: 100%;
-					height: 100%;
-					justify-content: center;
-					align-items: center;
-					font-weight: 700;
-					font-size: 50px;
-					color: white;
-					text-decoration: none;
-					transform: rotate(45deg);
-					transition: all 0.1s linear;
-					-webkit-transition: all 0.1s linear;
-					-o-transition: all 0.1s linear;
-					-ms-transition: all 0.1s linear;
-				}
-				.text:hover {
-					font-size: 75px;
-					transform: rotate(0deg);
 				}
 				flex: 1;
 				overflow: hidden;

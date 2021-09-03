@@ -2,12 +2,9 @@
 	"name": "homepage",
 	"version": "3.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"start": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
-		"check": "svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check --plugin-search-dir=. .",
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
@@ -20,14 +17,10 @@
 		"sass": "^1.32.8",
 		"svelte": "^3.34.0",
 		"svelte-check": "^2.0.0",
-		"svelte-device-detector": "^0.2.2",
 		"svelte-particles": "^1.12.2",
 		"svelte-preprocess": "^4.0.0",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0"
 	},
-	"type": "module",
-	"dependencies": {
-		"svelte-device-detector": "^0.2.2"
-	}
+	"type": "module"
 }

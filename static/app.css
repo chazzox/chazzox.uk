@@ -1,8 +1,6 @@
 html,
 body,
 #main {
-	width: 100%;
-	height: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -10,21 +8,20 @@ html {
 	background: linear-gradient(153deg, #667eff 5%, #ff849d 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
+	min-height: 100%;
 }
 body {
 	color: #333;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
 		sans-serif;
+	min-height: 100%;
 }
 
-.app {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100%;
+#main {
 	display: flex;
 	flex-direction: column;
+	min-height: 100%;
 }
 
 .center {
