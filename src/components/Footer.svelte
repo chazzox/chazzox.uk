@@ -28,7 +28,7 @@
 				show.set(5);
 				setTimeout(() => show.set(-32), 800);
 			}}
-			on:mouseenter={() => text.set(': chazzox#5555'.length)}
+			on:mouseenter={() => text.set(': chazzox#1001'.length)}
 			on:mouseleave={() => text.set(0)}
 			>Discord{': chazzox#8286'.slice(0, $text)}
 		</span>
