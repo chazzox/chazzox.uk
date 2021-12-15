@@ -24,13 +24,13 @@
 			class="profileLink"
 			id="discord"
 			on:click={() => {
-				copy('chazzox#8286');
+				copy('chazzox#1001');
 				show.set(5);
 				setTimeout(() => show.set(-32), 800);
 			}}
 			on:mouseenter={() => text.set(': chazzox#1001'.length)}
 			on:mouseleave={() => text.set(0)}
-			>Discord{': chazzox#8286'.slice(0, $text)}
+			>Discord{': chazzox#1001'.slice(0, $text)}
 		</span>
 	</div>
 </div>

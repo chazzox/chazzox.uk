@@ -4,11 +4,25 @@ body,
 	margin: 0;
 	padding: 0;
 }
+
+html::-webkit-scrollbar-track {
+	background-color: rgb(46, 54, 69);
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: rgb(210, 210, 210);
+}
+html::-webkit-scrollbar {
+	width: 9px;
+}
+
 html {
 	background: linear-gradient(153deg, #667eff 5%, #ff849d 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 100%;
+	scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69);
+	scrollbar-width: thin;
 }
 body {
 	color: #333;

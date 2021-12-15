@@ -1,68 +1,6 @@
 <script>
-	// import DeviceDetector from 'svelte-device-detector';
-	import Particles from 'svelte-particles';
-	import Footer from '../components/Footer.svelte';
-	let particlesConfig = {
-		particles: {
-			number: {
-				value: 100,
-				density: {
-					enable: true,
-					value_area: 1000
-				},
-				max: -1
-			},
-			color: { value: '#FFF' },
-			shape: {
-				type: 'circle',
-				polygon: { sides: 5 },
-				image: { src: '', width: 100, height: 100 }
-			},
-			stroke: { width: 0, color: '#000000' },
-			opacity: {
-				value: 0.5,
-				random: !1,
-				anim: { enable: !0, speed: 1, minimumValue: 0.1, sync: !1 }
-			},
-			size: {
-				value: 1,
-				random: !1,
-				anim: { enable: !1, speed: 40, minimumValue: 0, sync: !1 }
-			},
-			links: {
-				enable: !0,
-				distance: 150,
-				color: '#FFF',
-				opacity: 0.6,
-				width: 1,
-				shadow: { enable: !1, blur: 5, color: 'lime' }
-			},
-			move: {
-				enable: !0,
-				speed: 3,
-				direction: 'none',
-				random: !1,
-				straight: !1,
-				outMode: 'bounce',
-				bounce: !0,
-				attract: { enable: !1, rotateX: 3e3, rotateY: 3e3 }
-			}
-		},
-		detectRetina: !0,
-		fpsLimit: 999,
-		polygon: {
-			enable: !1,
-			scale: 1,
-			type: 'inline',
-			inline: { arrangement: 'onePerPoint' },
-			draw: {
-				enable: !1,
-				stroke: { width: 0.5, color: 'rgba(255, 255, 255, .1)' }
-			},
-			move: { radius: 10, type: 'path' },
-			url: ''
-		}
-	};
+	import Footer from '../components/footer.svelte';
+	import Project from '../components/project.svelte';
 </script>
 
 <svelte:head>
@@ -72,23 +10,8 @@
 <div class="center">
 	<div class="container">
 		<div id="projectContainer">
-			<a
-				href="https://chazzox.github.io/shortcuts/"
-				class="project"
-				style="background-color: #667eff"
-				target="_parent"
-			>
-				<div
-					class="pseudoElement"
-					style="background-image: url('images/shortcuts.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
-				/>
-			</a>
-			<a href="https://hydrova.netlify.app/" class="project" style="background-color: #875fb3">
-				<div
-					class="pseudoElement"
-					style="background-image:url('images/hydrova.jpg'); transform: translate(-10%, -60px) rotate(30deg)"
-				/>
-			</a>
+			<Project url="https://chazzox.github.io/shortcuts/" background="#667eff" img="'images/shortcuts.jpg'" />
+			<Project url="https://hydrova.netlify.app/" background="#875fb3" img="'images/hydrova.jpg'" />
 		</div>
 		<div>
 			<h1>Charlie</h1>
@@ -140,35 +63,6 @@
 			flex-direction: column;
 			overflow: hidden;
 			border-radius: 40px;
-			.project {
-				text-decoration: none;
-				&,
-				.pseudoElement {
-					transition: all 0.3s ease;
-				}
-				flex: 1;
-				overflow: hidden;
-				position: relative;
-				.pseudoElement {
-					position: absolute;
-					height: 250%;
-					width: 250%;
-					top: -50%;
-					left: -50%;
-					background-repeat: no-repeat;
-					background-size: 100%;
-					background-position: center;
-					transform: rotate(30deg);
-				}
-				&:hover {
-					flex: 2;
-					.pseudoElement {
-						opacity: 1 !important;
-						background-size: 130%;
-						transform: rotate(10deg);
-					}
-				}
-			}
 		}
 		> div {
 			flex: 1 1 250px;
