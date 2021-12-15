@@ -36,7 +36,7 @@
 </div>
 <Footer />
 
-<style type="text/scss">
+<style lang="scss">
 	:global(#tsparticles) {
 		position: fixed;
 		top: 0;

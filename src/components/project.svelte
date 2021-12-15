@@ -8,7 +8,7 @@
 	<div class="pseudoElement" style={`background-image:url(${img}); transform: translate(-10%, -60px) rotate(30deg)`} />
 </a>
 
-<style type="text/scss">
+<style lang="scss">
 	.project {
 		text-decoration: none;
 		&,
