@@ -15,8 +15,8 @@
 	`;
 </script>
 
-<!-- svelte-ignore a11y-missing-content -->
 <div class="projectContainer">
+	<!-- svelte-ignore a11y-missing-content -->
 	<a href={url} class="{backgroundPsuedo} {githubOnly ? 'git' : 'norm'} project" />
 	<p>{name}</p>
 </div>

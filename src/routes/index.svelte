@@ -19,6 +19,7 @@
 			</p>
 		</div>
 		<div id="projectContainer">
+			<Project url="https://github.com/chazzox/grpupdm/" githubOnly name="Groupdm - A betterdiscord plugin" />
 			<Project
 				url="https://hydrova.netlify.app/"
 				background="#875fb3"
@@ -43,7 +44,16 @@
 				img="images/replay.png"
 				name="Replay - A discover weekly backup tool"
 			/>
-			<Project url="https://github.com/chazzox/grpupdm/" githubOnly name="Groupdm - A betterdiscord plugin" />
+			<Project
+				url="https://github.com/chazzox/plugin-template/"
+				name="A plugin template for better discord"
+				githubOnly
+			/>
+			<Project
+				url="https://github.com/chazzox/faster-panopto/"
+				name="Browser extension for panopto lectures"
+				githubOnly
+			/>
 		</div>
 	</div>
 </div>
