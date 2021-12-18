@@ -74,7 +74,7 @@
 		background: linear-gradient(to right, #040d21, #3a3da0);
 	}
 	#spotify {
-		background: linear-gradient(to right, #33c065, #302b2b);
+		background: linear-gradient(to right, #1db954, #181818);
 	}
 	#reddit {
 		background: linear-gradient(to right, #ff4c02, #ed0a21);
