@@ -3,6 +3,7 @@
 	export let url;
 	export let img = 'images/github.svg';
 	export let background;
+	export let name = 'maliha';
 
 	export let githubOnly = false;
 
@@ -15,9 +16,28 @@
 </script>
 
 <!-- svelte-ignore a11y-missing-content -->
-<a href={url} class="{backgroundPsuedo} {githubOnly ? 'git' : 'norm'} project" />
+<div class="projectContainer">
+	<a href={url} class="{backgroundPsuedo} {githubOnly ? 'git' : 'norm'} project" />
+	<p>{name}</p>
+</div>
 
 <style lang="scss">
+	.projectContainer {
+		display: flex;
+		flex-direction: column;
+		margin: 10px 15px 0px 15px;
+		& > p {
+			text-align: center;
+			margin: 0;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+		}
+		&:hover {
+			& > p {
+				opacity: 1;
+			}
+		}
+	}
 	.git {
 		background: linear-gradient(to right, #040d21, #3a3da0);
 		&::before {
@@ -54,7 +74,6 @@
 
 		position: relative;
 		overflow: hidden;
-		margin: 15px;
 
 		box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
 			rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -64,9 +83,9 @@
 		transition: margin 0.2s ease;
 
 		&::before {
-			background-position: center;
 			content: '';
 			position: absolute;
+			background-position: center;
 			transition: background-size 0.2s ease;
 		}
 	}

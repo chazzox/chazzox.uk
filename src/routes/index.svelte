@@ -19,11 +19,31 @@
 			</p>
 		</div>
 		<div id="projectContainer">
-			<Project url="https://hydrova.netlify.app/" background="#875fb3" img="images/hydrova.jpg" />
-			<Project url="https://github.com/rhul-compsoc/twitter-stream/" background="#1da1f2" img="images/twitter.png" />
-			<Project url="https://chazzox.github.io/shortcuts/" background="#667eff" img="images/shortcuts.jpg" />
-			<Project url="https://chazzox.github.io/replay/" background="#1db954" img="images/replay.png" />
-			<Project url="https://github.com/chazzox/grpupdm/" githubOnly />
+			<Project
+				url="https://hydrova.netlify.app/"
+				background="#875fb3"
+				img="images/hydrova.jpg"
+				name="Hydrova - High perfomance reddit client"
+			/>
+			<Project
+				url="https://github.com/rhul-compsoc/twitter-stream/"
+				background="#1da1f2"
+				img="images/twitter.png"
+				name="Twitter feed made for a RHUL SU night"
+			/>
+			<Project
+				url="https://chazzox.github.io/shortcuts/"
+				background="#667eff"
+				img="images/shortcuts.jpg"
+				name="Shortcuts - All your bookmarks on one site!"
+			/>
+			<Project
+				url="https://chazzox.github.io/replay/"
+				background="#1db954"
+				img="images/replay.png"
+				name="Replay - A discover weekly backup tool"
+			/>
+			<Project url="https://github.com/chazzox/grpupdm/" githubOnly name="Groupdm - A betterdiscord plugin" />
 		</div>
 	</div>
 </div>
