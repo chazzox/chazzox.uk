@@ -12,7 +12,7 @@
 		<div id="info">
 			<h1>Charlie</h1>
 			<h2>Hobbyist programmer</h2>
-			<p>Hi! I'm chazzox, you may also know me has charlie</p>
+			<p>Hi! I'm chazzox, you may also know me as charlie</p>
 			<p>
 				I'm currently a full time student but I like to work on pojects from time to time. Feel free to checkout some
 				of my previous projects below : )
