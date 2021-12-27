@@ -36,7 +36,7 @@
 				url="https://chazzox.github.io/shortcuts/"
 				background="#667eff"
 				img="images/shortcuts.jpg"
-				name="Shortcuts - All your bookmarks on one site!"
+				name="Shortcuts - Your bookmarks on one site!"
 			/>
 			<Project
 				url="https://chazzox.github.io/replay/"
