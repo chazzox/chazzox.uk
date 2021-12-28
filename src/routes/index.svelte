@@ -12,14 +12,21 @@
 		<div id="info">
 			<h1>Charlie</h1>
 			<h2>Hobbyist programmer</h2>
-			<p>Hi! I'm chazzox, you may also know me as charlie</p>
+			<p>Hi! I'm chazzox, you may also know me as charlie!</p>
 			<p>
 				I'm currently a full time student but I like to work on pojects from time to time. Feel free to checkout some
 				of my previous projects below : )
 			</p>
 		</div>
 		<div id="projectContainer">
-			<Project url="https://github.com/chazzox/grpupdm/" githubOnly name="Groupdm - A betterdiscord plugin" />
+			<Project
+				url="https://github.com/chazzox/groupdm/"
+				name="Groupdm - Betterdiscord plugin"
+				img="https://betterdiscord.app/resources/branding/logo_small.svg"
+				iconOnly
+				iconGradientFrom="#14151b"
+				iconGradientTo="#0c0d10"
+			/>
 			<Project
 				url="https://hydrova.netlify.app/"
 				background="#875fb3"
@@ -33,10 +40,23 @@
 				name="Twitter feed made for a RHUL SU night"
 			/>
 			<Project
+				url="https://github.com/chazzox/faster-panopto/"
+				name="Browser extension for panopto lectures"
+				iconOnly
+			/>
+			<Project
 				url="https://chazzox.github.io/shortcuts/"
 				background="#667eff"
 				img="images/shortcuts.jpg"
 				name="Shortcuts - Your bookmarks on one site!"
+			/>
+			<Project
+				url="https://github.com/chazzox/plugin-template/"
+				name="A plugin template for better discord"
+				img="https://betterdiscord.app/resources/branding/logo_small.svg"
+				iconOnly
+				iconGradientFrom="#14151b"
+				iconGradientTo="#0c0d10"
 			/>
 			<Project
 				url="https://chazzox.github.io/replay/"
@@ -45,14 +65,12 @@
 				name="Replay - A discover weekly backup tool"
 			/>
 			<Project
-				url="https://github.com/chazzox/plugin-template/"
-				name="A plugin template for better discord"
-				githubOnly
-			/>
-			<Project
-				url="https://github.com/chazzox/faster-panopto/"
-				name="Browser extension for panopto lectures"
-				githubOnly
+				url="https://github.com/chazzox/hide/"
+				name="Hide - Betterdiscord plugin"
+				img="https://betterdiscord.app/resources/branding/logo_small.svg"
+				iconOnly
+				iconGradientFrom="#14151b"
+				iconGradientTo="#0c0d10"
 			/>
 		</div>
 	</div>

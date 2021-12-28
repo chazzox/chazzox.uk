@@ -1,11 +1,19 @@
 <script>
 	import { css } from '@emotion/css';
+	import classNames from 'classnames';
 	export let url;
 	export let img = 'images/github.svg';
 	export let background;
-	export let name = 'maliha';
+	export let name;
 
-	export let githubOnly = false;
+	export let iconOnly = false;
+
+	export let iconGradientFrom = '#040d21';
+	export let iconGradientTo = '#3a3da0';
+
+	const iconGrad = css`
+		background: linear-gradient(to right, ${iconGradientFrom}, ${iconGradientTo});
+	`;
 
 	const backgroundPsuedo = css`
 		background-color: ${background};
@@ -17,7 +25,11 @@
 
 <div class="projectContainer">
 	<!-- svelte-ignore a11y-missing-content -->
-	<a href={url} class="{backgroundPsuedo} {githubOnly ? 'git' : 'norm'} project" />
+	<a
+		href={url}
+		target="_blank"
+		class={classNames('project', [backgroundPsuedo], { icon: iconOnly, [iconGrad]: iconOnly, norm: !iconOnly })}
+	/>
 	<p>{name}</p>
 </div>
 
@@ -38,8 +50,7 @@
 			}
 		}
 	}
-	.git {
-		background: linear-gradient(to right, #040d21, #3a3da0);
+	.icon {
 		&::before {
 			height: 100%;
 			width: 100%;
