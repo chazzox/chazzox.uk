@@ -20,8 +20,8 @@
 		</div>
 		<div id="projectContainer">
 			<Project
-				url="https://github.com/chazzox/groupdm/"
-				name="Groupdm - Betterdiscord plugin"
+				url="https://github.com/chazzox/discordify/"
+				name="discordify - A Betterdiscord plugin"
 				img="https://betterdiscord.app/resources/branding/logo_small.svg"
 				iconOnly
 				iconGradientFrom="#14151b"
@@ -51,22 +51,14 @@
 				name="Shortcuts - Your bookmarks on one site!"
 			/>
 			<Project
-				url="https://github.com/chazzox/plugin-template/"
-				name="A plugin template for better discord"
-				img="https://betterdiscord.app/resources/branding/logo_small.svg"
-				iconOnly
-				iconGradientFrom="#14151b"
-				iconGradientTo="#0c0d10"
-			/>
-			<Project
 				url="https://chazzox.github.io/replay/"
 				background="#1db954"
 				img="images/replay.png"
 				name="Replay - A discover weekly backup tool"
 			/>
 			<Project
-				url="https://github.com/chazzox/hide/"
-				name="Hide - Betterdiscord plugin"
+				url="https://github.com/chazzox/BetterDiscordPlugins/"
+				name="A collection of my other smaller bd plugins"
 				img="https://betterdiscord.app/resources/branding/logo_small.svg"
 				iconOnly
 				iconGradientFrom="#14151b"
