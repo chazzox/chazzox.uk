@@ -28,7 +28,7 @@
 				iconGradientTo="#0c0d10"
 			/>
 			<Project
-				url="https://hydrova.netlify.app/"
+				url="https://hydrova.chazzox.uk/"
 				background="#875fb3"
 				img="images/hydrova.jpg"
 				name="Hydrova - High perfomance reddit client"
@@ -45,15 +45,15 @@
 				iconOnly
 			/>
 			<Project
-				url="https://chazzox.github.io/shortcuts/"
+				url="https://chazzox.uk/shortcuts/"
 				background="#667eff"
 				img="images/shortcuts.jpg"
 				name="Shortcuts - Your bookmarks on one site!"
 			/>
 			<Project
-				url="https://chazzox.github.io/replay/"
+				url="https://chazzox.uk/RePLAY/"
 				background="#1db954"
-				img="images/replay.png"
+				img="images/replay.jpg"
 				name="Replay - A discover weekly backup tool"
 			/>
 			<Project

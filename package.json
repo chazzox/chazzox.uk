@@ -3,6 +3,7 @@
 	"version": "3.0.2",
 	"scripts": {
 		"start": "svelte-kit dev",
+		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"format": "prettier --write --plugin-search-dir=. ."
