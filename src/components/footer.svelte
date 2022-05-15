@@ -57,6 +57,9 @@
 		background-color: #f7eaea;
 		padding: 15px;
 		border-radius: 55px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
 	}
 	.profileLink {
 		text-decoration: none;
