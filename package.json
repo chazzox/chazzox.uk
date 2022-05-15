@@ -10,18 +10,18 @@
 	},
 	"dependencies": {
 		"@emotion/css": "^11.7.1",
-		"classnames": "^2.3.1"
+		"classnames": "^2.3.1",
+		"sass": "^1.32.8",
+		"svelte": "^3.44.0",
+		"copy-to-clipboard": "^3.3.1"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.4.0",
-		"copy-to-clipboard": "^3.3.1",
 		"pnpm": "^7.1.0",
 		"prettier": "^2.3.1",
 		"prettier-plugin-svelte": "^2.2.0",
-		"sass": "^1.32.8",
-		"svelte": "^3.44.0",
 		"svelte-preprocess": "^4.0.0"
 	},
 	"type": "module"
