@@ -20,7 +20,8 @@
 		<a class="profileLink" id="spotify" href="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk">Spotify</a>
 		<a class="profileLink" id="reddit" href="https://hydrova.netlify.app/u/chazzox">Reddit</a>
 		<a class="profileLink" id="twitter" href="https://twitter.com/_chazzox_">Twitter</a>
-		<span
+		
+<span
 			class="profileLink"
 			id="discord"
 			on:click={() => {
@@ -28,7 +29,8 @@
 				show.set(5);
 				setTimeout(() => show.set(-32), 800);
 			}}
-			on:mouseenter={() => text.set(': chazzox#1001'.length)}
+           
+			on:mouseenter={() => {if (screen?.width>= 530) text.set(': chazzox#1001'.length)}}
 			on:mouseleave={() => text.set(0)}
 			>Discord{': chazzox#1001'.slice(0, $text)}
 		</span>
@@ -65,10 +67,12 @@
 		font-weight: bold;
 		transition: padding 0.2s ease;
 		line-height: 18px;
-		&:hover {
-			font-size: 18px;
-			padding: 7px 10px;
-		}
+
+        &:hover {
+            font-size: 18px;
+            padding: 7px 10px;
+        }
+	  
 	}
 	#github {
 		background: linear-gradient(to right, #040d21, #3a3da0);
