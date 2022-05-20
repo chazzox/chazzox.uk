@@ -12,7 +12,9 @@ module.exports = {
 				twitterOne: '#55acef',
 				twitterTwo: '#0a76e7',
 				discordOne: '#7289da',
-				discordTwo: '#21357d'
+				discordTwo: '#21357d',
+				linkedinOne: '#0077B5',
+				linkedinTwo: '#00A0DC'
 			}
 		}
 	},

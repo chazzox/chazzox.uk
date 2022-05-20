@@ -1,44 +1,39 @@
 <script>
 	import { tweened } from 'svelte/motion';
 	import { backInOut } from 'svelte/easing';
-	import classname from 'classnames';
+	import FooterLink from './footer-link.svelte';
 	import copy from 'copy-to-clipboard';
 
 	const show = tweened(-32, {
 		duration: 400,
 		easing: backInOut
 	});
+
+	const bounceHandle = () => {
+		copy('chazzox#1001');
+		show.set(5);
+		setTimeout(() => show.set(-32), 800);
+	};
 </script>
 
-<div class="fixed">Copied: chazzox#1001!</div>
+<div class="fixed w-full flex justify-center" style={`top: ${$show}px`}>
+	<div class="bg-green-600 py-0.5 px-1 rounded-lg">Copied: chazzox#1001!</div>
+</div>
 <div
-	class="flex flex-col text-white sm:bg-slate-200 sm:text-black sm:flex-row sm:mx-auto sm:my-6  sm:rounded-xl sm:overflow-hidden"
+	class="flex flex-row flex-wrap justify-center bg-slate-200  text-black mx-auto my-6 rounded-xl overflow-hidden shadow-2xl"
 >
-	<a
-		class="bg-gradient-to-r from-githubOne to-githubTwo py-1 px-2 sm:bg-none sm:hover:bg-black sm:hover:text-white sm:p-2 sm:hover:bg-gradient-to-r transition-colors duration-300"
-		href="https://github.com/chazzox">Github</a
-	>
-	<a
-		class="bg-gradient-to-r from-spotifyOne to-spotifyTwo py-1 px-2 sm:bg-none sm:hover:bg-black sm:hover:text-white sm:p-2 sm:hover:bg-gradient-to-r transition-colors duration-300"
-		href="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk">Spotify</a
-	>
-	<a
-		class="bg-gradient-to-r from-redditOne to-redditTwo py-1 px-2 sm:bg-none sm:hover:bg-black sm:hover:text-white sm:p-2 sm:hover:bg-gradient-to-r transition-colors duration-300"
-		href="https://hydrova.netlify.app/u/chazzox">Reddit</a
-	>
-	<a
-		class="bg-gradient-to-r from-twitterOne to-twitterTwo py-1 px-2 sm:bg-none sm:hover:bg-black sm:hover:text-white sm:p-2 sm:hover:bg-gradient-to-r transition-colors duration-300"
-		href="https://twitter.com/_chazzox_">Twitter</a
-	>
-
-	<span
-		class="bg-gradient-to-r from-discordOne to-discordTwo py-1 px-2 sm:bg-none sm:hover:bg-black sm:hover:text-white sm:p-2 sm:hover:bg-gradient-to-r transition-colors duration-300 cursor-pointer"
-		id="discord"
-		on:click={() => {
-			copy('chazzox#1001');
-			show.set(5);
-			setTimeout(() => show.set(-32), 800);
-		}}
-		>Discord
-	</span>
+	<FooterLink url="https://github.com/chazzox" classString="from-githubTwo to-githubOne" displayText="Github" />
+	<FooterLink
+		url="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk"
+		classString="to-spotifyOne from-spotifyTwo"
+		displayText="Spotify"
+	/>
+	<FooterLink url="https://hydrova.netlify.app/u/chazzox" classString="from-redditOne to-redditTwo" displayText="Reddit" />
+	<FooterLink url="https://twitter.com/_chazzox_" classString="from-twitterOne to-twitterTwo" displayText="Twitter" />
+	<FooterLink classString="from-discordOne to-discordTwo cursor-pointer" on:click={bounceHandle} displayText="Discord" />
+	<FooterLink
+		url="https://www.linkedin.com/in/chazzox/"
+		classString="from-linkedinOne to-linkedinTwo"
+		displayText="LinkedIn"
+	/>
 </div>
