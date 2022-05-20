@@ -6,10 +6,9 @@
 <svelte:head>
 	<title>Chazzox's Website</title>
 </svelte:head>
-
-<div class="center">
-	<div class="container">
-		<div id="info">
+<div class="flex flex-col min-h-screen dark:bg-slate-600 dark:text-white">
+	<div class="flex-1">
+		<div>
 			<h1>Charlie</h1>
 			<h2>Hobbyist programmer</h2>
 			<p>Hi! I'm chazzox, you may also know me as charlie!</p>
@@ -66,28 +65,6 @@
 			/>
 		</div>
 	</div>
+
+	<Footer />
 </div>
-<Footer />
-
-<style lang="scss">
-	.container {
-		margin-top: 50px;
-		max-width: 1200px;
-		background-color: #f7eaea;
-		box-shadow: 27px 43px 92px -6px rgba(0, 0, 0, 0.75);
-		width: calc(100vw - 50px);
-		padding: 30px;
-		box-sizing: border-box;
-		border-radius: 55px;
-	}
-
-	#projectContainer {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	#info * {
-		text-align: center;
-	}
-</style>
