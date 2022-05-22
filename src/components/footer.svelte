@@ -17,7 +17,7 @@
 </script>
 
 <div class="fixed w-full flex justify-center" style={`top: ${$show}px`}>
-	<div class="bg-green-600 py-0.5 px-1 rounded-lg">Copied: chazzox#1001!</div>
+	<div class="bg-green-600 py-0.5 px-1 rounded-lg text-white">Copied: chazzox#1001!</div>
 </div>
 <div
 	class="flex flex-row flex-wrap justify-center text-black mx-3 sm:mx-auto my-9 rounded-xl overflow-hidden shadow-2xl bg-accent sm:bg-transparent border-black border-[0.5px]"
@@ -30,7 +30,7 @@
 	/>
 	<FooterLink url="https://hydrova.netlify.app/u/chazzox" classString="from-redditOne to-redditTwo" displayText="Reddit" />
 	<FooterLink url="https://twitter.com/_chazzox_" classString="from-twitterOne to-twitterTwo" displayText="Twitter" />
-	<FooterLink classString="from-discordOne to-discordTwo cursor-pointer" on:click={bounceHandle} displayText="Discord" />
+	<FooterLink classString="from-discordOne to-discordTwo cursor-pointer" onClick={bounceHandle} displayText="Discord" />
 	<FooterLink
 		url="https://www.linkedin.com/in/chazzox/"
 		classString="from-linkedinOne to-linkedinTwo"
