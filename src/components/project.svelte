@@ -5,7 +5,7 @@
 </script>
 
 <div class="projectContainer">
-	<p><a href={url} target="_blank" class="underline">{name}</a> - {description}</p>
+	<p class="py-1"><a href={url} target="_blank" class="underline">{name}</a> - {description}</p>
 </div>
 
 <style lang="scss">
