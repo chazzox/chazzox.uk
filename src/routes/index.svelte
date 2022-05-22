@@ -9,10 +9,11 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="portfolio site for my projects" />
 	<meta name="description" content="portfolio site for my projects" />
-	<meta property="og:image" content="/images/screenshot.webp" />
+	<meta property="og:image" content="/images/screenshot.jpg" />
 	<meta property="og:url" content="/" />
-	<meta name="twitter:card" content="/images/screenshot.webp" />
+	<meta name="twitter:card" content="/images/screenshot.jpg" />
 </svelte:head>
+
 <div class="flex flex-col min-h-screen bg-cover bg-main-img bg-center -z-40">
 	<div class="flex-1 flex text-white justify-center items-center">
 		<div
