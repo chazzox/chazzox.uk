@@ -8,6 +8,7 @@
 	<meta property="og:title" content="chazzox's personal website" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="portfolio site for my projects" />
+	<meta name="description" content="portfolio site for my projects" />
 	<meta property="og:image" content="/images/screenshot.webp" />
 	<meta property="og:url" content="/" />
 	<meta name="twitter:card" content="/images/screenshot.webp" />
