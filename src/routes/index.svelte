@@ -16,7 +16,7 @@
 <div class="flex flex-col min-h-screen bg-cover bg-main-img bg-center -z-40">
 	<div class="flex-1 flex text-white justify-center items-center">
 		<div
-			class="border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative before:absolute before:bg-main-img before:top-0 before:left-0 before:right-0 before:bottom-0 before:content-[''] before:bg-fixed before:bg-center before:bg-cover before:blur-md"
+			class="border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative before:absolute before:bg-main-img before:-top-10 before:-left-10 before:-right-10 before:-bottom-10 before:content-[''] before:bg-fixed before:bg-center before:bg-cover before:blur-md overflow-hidden"
 		>
 			<div class="relative z-1">
 				<h1 class="text-2xl font-bold my-3"><span class="hidden sm:inline"># </span>Charlie</h1>
