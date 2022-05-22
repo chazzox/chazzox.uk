@@ -18,7 +18,7 @@ module.exports = {
 				accent: '#062326'
 			},
 			backgroundImage: {
-				'main-bg': 'url("/images/bg.jpg")'
+				'main-img': 'url("/images/bg.webp")'
 			},
 			fontFamily: { sans: ['Fira Code', 'monospace'] }
 		}
