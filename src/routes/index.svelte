@@ -6,65 +6,61 @@
 <svelte:head>
 	<title>Chazzox's Website</title>
 </svelte:head>
-<div class="flex flex-col min-h-screen dark:bg-slate-600 dark:text-white">
-	<div class="flex-1">
-		<div>
-			<h1>Charlie</h1>
-			<h2>Hobbyist programmer</h2>
-			<p>Hi! I'm chazzox, you may also know me as charlie!</p>
-			<p>
-				I'm currently a full time student but I like to work on pojects from time to time. Feel free to checkout some
-				of my previous projects below : )
-			</p>
-		</div>
-		<div id="projectContainer">
-			<Project
-				url="https://github.com/chazzox/discordify/"
-				name="discordify - A Betterdiscord plugin"
-				img="https://betterdiscord.app/resources/branding/logo_small.svg"
-				iconOnly
-				iconGradientFrom="#14151b"
-				iconGradientTo="#0c0d10"
+<div class="flex flex-col min-h-screen bg-cover bg-main-bg bg-center">
+	<div class="flex-1 flex text-white justify-center items-center">
+		<div class="backdrop-blur-sm border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 overflow-hidden">
+			<div
+				class="fixed -top-[10%] -left-[10%] h-[120%] w-[120%] -z-20 bg-center bg-main-bg bg-fixed bg-cover blur-md"
 			/>
-			<Project
-				url="https://hydrova.chazzox.uk/"
-				background="#875fb3"
-				img="images/hydrova.jpg"
-				name="Hydrova - High perfomance reddit client"
-			/>
-			<Project
-				url="https://github.com/rhul-compsoc/twitter-stream/"
-				background="#1da1f2"
-				img="images/twitter.png"
-				name="Twitter feed made for a RHUL SU night"
-			/>
-			<Project
-				url="https://github.com/chazzox/faster-panopto/"
-				name="Browser extension for panopto lectures"
-				iconOnly
-			/>
-			<Project
-				url="https://chazzox.uk/shortcuts/"
-				background="#667eff"
-				img="images/shortcuts.jpg"
-				name="Shortcuts - Your bookmarks on one site!"
-			/>
-			<Project
-				url="https://chazzox.uk/RePLAY/"
-				background="#1db954"
-				img="images/replay.jpg"
-				name="Replay - A discover weekly backup tool"
-			/>
-			<Project
-				url="https://github.com/chazzox/BetterDiscordPlugins/"
-				name="A collection of my other smaller bd plugins"
-				img="https://betterdiscord.app/resources/branding/logo_small.svg"
-				iconOnly
-				iconGradientFrom="#14151b"
-				iconGradientTo="#0c0d10"
-			/>
+			<div>
+				<h1 class="text-2xl font-bold my-3"><span class="hidden sm:inline"># </span>Charlie</h1>
+				<h2 class="text-lg sm:text-xl font-bold my-3">
+					<span class="hidden sm:inline">## </span>Student/Full Stack Dev
+				</h2>
+				<p class="my-3"><span class="hidden sm:inline">- </span>Hi! I'm chazzox, you may also know me as charlie!</p>
+				<p>
+					<span class="hidden sm:inline">- </span>I'm a full time Computer Science student
+					<a class="underline font-semibold" href="https://www.royalholloway.ac.uk/">@RHUL</a>
+					while doing full Stack work on the side
+				</p>
+				<p class="py-1.5">
+					<span class="hidden sm:inline">- </span>Working part time for<a
+						class="underline pl-2 px-1 font-semibold"
+						href="https://projectwaitless.com/">Project Waitless</a
+					>
+					and
+					<a class="underline px-1 font-semibold" href="https://www.gosystem.co.uk/">goSystem</a>
+				</p>
+				<p class="py-1.5">
+					<span class="hidden sm:inline">- </span>Below are some of my projects i've tinkered with over the years:
+				</p>
+			</div>
+			<div class="sm:ml-7">
+				<Project
+					url="https://github.com/chazzox/discordify/"
+					name="discordify"
+					description="A Betterdiscord plugin"
+				/>
+				<Project url="https://hydrova.chazzox.uk/" name="Hydrova" description="High perfomance reddit client" />
+				<Project
+					url="https://github.com/rhul-compsoc/twitter-stream/"
+					name="Twitter Stream"
+					description="Twitter feed made for a RHUL SU night"
+				/>
+				<Project
+					url="https://github.com/chazzox/faster-panopto/"
+					name="Faster Panopto"
+					description="Browser extension for panopto lectures"
+				/>
+				<Project url="https://chazzox.uk/shortcuts/" name="Shortcuts" description="Your bookmarks on one site!" />
+				<Project url="https://chazzox.uk/RePLAY/" name="Replay" description="A discover weekly backup tool" />
+				<Project
+					url="https://github.com/chazzox/BetterDiscordPlugins/"
+					name="BetterDiscordPlugins"
+					description="A monorepo containing all my BDP stuff"
+				/>
+			</div>
 		</div>
 	</div>
-
 	<Footer />
 </div>

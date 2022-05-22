@@ -1,18 +1,11 @@
 <script>
 	export let url;
-	export let img = 'images/github.svg';
-	export let background;
 	export let name;
-
-	export let iconOnly = false;
-
-	export let iconGradientFrom = '#040d21';
-	export let iconGradientTo = '#3a3da0';
+	export let description;
 </script>
 
 <div class="projectContainer">
-	<a href={url} target="_blank" />
-	<p>{name}</p>
+	<p><a href={url} target="_blank" class="underline">{name}</a> - {description}</p>
 </div>
 
 <style lang="scss">

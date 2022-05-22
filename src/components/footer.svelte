@@ -20,7 +20,7 @@
 	<div class="bg-green-600 py-0.5 px-1 rounded-lg">Copied: chazzox#1001!</div>
 </div>
 <div
-	class="flex flex-row flex-wrap justify-center bg-slate-200  text-black mx-auto my-6 rounded-xl overflow-hidden shadow-2xl"
+	class="flex flex-row flex-wrap justify-center text-black mx-3 sm:mx-auto my-9 rounded-xl overflow-hidden shadow-2xl relative border-black border-[0.5px]"
 >
 	<FooterLink url="https://github.com/chazzox" classString="from-githubTwo to-githubOne" displayText="Github" />
 	<FooterLink

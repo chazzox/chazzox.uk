@@ -14,8 +14,13 @@ module.exports = {
 				discordOne: '#7289da',
 				discordTwo: '#21357d',
 				linkedinOne: '#0077B5',
-				linkedinTwo: '#00A0DC'
-			}
+				linkedinTwo: '#00A0DC',
+				accent: '#062326'
+			},
+			backgroundImage: {
+				'main-bg': 'url("/images/bg.jpg")'
+			},
+			fontFamily: { sans: ['Fira Code', 'monospace'] }
 		}
 	},
 	plugins: []
