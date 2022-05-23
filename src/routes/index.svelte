@@ -25,7 +25,7 @@
 	<meta name="twitter:card" content="/images/screenshot.jpg" />
 </svelte:head>
 
-<div class="flex flex-col min-h-screen bg-cover bg-main-img bg-center -z-40">
+<div class="flex flex-col min-h-screen bg-cover bg-main-img bg-center -z-40 bg-fixed">
 	<div class="flex-1 flex text-white justify-center items-center">
 		<div class={'border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative overflow-hidden ' + bgClassString}>
 			<div class="relative z-1 text-center sm:text-left">

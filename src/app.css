@@ -4,7 +4,7 @@
 
 @layer components {
 	.firefox {
-		@apply before:absolute before:bg-main-img before:top-[0] before:left-[0] before:right-[0] before:bottom-[0] before:content-[''] before:bg-fixed before:bg-center before:bg-cover before:blur-md;
+		@apply before:absolute before:bg-main-img before:-top-[20px] before:-left-[20px] before:-right-[20px] before:-bottom-[20px] before:content-[''] before:bg-fixed before:bg-center before:bg-cover before:blur-md;
 	}
 	.chrome {
 		@apply backdrop-blur-lg;
