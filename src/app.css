@@ -10,3 +10,8 @@
 		@apply backdrop-blur-lg;
 	}
 }
+
+body,
+html {
+	background-color: #062326;
+}
