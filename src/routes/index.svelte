@@ -1,6 +1,14 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import Footer from '../components/footer.svelte';
 	import Project from '../components/project.svelte';
+
+	let bgClassString = '';
+
+	onMount(async () => {
+		bgClassString = window.navigator.userAgent.includes('Chrome') ? 'chrome' : 'firefox';
+	});
 </script>
 
 <svelte:head>
@@ -16,10 +24,8 @@
 
 <div class="flex flex-col min-h-screen bg-cover bg-main-img bg-center -z-40">
 	<div class="flex-1 flex text-white justify-center items-center">
-		<div
-			class="border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative before:absolute before:bg-main-img before:-top-10 before:-left-10 before:-right-10 before:-bottom-10 before:content-[''] before:bg-fixed before:bg-center before:bg-cover before:blur-md overflow-hidden"
-		>
-			<div class="relative z-1">
+		<div class={'border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative overflow-hidden ' + bgClassString}>
+			<div class="relative z-1 text-center sm:text-left">
 				<h1 class="text-2xl font-bold my-3"><span class="hidden sm:inline"># </span>Charlie</h1>
 				<h2 class="text-lg sm:text-xl font-bold my-3">
 					<span class="hidden sm:inline">## </span>Student/Full Stack Dev
@@ -41,9 +47,10 @@
 					<a class="underline px-1 font-semibold" href="https://www.gosystem.co.uk/">goSystem</a>
 				</p>
 				<p class="py-1.5">
-					<span class="hidden sm:inline">- </span>Below are some of my projects i've tinkered with over the years:
+					<span class="hidden sm:inline">- </span>Below are some of my projects in varying states of completion
+					that i've tinkered with over the years<span class="hidden sm:inline">:</span>
 				</p>
-				<div class="sm:ml-7">
+				<div class="sm:ml-3">
 					<Project
 						url="https://github.com/chazzox/discordify/"
 						name="discordify"
@@ -60,16 +67,13 @@
 						name="Faster Panopto"
 						description="Browser extension for panopto lectures"
 					/>
-					<Project
-						url="https://chazzox.uk/shortcuts/"
-						name="Shortcuts"
-						description="Your bookmarks on one site!"
-					/>
-					<Project url="https://chazzox.uk/RePLAY/" name="Replay" description="A discover weekly backup tool" />
+					<Project url="https://shortcuts.chazzox.uk/" name="Shortcuts" description="Your bookmarks on one site" />
+					<Project url="https://hack.chazzox.uk/" name="oxHack" description="My submission to oxford hack 22" />
+					<Project url="https://replay.chazzox.uk/" name="Replay" description="A discover weekly backup tool" />
 					<Project
 						url="https://github.com/chazzox/BetterDiscordPlugins/"
 						name="BetterDiscordPlugins"
-						description="A monorepo containing all my BDP stuff"
+						description="A Monorepo containing all my BDP stuff"
 					/>
 				</div>
 			</div>
