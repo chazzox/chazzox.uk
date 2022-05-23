@@ -82,5 +82,5 @@
 			</div>
 		</div>
 	</div>
-	<Footer />
+	<Footer blurTechnique={bgClassString} />
 </div>

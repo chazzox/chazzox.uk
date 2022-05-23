@@ -14,8 +14,7 @@ module.exports = {
 				discordOne: '#7289da',
 				discordTwo: '#21357d',
 				linkedinOne: '#0077B5',
-				linkedinTwo: '#00A0DC',
-				accent: '#062326'
+				linkedinTwo: '#00A0DC'
 			},
 			backgroundImage: {
 				'main-img': 'url("/images/bg.webp")'
