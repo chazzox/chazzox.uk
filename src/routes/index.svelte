@@ -7,7 +7,10 @@
 	let bgClassString = '';
 
 	onMount(async () => {
-		bgClassString = window.navigator.userAgent.includes('Chrome') ? 'chrome' : 'firefox';
+		bgClassString =
+			window.navigator.userAgent.includes('Chrome') || window.navigator.userAgent.includes('Safari')
+				? 'chrome'
+				: 'firefox';
 	});
 </script>
 
@@ -34,8 +37,8 @@
 					<span class="hidden sm:inline">- </span>Hi! I'm chazzox, you may also know me as charlie!
 				</p>
 				<p>
-					<span class="hidden sm:inline">- </span>I'm a full time Computer Science student
-					<a class="underline font-semibold" href="https://www.royalholloway.ac.uk/">@RHUL</a>
+					<span class="hidden sm:inline">- </span>I'm a full time Computer Science student @
+					<a class="underline font-semibold" href="https://www.royalholloway.ac.uk/">RHUL</a>
 					while doing full Stack work on the side
 				</p>
 				<p class="py-1.5">
