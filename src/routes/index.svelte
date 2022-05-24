@@ -4,13 +4,12 @@
 	import Footer from '../components/footer.svelte';
 	import Project from '../components/project.svelte';
 
-	let bgClassString = '';
+	let bgClassString = 'chrome';
 
 	onMount(async () => {
-		bgClassString =
-			window.navigator.userAgent.includes('Chrome') || window.navigator.userAgent.includes('Safari')
-				? 'chrome'
-				: 'firefox';
+		if (!(window.navigator.userAgent.includes('Chrome') || window.navigator.userAgent.includes('Safari'))) {
+			bgClassString = 'firefox';
+		}
 	});
 </script>
 
@@ -18,17 +17,20 @@
 	<title>Chazzox's Website</title>
 	<meta property="og:title" content="chazzox's personal website" />
 	<meta property="og:type" content="website" />
-	<meta property="og:description" content="portfolio site for my projects" />
-	<meta name="description" content="portfolio site for my projects" />
+	<meta property="og:description" content="Portfolio site for my projects" />
+	<meta name="description" content="Portfolio site for my projects" />
 	<meta property="og:image" content="/images/screenshot.jpg" />
 	<meta property="og:url" content="/" />
 	<meta name="twitter:card" content="/images/screenshot.jpg" />
 </svelte:head>
 
-<div class="flex flex-col min-h-screen bg-cover bg-main-img bg-center -z-40 bg-fixed">
-	<div class="flex-1 flex text-white justify-center items-center">
-		<div class={'border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative overflow-hidden ' + bgClassString}>
-			<div class="relative z-1 text-center sm:text-left">
+<div class="flex flex-col dark:text-white min-h-screen bg-cover bg-main-img bg-center bg-fixed">
+	<div class="flex-1 flex justify-center items-center">
+		<div
+			class={'border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative overflow-hidden bg-extends-white ' +
+				bgClassString }
+		>
+			<div class="relative z-50 text-center sm:text-left">
 				<h1 class="text-2xl font-bold my-3"><span class="hidden sm:inline"># </span>Charlie</h1>
 				<h2 class="text-lg sm:text-xl font-bold my-3">
 					<span class="hidden sm:inline">## </span>Student/Full Stack Dev

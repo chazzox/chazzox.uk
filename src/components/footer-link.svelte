@@ -9,7 +9,7 @@
 	target="_blank"
 	href={url}
 	on:click={onClick}
-	class={'flex-1 y-1 px-2 text-white p-2 sm:bg-none hover:bg-gradient-to-r hover:transition-all hover:duration-1000 font-semibold text-center ' +
+	class={'flex-1 y-1 px-2 dark:text-white p-2 sm:bg-none hover:bg-gradient-to-r transition-colors font-semibold text-center hover:text-white ' +
 		classString}
 	>{displayText}
 </a>

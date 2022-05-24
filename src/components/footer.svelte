@@ -21,10 +21,10 @@
 	<div class="bg-green-600 py-0.5 px-1 rounded-lg text-white">Copied: chazzox#1001!</div>
 </div>
 <div
-	class={'mx-3 sm:mx-auto my-9 rounded-xl overflow-hidden shadow-2xl sm:bg-transparent border-black border-[0.5px] relative ' +
+	class={'mx-3 sm:mx-auto my-9 rounded-xl overflow-hidden shadow-2xl sm:bg-transparent border-black border-[0.5px] relative bg-extends-white ' +
 		blurTechnique}
 >
-	<div class="relative z-1 flex flex-row flex-wrap justify-center">
+	<div class="relative z-1 flex flex-row flex-wrap justify-center z-50">
 		<FooterLink url="https://github.com/chazzox" classString="from-githubTwo to-githubOne" displayText="Github" />
 		<FooterLink
 			url="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk"
