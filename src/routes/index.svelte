@@ -28,7 +28,7 @@
 	<div class="flex-1 flex justify-center items-center">
 		<div
 			class={'border-[1px] border-gray-700 p-4 rounded-xl shadow-xl m-6 relative overflow-hidden bg-extends-white ' +
-				bgClassString }
+				bgClassString}
 		>
 			<div class="relative z-50 text-center sm:text-left">
 				<h1 class="text-2xl font-bold my-3"><span class="hidden sm:inline"># </span>Charlie</h1>
@@ -38,12 +38,12 @@
 				<p class="my-3">
 					<span class="hidden sm:inline">- </span>Hi! I'm chazzox, you may also know me as charlie!
 				</p>
-				<p>
+				<p class="my-3">
 					<span class="hidden sm:inline">- </span>I'm a full time Computer Science student @
 					<a class="underline font-semibold" href="https://www.royalholloway.ac.uk/">RHUL</a>
 					while doing full Stack work on the side
 				</p>
-				<p class="py-1.5">
+				<p class="my-3">
 					<span class="hidden sm:inline">- </span>Working part time for<a
 						class="underline pl-2 px-1 font-semibold"
 						href="https://projectwaitless.com/">Project Waitless</a
@@ -51,7 +51,7 @@
 					and
 					<a class="underline px-1 font-semibold" href="https://www.gosystem.co.uk/">goSystem</a>
 				</p>
-				<p class="py-1.5">
+				<p class="my-3">
 					<span class="hidden sm:inline">- </span>Below are some of my projects in varying states of completion
 					that i've tinkered with over the years<span class="hidden sm:inline">:</span>
 				</p>
