@@ -1,5 +1,5 @@
-<script>
-	export let blurTechnique;
+<script lang="ts">
+	export let blurTechnique: string;
 	import { tweened } from 'svelte/motion';
 	import { backInOut } from 'svelte/easing';
 	import FooterLink from './footer-link.svelte';
@@ -21,7 +21,7 @@
 	<div class="bg-green-600 py-0.5 px-1 rounded-lg text-white">Copied: chazzox#1001!</div>
 </div>
 <div
-	class={'mx-3 sm:mx-auto my-9 rounded-xl overflow-hidden shadow-2xl sm:bg-transparent border-black border-[0.5px] relative bg-extends-white ' +
+	class={'mx-6 sm:mx-auto my-9 rounded-xl overflow-hidden shadow-2xl sm:bg-transparent border-black border-[0.5px] relative bg-extends-white ' +
 		blurTechnique}
 >
 	<div class="relative z-1 flex flex-row flex-wrap justify-center z-50">

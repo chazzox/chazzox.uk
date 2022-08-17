@@ -1,8 +1,8 @@
-<script>
-	export let url;
-	export let displayText;
-	export let classString;
-	export let onClick = undefined;
+<script lang="ts">
+	export let url: string = '';
+	export let displayText: string;
+	export let classString: string;
+	export let onClick: undefined | (() => void) = undefined;
 </script>
 
 <a

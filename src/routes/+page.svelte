@@ -7,7 +7,12 @@
 	let bgClassString = 'chrome';
 
 	onMount(async () => {
-		if (!(window.navigator.userAgent.includes('Chrome') || window.navigator.userAgent.includes('Safari'))) {
+		if (
+			!(
+				window.navigator.userAgent.includes('Chrome') ||
+				window.navigator.userAgent.includes('Safari')
+			)
+		) {
 			bgClassString = 'firefox';
 		}
 	});
@@ -52,8 +57,8 @@
 					<a class="underline px-1 font-semibold" href="https://www.gosystem.co.uk/">goSystem</a>
 				</p>
 				<p class="my-3">
-					<span class="hidden sm:inline">- </span>Below are some of my projects in varying states of completion
-					that i've tinkered with over the years<span class="hidden sm:inline">:</span>
+					<span class="hidden sm:inline">- </span>Below are some of my projects in varying states of
+					completion that i've tinkered with over the years<span class="hidden sm:inline">:</span>
 				</p>
 				<div class="sm:ml-3">
 					<Project
@@ -61,7 +66,11 @@
 						name="discordify"
 						description="A Betterdiscord plugin"
 					/>
-					<Project url="https://hydrova.chazzox.uk/" name="Hydrova" description="High perfomance reddit client" />
+					<Project
+						url="https://hydrova.chazzox.uk/"
+						name="Hydrova"
+						description="High perfomance reddit client"
+					/>
 					<Project
 						url="https://github.com/rhul-compsoc/twitter-stream/"
 						name="Twitter Stream"
@@ -72,9 +81,21 @@
 						name="Faster Panopto"
 						description="Browser extension for panopto lectures"
 					/>
-					<Project url="https://shortcuts.chazzox.uk/" name="Shortcuts" description="Your bookmarks on one site" />
-					<Project url="https://hack.chazzox.uk/" name="oxHack" description="My submission to oxford hack 22" />
-					<Project url="https://replay.chazzox.uk/" name="Replay" description="A discover weekly backup tool" />
+					<Project
+						url="https://shortcuts.chazzox.uk/"
+						name="Shortcuts"
+						description="Your bookmarks on one site"
+					/>
+					<Project
+						url="https://hack.chazzox.uk/"
+						name="oxHack"
+						description="My submission to oxford hack 22"
+					/>
+					<Project
+						url="https://replay.chazzox.uk/"
+						name="Replay"
+						description="A discover weekly backup tool"
+					/>
 					<Project
 						url="https://github.com/chazzox/BetterDiscordPlugins/"
 						name="BetterDiscordPlugins"
