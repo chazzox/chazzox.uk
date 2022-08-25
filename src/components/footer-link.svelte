@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let url: string = '';
+	export let url: string | undefined;
 	export let displayText: string;
 	export let classString: string;
 	export let onClick: undefined | (() => void) = undefined;
