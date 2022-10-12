@@ -5,10 +5,7 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	preprocess: preprocess({ postcss: true }),
 	kit: {
-		adapter: adapter()
-		// prerender: {
-		// 	default: true
-		// }
+		adapter: adapter({ fallback: true, precompress: true })
 	}
 };
 
