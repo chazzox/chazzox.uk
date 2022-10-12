@@ -1,15 +1,25 @@
 <script lang="ts">
-	export let url: string | undefined;
+	export let url: string | undefined = '';
 	export let displayText: string;
-	export let classString: string;
+	export let className: string;
 	export let onClick: undefined | (() => void) = undefined;
+
+	import classNames from 'classnames';
 </script>
 
 <a
 	target="_blank"
 	href={url}
-	on:click={onClick}
-	class={'flex-1 y-1 px-2 dark:text-white p-2 sm:bg-none hover:bg-gradient-to-r transition-colors font-semibold text-center hover:text-white ' +
-		classString}
-	>{displayText}
+	on:click={(e) => {
+		if (onClick) {
+			e.preventDefault();
+			onClick();
+		}
+	}}
+	class={classNames(
+		'relative before:-z-10 bg-opacity-100 p-2 before:absolute before:top-0 before:left-0 before:contents before:h-full before:w-full before:bg-gradient-to-br before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100',
+		className
+	)}
+>
+	<p class="z-50">{displayText}</p>
 </a>

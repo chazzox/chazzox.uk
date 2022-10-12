@@ -1,5 +1,4 @@
 <script lang="ts">
-	export let blurTechnique: string;
 	import { tweened } from 'svelte/motion';
 	import { backInOut } from 'svelte/easing';
 	import FooterLink from './footer-link.svelte';
@@ -17,34 +16,29 @@
 	};
 </script>
 
-<div class="fixed w-full flex justify-center" style={`top: ${$show}px`}>
-	<div class="bg-green-600 py-0.5 px-1 rounded-lg text-white">Copied: chazzox#1001!</div>
+<div class="fixed flex w-full justify-center" style={`top: ${$show}px`}>
+	<div class="rounded-lg bg-green-600 py-0.5 px-1 text-white">Copied: chazzox#1001!</div>
 </div>
 <div
-	class={'mx-6 sm:mx-auto my-9 rounded-xl overflow-hidden shadow-2xl sm:bg-transparent border-black border-[0.5px] relative bg-extends-white ' +
-		blurTechnique}
+	class="relative mx-6 my-9 overflow-hidden rounded-xl border-[0.5px] border-black shadow-2xl backdrop-blur-lg sm:mx-auto sm:bg-transparent"
 >
-	<div class="relative z-1 flex flex-row flex-wrap justify-center z-50">
-		<FooterLink url="https://github.com/chazzox" classString="from-githubTwo to-githubOne" displayText="Github" />
+	<div class="z-1 relative z-50 flex flex-row flex-wrap justify-center">
+		<FooterLink url="https://github.com/chazzox" className="from-githubTwo to-githubOne" displayText="Github" />
 		<FooterLink
 			url="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk"
-			classString="to-spotifyOne from-spotifyTwo"
+			className="to-spotifyOne from-spotifyTwo"
 			displayText="Spotify"
 		/>
 		<FooterLink
 			url="https://hydrova.netlify.app/u/chazzox"
-			classString="from-redditOne to-redditTwo"
+			className="from-redditOne to-redditTwo"
 			displayText="Reddit"
 		/>
-		<FooterLink url="https://twitter.com/_chazzox_" classString="from-twitterOne to-twitterTwo" displayText="Twitter" />
-		<FooterLink
-			classString="from-discordOne to-discordTwo cursor-pointer"
-			onClick={bounceHandle}
-			displayText="Discord"
-		/>
+		<FooterLink url="https://twitter.com/_chazzox_" className="from-twitterOne to-twitterTwo" displayText="Twitter" />
+		<FooterLink className="from-discordOne to-discordTwo" onClick={bounceHandle} displayText="Discord" />
 		<FooterLink
 			url="https://www.linkedin.com/in/chazzox/"
-			classString="from-linkedinOne to-linkedinTwo"
+			className="from-linkedinOne to-linkedinTwo"
 			displayText="LinkedIn"
 		/>
 	</div>

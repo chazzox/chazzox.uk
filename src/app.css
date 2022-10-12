@@ -4,19 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-	.firefox {
-		@apply before:absolute before:bg-main-img before:-top-[20px] before:-left-[20px] before:-right-[20px] before:-bottom-[20px] before:content-[''] before:bg-fixed before:bg-center before:bg-cover before:blur-md;
-	}
-	.chrome {
-		@apply backdrop-blur-lg;
-	}
-
-	.bg-extends-white {
-		@apply after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:content-[""] after:bg-white after:bg-opacity-70 dark:after:hidden;
-	}
-}
-
 body,
 html {
 	background-color: #282c36;

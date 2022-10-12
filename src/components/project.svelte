@@ -6,6 +6,8 @@
 
 <div class="projectContainer my-4">
 	<p class="sm:py-1">
-		<a href={url} target="_blank" class="underline text-lg sm:text-base">{name}</a><span class="hidden sm:inline-block whitespace-pre px-3">-</span><span class="block sm:inline-block">{description}</span>
+		<a href={url} target="_blank" class="text-lg underline sm:text-base">{name}</a><span
+			class="hidden whitespace-pre px-3 sm:inline-block">-</span
+		><span class="block sm:inline-block">{description}</span>
 	</p>
 </div>
