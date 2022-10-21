@@ -29,12 +29,6 @@
 			className="to-spotifyOne from-spotifyTwo"
 			displayText="Spotify"
 		/>
-		<FooterLink
-			url="https://hydrova.netlify.app/u/chazzox"
-			className="from-redditOne to-redditTwo"
-			displayText="Reddit"
-		/>
-		<FooterLink url="https://twitter.com/_chazzox_" className="from-twitterOne to-twitterTwo" displayText="Twitter" />
 		<FooterLink className="from-discordOne to-discordTwo" onClick={bounceHandle} displayText="Discord" />
 		<FooterLink
 			url="https://www.linkedin.com/in/chazzox/"
