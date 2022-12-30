@@ -33,7 +33,7 @@
 				<p class="my-3">
 					<span class="hidden sm:inline">- </span>Working part time for<a
 						class="px-1 pl-2 font-semibold underline"
-						href="https://projectwaitless.com/">Project Waitless</a
+						href="https://projectwaitless.io/">Project Waitless</a
 					>
 					and
 					<a class="px-1 font-semibold underline" href="https://www.gosystem.co.uk/">goSystem</a>
