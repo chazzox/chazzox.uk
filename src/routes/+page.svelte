@@ -28,27 +28,31 @@
 				<p class="my-3">
 					<span class="hidden sm:inline">- </span>I'm a full time Computer Science student @
 					<a class="font-semibold underline" href="https://www.royalholloway.ac.uk/">RHUL</a>
-					while doing full Stack work on the side
+					while doing freelance full Stack work on the side
 				</p>
 				<p class="my-3">
-					<span class="hidden sm:inline">- </span>Working part time for<a
-						class="px-1 pl-2 font-semibold underline"
+					<span class="hidden sm:inline">- </span>Some of my previous work includes sites for<a
+						class="pl-2 font-semibold underline"
 						href="https://projectwaitless.io/">Project Waitless</a
-					>
-					and
-					<a class="px-1 font-semibold underline" href="https://www.gosystem.co.uk/">goSystem</a>
+					>, <a class="font-semibold underline" href="https://www.gosystem.co.uk/">goSystem</a> amd
+					<a class="font-semibold underline" href="https://ukrepmed.com/">ukrepmed</a>
 				</p>
 				<p class="my-3">
 					<span class="hidden sm:inline">- </span>Below are some of my projects in varying states of completion
 					that i've tinkered with over the years<span class="hidden sm:inline">:</span>
 				</p>
 				<div class="sm:ml-3">
+					<Project url='https://project-omikron.chazzox.uk' name='Project-Omikron' description='A game development project im currently working on, written in pure ANSI C!'/>
+
 					<Project
+						url="https://hydrova.chazzox.uk/"
+						name="Hydrova"
+						description="Alternative Reddit client"
+					/><Project
 						url="https://github.com/chazzox/discordify/"
 						name="discordify"
-						description="A Betterdiscord plugin"
+						description="A Better Discord plugin"
 					/>
-					<Project url="https://hydrova.chazzox.uk/" name="Hydrova" description="High perfomance reddit client" />
 					<Project
 						url="https://github.com/rhul-compsoc/twitter-stream/"
 						name="Twitter Stream"
