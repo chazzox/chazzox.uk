@@ -35,7 +35,7 @@
 						class="pl-2 font-semibold underline"
 						href="https://projectwaitless.io/">Project Waitless</a
 					>, <a class="font-semibold underline" href="https://www.gosystem.co.uk/">goSystem</a> amd
-					<a class="font-semibold underline" href="https://ukrepmed.com/">ukrepmed</a>
+					<a class="font-semibold underline" href="https://ukrepmed.com/">UKRepMed</a>
 				</p>
 				<p class="my-3">
 					<span class="hidden sm:inline">- </span>Below are some of my projects in varying states of completion
