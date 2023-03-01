@@ -23,7 +23,7 @@
 					<span class="hidden sm:inline">## </span>Student/Full Stack Dev
 				</h2>
 				<p class="my-3">
-					<span class="hidden sm:inline">- </span>Hi! I'm chazzox, you may also know me as charlie!
+					<span class="hidden sm:inline">- </span>Hi! I'm charlie, you may also know me as chazzox!
 				</p>
 				<p class="my-3">
 					<span class="hidden sm:inline">- </span>I'm a full time Computer Science student @
