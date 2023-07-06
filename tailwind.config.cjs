@@ -18,7 +18,8 @@ module.exports = {
         linkedinTwo: "rgb(0 160 220)"
       },
       backgroundImage: {
-        "main-img": 'url("/bg.webp")'
+        "main-img": 'url("/bg.webp")',
+        "main-img2": 'url("/new.webp")'
       },
       fontFamily: { sans: ["Fira Code", "monospace"] }
     }
