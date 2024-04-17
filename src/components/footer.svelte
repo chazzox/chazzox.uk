@@ -23,11 +23,38 @@
 </div>
 
 <div class="z-1 relative z-50 my-4 flex flex-row flex-wrap justify-center gap-3">
-    <FooterLink url="https://github.com/chazzox" displayText="Github" />
+    <FooterLink url="https://github.com/chazzox" displayText="Github"
+        ><img
+            slot="icon"
+            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            src="/social-icons/SVG/White/Github_white.svg"
+            alt="github icon"
+        /></FooterLink
+    >
     <FooterLink
         url="https://open.spotify.com/user/lntwtvllegk9frl5rn3elv0dk"
         displayText="Spotify"
-    />
-    <FooterLink onClick={bounceHandle} displayText="Discord" />
-    <FooterLink url="https://www.linkedin.com/in/chazzox/" displayText="LinkedIn" />
+        ><img
+            slot="icon"
+            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            src="/social-icons/SVG/White/Spotify_white.svg"
+            alt="spotify icon"
+        /></FooterLink
+    >
+    <FooterLink onClick={bounceHandle} displayText="Discord"
+        ><img
+            slot="icon"
+            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            src="/social-icons/SVG/White/Discord_white.svg"
+            alt="Discord icon"
+        /></FooterLink
+    >
+    <FooterLink url="https://www.linkedin.com/in/chazzox/" displayText="LinkedIn"
+        ><img
+            slot="icon"
+            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            src="/social-icons/SVG/White/LinkedIN_white.svg"
+            alt="Linkedin icon"
+        /></FooterLink
+    >
 </div>

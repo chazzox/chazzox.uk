@@ -18,7 +18,7 @@
         }
     }}
     class={classNames(
-        "rounded-xl border-[1px] border-white px-6 py-1 transition-colors dark:border-gray-700 dark:hover:bg-[#e8e8e8] dark:hover:text-black",
+        "group flex items-center gap-2 rounded-xl border-[1px] border-white px-6 py-1 transition-colors dark:border-gray-700 dark:hover:bg-[#e8e8e8] dark:hover:text-black",
         className
     )}
 >
