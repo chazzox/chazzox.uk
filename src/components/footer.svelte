@@ -10,7 +10,7 @@
     });
 
     const bounceHandle = () => {
-        copy("chazzox#1001");
+        copy("chazzox");
         show.set(5);
         setTimeout(() => show.set(-32), 800);
     };
@@ -18,7 +18,7 @@
 
 <div class="fixed flex w-full justify-center" style={`top: ${$show}px`}>
     <div class="rounded-lg bg-green-600 px-1 py-0.5 text-white">
-        Copied: chazzox#1001!
+        Copied: "chazzox"!
     </div>
 </div>
 
@@ -26,7 +26,7 @@
     <FooterLink url="https://github.com/chazzox" displayText="Github"
         ><img
             slot="icon"
-            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            class="h-3 w-3 invert transition-[filter] group-hover:invert-0 dark:invert-0 dark:group-hover:invert"
             src="/social-icons/SVG/White/Github_white.svg"
             alt="github icon"
         /></FooterLink
@@ -36,7 +36,7 @@
         displayText="Spotify"
         ><img
             slot="icon"
-            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            class="h-3 w-3 invert transition-[filter] group-hover:invert-0 dark:invert-0 dark:group-hover:invert"
             src="/social-icons/SVG/White/Spotify_white.svg"
             alt="spotify icon"
         /></FooterLink
@@ -44,7 +44,7 @@
     <FooterLink onClick={bounceHandle} displayText="Discord"
         ><img
             slot="icon"
-            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            class="h-3 w-3 invert transition-[filter] group-hover:invert-0 dark:invert-0 dark:group-hover:invert"
             src="/social-icons/SVG/White/Discord_white.svg"
             alt="Discord icon"
         /></FooterLink
@@ -52,7 +52,7 @@
     <FooterLink url="https://www.linkedin.com/in/chazzox/" displayText="LinkedIn"
         ><img
             slot="icon"
-            class="h-3 w-3 invert transition-[filter] hover:invert-0 dark:invert-0 dark:group-hover:invert"
+            class="h-3 w-3 invert transition-[filter] group-hover:invert-0 dark:invert-0 dark:group-hover:invert"
             src="/social-icons/SVG/White/LinkedIN_white.svg"
             alt="Linkedin icon"
         /></FooterLink
