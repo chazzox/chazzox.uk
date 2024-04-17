@@ -4,7 +4,7 @@ import Project from "../components/project.astro";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#e8e8e8] dark:bg-black">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,11 +27,11 @@ import Project from "../components/project.astro";
   </head>
   <body>
     <div
-      class="flex min-h-screen flex-col bg-main-img2 bg-cover bg-fixed bg-center text-white"
+      class="flex min-h-screen flex-col bg-[#e8e8e8] bg-cover bg-fixed bg-center text-black dark:bg-black dark:text-white"
     >
       <div class="flex flex-1 items-center justify-center">
         <div
-          class="relative m-6 overflow-hidden rounded-xl border-[1px] border-gray-700 p-4 shadow-xl backdrop-blur-lg"
+          class="relative m-6 max-w-2xl overflow-hidden rounded-xl border-[1px] border-gray-700 p-4 shadow-xl backdrop-blur-lg"
         >
           <div class="relative z-50 text-center sm:text-left">
             <h1 class="my-3 text-2xl font-bold">
@@ -72,7 +72,7 @@ import Project from "../components/project.astro";
               Below are some of my projects in varying states of completion that i've
               tinkered with over the years<span class="hidden sm:inline">:</span>
             </p>
-            <div class="sm:ml-3">
+            <div>
               <Project
                 url="https://project-omikron.chazzox.uk"
                 name="Project-Omikron"

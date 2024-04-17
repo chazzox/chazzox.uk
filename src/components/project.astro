@@ -1,18 +1,19 @@
 ---
 interface Props {
-  url: string;
-  name: string;
-  description: string;
+    url: string;
+    name: string;
+    description: string;
 }
 
 const { url, name, description } = Astro.props;
 ---
 
-<div class="projectContainer my-4">
-  <p class="sm:py-1">
-    <a href={url} target="_blank" class="text-lg underline sm:text-base">{name}</a
-    ><span class="hidden whitespace-pre px-3 sm:inline-block">-</span><span
-      class="block sm:inline-block">{description}</span
-    >
-  </p>
+<div class="projectContainer mt-3">
+    <p class="sm:py-1">
+        <a href={url} target="_blank" class="text-lg underline sm:text-base"
+            >{name}</a
+        ><span class="hidden whitespace-pre px-3 sm:inline">-</span><span
+            class="block sm:inline">{description}</span
+        >
+    </p>
 </div>

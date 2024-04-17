@@ -4,9 +4,11 @@ import tailwind from "@astrojs/tailwind";
 
 import vercel from "@astrojs/vercel/static";
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [svelte(), tailwind()],
   output: "static",
-  adapter: vercel()
+  server: { port: 3000 },
+  adapter: vercel({
+    analytics: false
+  })
 });
