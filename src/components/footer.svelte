@@ -49,7 +49,7 @@
             alt="Discord icon"
         /></FooterLink
     >
-    <FooterLink url="https://www.linkedin.com/in/chazzox/" displayText="LinkedIn"
+    <FooterLink url="https://www.linkedin.com/in/charlieaylott/" displayText="LinkedIn"
         ><img
             slot="icon"
             class="h-3 w-3 invert transition-[filter] duration-200 group-hover:invert-0 dark:invert-0 dark:group-hover:invert"
