@@ -1,0 +1,11 @@
+---
+import { getCollection } from "astro:content";
+import { LoggerFactory } from "../utils";
+
+const blogs = await getCollection("blogs");
+
+const logger = new LoggerFactory().getInstance();
+logger.info("logs", blogs);
+---
+
+{blogs.map(() => <div>blogs</div>)}

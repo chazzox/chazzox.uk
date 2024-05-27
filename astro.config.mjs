@@ -20,5 +20,8 @@ export default defineConfig({
     markdown: {
         remarkPlugins: [remarkMermaid, remarkMath],
         rehypePlugins: [rehypeKatex]
+    },
+    devToolbar: {
+        enabled: false
     }
 });

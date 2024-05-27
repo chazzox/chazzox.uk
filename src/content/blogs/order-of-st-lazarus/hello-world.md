@@ -1,11 +1,9 @@
 ---
-layout: ../../../layouts/blog-post.astro
 title: How to make a game
 description: I do not know what I am doing
-# yyyy-mm-dd
 date: 2023-01-26
-author_text: Charlie
-author_social: https://twitter.com/_chazzox_
+author: chazzox
+released: true
 ---
 
 # I do not know what I am doing
@@ -31,7 +29,7 @@ choice was to write the whole thing in
 windows, render graphics, and play sounds without the annoyance of dealing with
 platform specific APIs.
 
-{/* maybe a sdl2 explanation diagram */}
+{/_ maybe a sdl2 explanation diagram _/}
 
 After this I started to play around with SDL2, creating a window my first
 breakthrough.

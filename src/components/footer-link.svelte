@@ -1,7 +1,7 @@
 <script lang="ts">
+    export const className: string | undefined = "";
     export let url: string | undefined = "";
     export let displayText: string;
-    export let className: string | undefined = "";
     export let onClick: undefined | (() => void) = undefined;
 
     import classNames from "classnames";

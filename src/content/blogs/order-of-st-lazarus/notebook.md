@@ -1,11 +1,10 @@
 ---
-layout: ../../../layouts/blog-post.astro
 title: Art and Design Edition
 description: Hey, I'm Ruanew and welcome to my Notebook :)
 # yyyy-mm-dd
 date: 2023-02-13
-author_text: Ruairi
-author_social: https://github.com/ruanew
+author: ruairi
+released: true
 ---
 
 # Welcome to DevLog 2 (Art and Design Edition)

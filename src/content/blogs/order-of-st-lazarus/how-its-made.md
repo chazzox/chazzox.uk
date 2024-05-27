@@ -1,10 +1,9 @@
 ---
-layout: ../../../layouts/blog-post.astro
 title: How it's made
 description: A brief look into how this thing works
-date: 06-03-2023
-author_text: Charlie
-author_social: https://twitter.com/_chazzox_
+date: 2023-03-06
+author: chazzox
+released: true
 ---
 
 # A brief look into the technology behind this site
