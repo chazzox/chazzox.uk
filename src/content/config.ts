@@ -1,4 +1,4 @@
-import { defineCollection, reference, z, mer } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 
 type DateFormat = `${number}-${number}-${number}`; // 'YYYY-MM-DD'
 
