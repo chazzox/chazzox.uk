@@ -1,5 +1,0 @@
- - philosophy research
- - devlog of a project (import from pull requests?)
- - guide to writing good code, case study on the ssh component
- - generating og tags from frontmatter
- - weird canvas graph thing (ascii vs canvas mode p5js?)

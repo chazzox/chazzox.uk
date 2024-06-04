@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const blogs = await getCollection(
+        "blogs",
+        (e) => !import.meta.env.PROD || e.data.released === true
+    );
+
+    return Array.from(Object.entries(blogs)).map(([_, body]) => ({
+        params: {
+            path: body.slug
+        },
+        props: {
+            title: body.data.title,
+            text: body.body
+        }
+    }));
+}
+
+const { title, text } = Astro.props;
+---
+
+<div class="mx-auto">
+    <h2 class="max-w-fit">{title}</h2>
+
+    <div class="w-1/2 whitespace-pre-line">{text}</div>
+</div>

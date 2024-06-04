@@ -1,95 +1,105 @@
 ---
+import MainLayout from "../layouts/index.astro";
 import Footer from "../components/footer.svelte";
 import Project from "../components/project.astro";
 ---
 
-<div
-    class="flex min-h-screen flex-col items-center justify-center bg-[#e8e8e8] bg-cover bg-fixed bg-center text-black dark:bg-black dark:text-white"
->
+<MainLayout>
     <div
-        class="relative m-6 max-w-2xl overflow-hidden rounded-xl border-[1px] border-gray-700 p-4 shadow-xl backdrop-blur-lg"
+        class="flex min-h-screen flex-col items-center justify-center bg-[#e8e8e8] bg-cover bg-fixed bg-center text-black dark:bg-black dark:text-white"
     >
-        <h1 class="text-2xl font-bold">
-            <span class="hidden sm:inline">#</span>
-            Charlie
-        </h1>
-        <h2 class="my-3 text-lg font-bold sm:text-xl">
-            <span class="hidden sm:inline">##</span>
-            Student/Full Stack Dev
-        </h2>
-        <p class="my-3">
-            <span class="hidden sm:inline">-</span>
-            Hi! I'm charlie, you may also know me as chazzox!
-        </p>
-        <p class="my-3">
-            <span class="hidden sm:inline">-</span>
-            <!-- I'm a full time Computer Science student @<a
+        <div
+            class="relative m-6 max-w-2xl overflow-hidden rounded-xl border-[1px] border-gray-700 p-4 shadow-xl backdrop-blur-lg"
+        >
+            <h1 class="text-2xl font-bold">
+                <span class="hidden sm:inline">#</span>
+                Charlie
+            </h1>
+            <h2 class="my-3 text-lg font-bold sm:text-xl">
+                <span class="hidden sm:inline">##</span>
+                Student/Full Stack Dev
+            </h2>
+            <p class="my-3">
+                <span class="hidden sm:inline">-</span>
+                Hi! I'm charlie, you may also know me as chazzox!
+            </p>
+            <p class="my-3">
+                <span class="hidden sm:inline">-</span>
+                <!-- I'm a full time Computer Science student @<a
                     class="font-semibold underline"
                     href="https://www.royalholloway.ac.uk/">RHUL</a
                     >
                     while doing freelance full Stack work on the side -->
-            Currently I'm an Innovation Engineer @ <a
-                class="font-semibold underline"
-                href="https://www.matillion.com/">Matillion</a
-            > and im looking to re-continue my studies at <a
-                class="font-semibold underline"
-                href="https://www.royalholloway.ac.uk/">RHUL</a
-            > next year.
-            <p class="my-3">
-                <span class="hidden sm:inline">-</span>
-                In the past, I've done work for companies such as
-                <a class="font-semibold underline" href="https://ukrepmed.com/"
-                    >UKRepMed</a
-                >
+                Currently I'm an Innovation Engineer @ <a
+                    class="font-semibold underline"
+                    target="_blank"
+                    href="https://www.matillion.com/">Matillion</a
+                > and im looking to re-continue my studies at <a
+                    class="font-semibold underline"
+                    target="_blank"
+                    href="https://www.royalholloway.ac.uk/">RHUL</a
+                > next year.
+                <p class="my-3">
+                    <span class="hidden sm:inline">-</span>
+                    In the past, I've done work for companies such as
+                    <a
+                        class="font-semibold underline"
+                        target="_blank"
+                        href="https://ukrepmed.com/">UKRepMed</a
+                    >
+                </p>
+                <p class="my-3">
+                    <span class="hidden sm:inline">-</span>
+                    Below are some of my projects in varying states of completion that
+                    i've tinkered with over the years<span class="hidden sm:inline"
+                        >:</span
+                    >
+                </p>
+                <div>
+                    <Project
+                        url="/order-of-st-lazarus"
+                        name="Project-Omikron"
+                        description="A game development project im currently working on, currently learning godot!"
+                        openInNewTab={false}
+                    />
+                    <Project
+                        url="https://hydrova.chazzox.uk/"
+                        name="Hydrova"
+                        description="A retired Alternative Reddit client"
+                    />
+                    <Project
+                        url="https://github.com/chazzox/discordify/"
+                        name="discordify"
+                        description="A Better Discord plugin"
+                    />
+                    <Project
+                        url="https://github.com/rhul-compsoc/twitter-stream/"
+                        name="Twitter Stream"
+                        description="Twitter feed made for a RHUL SU night"
+                    />
+                    <Project
+                        url="https://github.com/chazzox/faster-panopto/"
+                        name="Faster Panopto"
+                        description="Browser extension for panopto lectures"
+                    />
+                    <Project
+                        url="https://hack.chazzox.uk/"
+                        name="oxHack"
+                        description="My submission to oxford hack 22"
+                    />
+                    <Project
+                        url="https://replay.chazzox.uk/"
+                        name="Replay"
+                        description="A discover weekly backup tool"
+                    />
+                    <Project
+                        url="https://github.com/chazzox/BetterDiscordPlugins/"
+                        name="BetterDiscordPlugins"
+                        description="A Monorepo containing all my BDP stuff"
+                    />
+                </div>
             </p>
-            <p class="my-3">
-                <span class="hidden sm:inline">-</span>
-                Below are some of my projects in varying states of completion that i've
-                tinkered with over the years<span class="hidden sm:inline">:</span>
-            </p>
-            <div>
-                <Project
-                    url="https://project-omikron.chazzox.uk"
-                    name="Project-Omikron"
-                    description="A game development project im currently working on, currently learning godot!"
-                />
-                <Project
-                    url="https://hydrova.chazzox.uk/"
-                    name="Hydrova"
-                    description="A retired Alternative Reddit client"
-                />
-                <Project
-                    url="https://github.com/chazzox/discordify/"
-                    name="discordify"
-                    description="A Better Discord plugin"
-                />
-                <Project
-                    url="https://github.com/rhul-compsoc/twitter-stream/"
-                    name="Twitter Stream"
-                    description="Twitter feed made for a RHUL SU night"
-                />
-                <Project
-                    url="https://github.com/chazzox/faster-panopto/"
-                    name="Faster Panopto"
-                    description="Browser extension for panopto lectures"
-                />
-                <Project
-                    url="https://hack.chazzox.uk/"
-                    name="oxHack"
-                    description="My submission to oxford hack 22"
-                />
-                <Project
-                    url="https://replay.chazzox.uk/"
-                    name="Replay"
-                    description="A discover weekly backup tool"
-                />
-                <Project
-                    url="https://github.com/chazzox/BetterDiscordPlugins/"
-                    name="BetterDiscordPlugins"
-                    description="A Monorepo containing all my BDP stuff"
-                />
-            </div>
-        </p>
-        <Footer client:load />
+            <Footer client:load />
+        </div>
     </div>
-</div>
+</MainLayout>

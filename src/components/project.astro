@@ -3,15 +3,18 @@ interface Props {
     url: string;
     name: string;
     description: string;
+    openInNewTab?: boolean;
 }
 
-const { url, name, description } = Astro.props;
+const { url, name, description, openInNewTab = true } = Astro.props;
 ---
 
 <div class="projectContainer mt-3">
     <p class="sm:py-1">
-        <a href={url} target="_blank" class="text-lg underline sm:text-base"
-            >{name}</a
+        <a
+            href={url}
+            target={openInNewTab ? "_blank" : ""}
+            class="text-lg underline sm:text-base">{name}</a
         ><span class="hidden whitespace-pre px-3 sm:inline">-</span><span
             class="block sm:inline">{description}</span
         >

@@ -1,7 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
 
-type DateFormat = `${number}-${number}-${number}`; // 'YYYY-MM-DD'
-
 const authorSchema = defineCollection({
     type: "data",
     schema: z.object({
@@ -16,12 +14,22 @@ const authorSchema = defineCollection({
     })
 });
 
+const categorySchema = defineCollection({
+    type: "data",
+    schema: z.object({
+        name: z.string(),
+        description: z.string(),
+        link: z.string().url().optional()
+    })
+});
+
 const blogSchema = defineCollection({
     type: "content",
     schema: z.object({
         title: z.string(),
         description: z.string(),
         author: reference("authors"),
+        category: reference("categories"),
         date: z.date(),
         released: z.boolean()
     })
@@ -29,5 +37,6 @@ const blogSchema = defineCollection({
 
 export const collections = {
     blogs: blogSchema,
-    authors: authorSchema
+    authors: authorSchema,
+    categories: categorySchema
 };

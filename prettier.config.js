@@ -1,7 +1,4 @@
-import * as sveltePlugin from "prettier-plugin-svelte";
-import * as astroPlugin from "prettier-plugin-astro";
-import * as tailwindPlugin from "prettier-plugin-tailwindcss";
-
+ 
 /**
  * @type {import('@types/prettier').Options}
  */
@@ -12,7 +9,7 @@ export default {
     trailingComma: "none",
     proseWrap: "always",
     printWidth: 85,
-    plugins: [tailwindPlugin, astroPlugin, sveltePlugin],
+    plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro", 'prettier-plugin-svelte'],
     overrides: [
         {
             files: "*.astro",

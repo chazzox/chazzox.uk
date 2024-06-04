@@ -1,9 +1,9 @@
 ---
 title: Art and Design Edition
 description: Hey, I'm Ruanew and welcome to my Notebook :)
-# yyyy-mm-dd
 date: 2023-02-13
 author: ruairi
+category: order-of-st-lazarus
 released: true
 ---
 

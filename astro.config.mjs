@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";
 import tailwind from "@astrojs/tailwind";
 
 import svelte from "@astrojs/svelte";
@@ -10,12 +10,12 @@ import remarkMermaid from "astro-diagram/remark-mermaid";
 
 export default defineConfig({
     integrations: [svelte(), tailwind(), mdx()],
-    output: "static",
+    output: "hybrid",
     server: {
         port: 3000
     },
     adapter: vercel({
-        analytics: false
+        analytics: true
     }),
     markdown: {
         remarkPlugins: [remarkMermaid, remarkMath],

@@ -3,6 +3,7 @@ title: How to make a game
 description: I do not know what I am doing
 date: 2023-01-26
 author: chazzox
+category: order-of-st-lazarus
 released: true
 ---
 

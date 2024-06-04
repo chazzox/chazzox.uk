@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+
+const blogs = await getCollection(
+    "blogs",
+    (e) => !import.meta.env.PROD || e.data.released === true
+);
+const categories = await getCollection("categories");
+---
+
+{categories.map((c) => <div>{c.data.name}</div>)}
+
+{
+    blogs.map((v) => (
+        <a class="block" href={"/" + [v.collection, v.slug].join("/")}>
+            blogs {v.data.title}
+        </a>
+    ))
+}
