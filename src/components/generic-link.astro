@@ -1,0 +1,16 @@
+---
+interface Props {
+    link: string;
+    style?: string;
+}
+
+const { link, style } = Astro.props;
+---
+
+<a
+    class={"border-black border-2 px-1 block w-fit my-3" +
+        (typeof style === "undefined" ? "" : style)}
+    href={link}
+>
+    <slot />
+</a>

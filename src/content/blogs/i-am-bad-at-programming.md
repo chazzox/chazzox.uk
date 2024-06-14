@@ -1,9 +1,11 @@
 ---
 title: Rethinking my approach
-description: Unreal™ might actually be pretty epic.
+description: "Unreal™ might actually be pretty epic."
 date: 0000-00-00
 author: chazzox
-category: order-of-st-lazarus
+folder: order-of-st-lazarus
+tags:
+    - development
 released: false
 ---
 

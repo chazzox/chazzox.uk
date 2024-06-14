@@ -3,7 +3,7 @@ title: How to make a game
 description: I do not know what I am doing
 date: 2023-01-26
 author: chazzox
-category: order-of-st-lazarus
+folder: order-of-st-lazarus
 released: true
 ---
 
@@ -57,7 +57,7 @@ window = SDL_CreateWindow("project-omikron",
 screenSurface = SDL_GetWindowSurface(window);
 ```
 
-This, however would not actually keep the game window open. For that the first 'Game
+This, however, would not actually keep the game window open. For that the first 'Game
 loop' was created. In trying to learn how to get the square to move I found that in
 order to rerender the square, you must first wipe the screen, then draw the new
 square with its fancy new coordinates

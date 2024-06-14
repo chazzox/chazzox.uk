@@ -14,7 +14,7 @@ const authorSchema = defineCollection({
     })
 });
 
-const categorySchema = defineCollection({
+const folderSchema = defineCollection({
     type: "data",
     schema: z.object({
         name: z.string(),
@@ -29,14 +29,24 @@ const blogSchema = defineCollection({
         title: z.string(),
         description: z.string(),
         author: reference("authors"),
-        category: reference("categories"),
+        folder: reference("folders"),
+        tags: z.array(reference("tags")).optional(),
         date: z.date(),
-        released: z.boolean()
+        released: z.boolean(),
+        archived: z.boolean().optional().default(false)
+    })
+});
+
+const tagSchema = defineCollection({
+    type: "data",
+    schema: z.object({
+        id: z.string()
     })
 });
 
 export const collections = {
     blogs: blogSchema,
     authors: authorSchema,
-    categories: categorySchema
+    folders: folderSchema,
+    tags: tagSchema
 };

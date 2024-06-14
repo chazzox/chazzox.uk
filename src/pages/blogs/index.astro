@@ -5,10 +5,10 @@ const blogs = await getCollection(
     "blogs",
     (e) => !import.meta.env.PROD || e.data.released === true
 );
-const categories = await getCollection("categories");
+const categories = await getCollection("folders");
 ---
 
-<!-- active catagories selection -->{categories.map((c) => <div>{c.data.name}</div>)}
+{categories.map((c) => <div>{c.data.name}</div>)}
 
 {
     blogs
