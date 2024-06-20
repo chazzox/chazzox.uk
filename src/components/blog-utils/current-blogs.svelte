@@ -34,12 +34,13 @@
 </script>
 
 {#each activeTagPostUnion.length > 0 ? activeTagPostUnion : posts as blog}
-    <div
+    <a
+        href={`/blogs/${blog.slug}`}
         class="dark:border-white dark:text-white border-black border-1 block my-3 max-w-2xl p-3"
     >
         <h2 class="font-semibold">{blog.data.title}</h2>
         <h3>description: {blog.data.description}</h3>
         <h4>tags: {getBlogTags(blog).join(",")}</h4>
         <h4>author: {blog.data.author.id}</h4>
-    </div>
+    </a>
 {/each}

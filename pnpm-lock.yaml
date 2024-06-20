@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@astrojs/alpinejs':
-        specifier: ^0.4.0
-        version: 0.4.0(@types/alpinejs@3.13.10)(alpinejs@3.14.0)
       '@astrojs/mdx':
         specifier: ^3.0.1
         version: 3.0.1(astro@4.9.1(@types/node@20.12.12)(typescript@5.4.5))
@@ -23,12 +20,6 @@ importers:
       '@astrojs/vercel':
         specifier: ^7.6.0
         version: 7.6.0(astro@4.9.1(@types/node@20.12.12)(typescript@5.4.5))
-      '@types/alpinejs':
-        specifier: ^3.13.10
-        version: 3.13.10
-      alpinejs:
-        specifier: ^3.14.0
-        version: 3.14.0
       astro:
         specifier: ^4.9.1
         version: 4.9.1(@types/node@20.12.12)(typescript@5.4.5)
@@ -70,8 +61,8 @@ importers:
         specifier: ^3.2.3
         version: 3.2.3(prettier@3.2.5)(svelte@4.2.18)
       prettier-plugin-tailwindcss:
-        specifier: ^0.5.14
-        version: 0.5.14(prettier-plugin-astro@0.13.0)(prettier-plugin-svelte@3.2.3(prettier@3.2.5)(svelte@4.2.18))(prettier@3.2.5)
+        specifier: ^0.6.5
+        version: 0.6.5(prettier-plugin-astro@0.13.0)(prettier-plugin-svelte@3.2.3(prettier@3.2.5)(svelte@4.2.18))(prettier@3.2.5)
 
 packages:
 
@@ -82,12 +73,6 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
-
-  '@astrojs/alpinejs@0.4.0':
-    resolution: {integrity: sha512-68BY1CA0XuielLW3WdX2sfh9F4sSTnFqQ//IE9AditbiYJ77HJDb4uZx07pTFDtr1jOMU7lCvH+iS9gmNafM1g==}
-    peerDependencies:
-      '@types/alpinejs': ^3.0.0
-      alpinejs: ^3.0.0
 
   '@astrojs/compiler@1.8.2':
     resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
@@ -786,9 +771,6 @@ packages:
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
 
-  '@types/alpinejs@3.13.10':
-    resolution: {integrity: sha512-ah53tF6mWuuwerpDE7EHwbZErNDJQlsLISPqJhYj2RZ9nuTYbRknSkqebUd3igkhLIZKkPa7IiXjSn9qsU9O2w==}
-
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
 
@@ -868,12 +850,6 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  '@vue/reactivity@3.1.5':
-    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
-
-  '@vue/shared@3.1.5':
-    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
-
   abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
 
@@ -895,9 +871,6 @@ packages:
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
-
-  alpinejs@3.14.0:
-    resolution: {integrity: sha512-YCWF95PMJqePe9ll6KMyDt/nLhh2R7RhqBf4loEmLzIskcHque4Br/9UgAa6cw13H0Cm3FM9e1hzDwP5z5wlDA==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -2366,8 +2339,8 @@ packages:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
 
-  prettier-plugin-tailwindcss@0.5.14:
-    resolution: {integrity: sha512-Puaz+wPUAhFp8Lo9HuciYKM2Y2XExESjeT+9NQoVFXZsPPnc9VYss2SpxdQ6vbatmt8/4+SN0oe0I1cPDABg9Q==}
+  prettier-plugin-tailwindcss@0.6.5:
+    resolution: {integrity: sha512-axfeOArc/RiGHjOIy9HytehlC0ZLeMaqY09mm8YCkMzznKiDkwFzOpBvtuhuv3xG5qB73+Mj7OCe2j/L1ryfuQ==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -3036,11 +3009,6 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@astrojs/alpinejs@0.4.0(@types/alpinejs@3.13.10)(alpinejs@3.14.0)':
-    dependencies:
-      '@types/alpinejs': 3.13.10
-      alpinejs: 3.14.0
-
   '@astrojs/compiler@1.8.2': {}
 
   '@astrojs/compiler@2.8.0': {}
@@ -3674,8 +3642,6 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.5
 
-  '@types/alpinejs@3.13.10': {}
-
   '@types/babel__core@7.20.5':
     dependencies:
       '@babel/parser': 7.24.6
@@ -3771,12 +3737,6 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vue/reactivity@3.1.5':
-    dependencies:
-      '@vue/shared': 3.1.5
-
-  '@vue/shared@3.1.5': {}
-
   abbrev@1.1.1: {}
 
   acorn-import-attributes@1.9.5(acorn@8.11.3):
@@ -3794,10 +3754,6 @@ snapshots:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
-
-  alpinejs@3.14.0:
-    dependencies:
-      '@vue/reactivity': 3.1.5
 
   ansi-align@3.0.1:
     dependencies:
@@ -5724,7 +5680,7 @@ snapshots:
       prettier: 3.2.5
       svelte: 4.2.18
 
-  prettier-plugin-tailwindcss@0.5.14(prettier-plugin-astro@0.13.0)(prettier-plugin-svelte@3.2.3(prettier@3.2.5)(svelte@4.2.18))(prettier@3.2.5):
+  prettier-plugin-tailwindcss@0.6.5(prettier-plugin-astro@0.13.0)(prettier-plugin-svelte@3.2.3(prettier@3.2.5)(svelte@4.2.18))(prettier@3.2.5):
     dependencies:
       prettier: 3.2.5
     optionalDependencies:
