@@ -14,27 +14,30 @@ const authorSchema = defineCollection({
     })
 });
 
-const folderSchema = defineCollection({
+export const folderSchema = z.object({
+    name: z.string(),
+    description: z.string(),
+    link: z.string().url().optional()
+});
+const folderCollection = defineCollection({
     type: "data",
-    schema: z.object({
-        name: z.string(),
-        description: z.string(),
-        link: z.string().url().optional()
-    })
+    schema: folderSchema
 });
 
-const blogSchema = defineCollection({
+export const blogSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    author: reference("authors"),
+    folder: reference("folders"),
+    tags: z.array(reference("tags")).optional(),
+    date: z.date(),
+    released: z.boolean(),
+    archived: z.boolean().optional().default(false)
+});
+
+const blogCollection = defineCollection({
     type: "content",
-    schema: z.object({
-        title: z.string(),
-        description: z.string(),
-        author: reference("authors"),
-        folder: reference("folders"),
-        tags: z.array(reference("tags")).optional(),
-        date: z.date(),
-        released: z.boolean(),
-        archived: z.boolean().optional().default(false)
-    })
+    schema: blogSchema
 });
 
 const tagSchema = defineCollection({
@@ -45,8 +48,8 @@ const tagSchema = defineCollection({
 });
 
 export const collections = {
-    blogs: blogSchema,
+    blogs: blogCollection,
     authors: authorSchema,
-    folders: folderSchema,
+    folders: folderCollection,
     tags: tagSchema
 };

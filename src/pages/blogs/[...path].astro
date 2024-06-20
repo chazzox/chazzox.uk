@@ -20,6 +20,8 @@ export async function getStaticPaths() {
 }
 
 const { title, text } = Astro.props;
+
+console.log("test", Astro.request.referrer);
 ---
 
 <div class="mx-auto p-10 w-fit">

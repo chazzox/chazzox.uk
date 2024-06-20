@@ -1,22 +1,37 @@
 ---
 import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/index.astro";
+import Tags from "@components/blog-utils/tags.svelte";
+import CurrentBlogs from "@components/blog-utils/current-blogs.svelte";
+import GenericLink from "@components/generic-link.astro";
 
-const blogs = await getCollection(
-    "blogs",
-    (e) => !import.meta.env.PROD || e.data.released === true
-);
-const categories = await getCollection("folders");
+const posts = await getCollection("blogs");
+
+const tags = posts.reduce((prev, cur) => {
+    cur.data.tags?.forEach((t) => (prev.includes(t.id) ? null : prev.push(t.id)));
+    return prev;
+}, [] as string[]);
 ---
 
-{categories.map((c) => <div>{c.data.name}</div>)}
+<MainLayout>
+    <div class="p-10">
+        <div class="flex gap-3">
+            <Tags client:load initialTags={tags} />
+        </div>
 
-{
-    blogs
-        // active catagories filter
-        .filter(() => true)
-        .map((v) => (
-            <a class="block" href={"/" + [v.collection, v.slug].join("/")}>
-                blogs {v.data.title}
-            </a>
-        ))
-}
+        <div>
+            <CurrentBlogs client:load posts={posts} />
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <GenericLink link="/blogs" style="px-3 py-1 block">
+                <h2 class="font-semibold underline">
+                    Click to go back to rest of blogs
+                </h2>
+            </GenericLink>
+            <GenericLink link="/" style="px-3 py-1 block">
+                <h2 class="font-semibold underline">Click to go back landing...</h2>
+            </GenericLink>
+        </div>
+    </div>
+</MainLayout>

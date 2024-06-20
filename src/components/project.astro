@@ -6,7 +6,7 @@ interface Props {
     openInNewTab?: boolean;
 }
 
-const { url, name, description, openInNewTab = true } = Astro.props;
+const { url, name, description, openInNewTab = false } = Astro.props;
 ---
 
 <div class="projectContainer mt-3">

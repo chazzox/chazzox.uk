@@ -4,12 +4,14 @@ interface Props {
     style?: string;
 }
 
-const { link, style } = Astro.props;
+const { link, style = "" } = Astro.props;
 ---
 
 <a
-    class={"border-black border-2 px-1 block w-fit my-3" +
-        (typeof style === "undefined" ? "" : style)}
+    class:list={[
+        "dark:border-white dark:text-white border-black border-1 px-1 block w-fit",
+        { [style]: style.length > 0 }
+    ]}
     href={link}
 >
     <slot />
