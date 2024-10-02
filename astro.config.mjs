@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/serverless";
 import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
@@ -13,9 +12,6 @@ export default defineConfig({
     server: {
         port: 3000
     },
-    adapter: vercel({
-        analytics: true
-    }),
     markdown: {
         remarkPlugins: [remarkMermaid, remarkMath],
         rehypePlugins: [rehypeKatex]
