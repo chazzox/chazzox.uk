@@ -8,7 +8,7 @@ import remarkMermaid from "astro-diagram/remark-mermaid";
 
 export default defineConfig({
     integrations: [svelte(), tailwind(), mdx()],
-    output: "hybrid",
+    output: "static",
     server: {
         port: 3000
     },
