@@ -1,0 +1,18 @@
+---
+interface Props {
+    link: string;
+    style?: string;
+}
+
+const { link, style = "" } = Astro.props;
+---
+
+<a
+    class:list={[
+        "dark:border-white dark:text-white border-black border-1 px-1 block w-fit",
+        { [style]: style.length > 0 }
+    ]}
+    href={link}
+>
+    <slot />
+</a>
