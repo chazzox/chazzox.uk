@@ -16,7 +16,7 @@
     };
 </script>
 
-<div class="fixed flex w-full justify-center" style={`top: ${$show}px`}>
+<div class="fixed flex w-full justify-center left-0" style={`top: ${$show}px`}>
     <div class="rounded-lg bg-green-600 px-1 py-0.5 text-white">
         Copied: "chazzox"!
     </div>
