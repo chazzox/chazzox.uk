@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import GenericLink from "@components/generic-link.astro";
-
+import MainLayout from "../../layouts/index.astro";
 export async function getStaticPaths() {
     const blogs = await getCollection(
         "blogs",
@@ -22,11 +22,13 @@ export async function getStaticPaths() {
 const { title, text } = Astro.props;
 ---
 
-<div class="mx-auto p-10 w-fit">
-    <h2 class="w-fit">{title}</h2>
-    <div class="min-w-[50vw] w-fit whitespace-pre-line">{text}</div>
-    <GenericLink link="/blogs">
-        <h2 class="font-bold underline">Back to blogs...</h2>
-        <p>click here to go back to more blog posts</p>
-    </GenericLink>
-</div>
+<MainLayout>
+    <div class="mx-auto p-10 w-fit dark:text-white">
+        <h2 class="w-fit">{title}</h2>
+        <div class="min-w-[50vw] w-fit whitespace-pre-line my-3">{text}</div>
+        <GenericLink link="/blogs">
+            <h2 class="font-bold underline">Back to blogs...</h2>
+            <p>click here to go back to more blog posts</p>
+        </GenericLink>
+    </div>
+</MainLayout>

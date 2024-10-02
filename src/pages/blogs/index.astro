@@ -4,6 +4,7 @@ import MainLayout from "../../layouts/index.astro";
 import Tags from "@components/blog-utils/tags.svelte";
 import CurrentBlogs from "@components/blog-utils/current-blogs.svelte";
 import GenericLink from "@components/generic-link.astro";
+import HideNoSlug from "@components/hide-no-slug.svelte";
 
 const posts = await getCollection("blogs");
 
@@ -24,11 +25,13 @@ const tags = posts.reduce((prev, cur) => {
         </div>
 
         <div class="flex flex-col gap-4">
-            <GenericLink link="/blogs" style="px-3 py-1 block">
-                <h2 class="font-semibold underline">
-                    Click to go back to rest of blogs
-                </h2>
-            </GenericLink>
+            <HideNoSlug client:load>
+                <GenericLink link="/blogs" style="px-3 py-1 block">
+                    <h2 class="font-semibold underline">
+                        Click to go back to rest of blogs
+                    </h2>
+                </GenericLink>
+            </HideNoSlug>
             <GenericLink link="/" style="px-3 py-1 block">
                 <h2 class="font-semibold underline">Click to go back landing...</h2>
             </GenericLink>
