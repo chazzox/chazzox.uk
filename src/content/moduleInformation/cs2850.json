@@ -1,0 +1,8 @@
+{
+    "name": "Operating Systems",
+    "code": "cs2850",
+    "url": "/notes/cs2850",
+    "moodleURL": "https://moodle.royalholloway.ac.uk/course/view.php?id=1464",
+    "description": "C and Concurrency (among other boring things)",
+    "lectures": ["Matteo Sammartino"]
+}

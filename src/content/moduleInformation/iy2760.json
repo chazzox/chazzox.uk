@@ -1,0 +1,8 @@
+{
+    "name": "Introduction to Information Security",
+    "code": "IY2760",
+    "url": "/notes/iy2760",
+    "moodleURL": "https://moodle.royalholloway.ac.uk/course/view.php?id=673",
+    "description": "C and Concurrency (among other boring things)",
+    "lectures": ["Matteo Sammartino"]
+}

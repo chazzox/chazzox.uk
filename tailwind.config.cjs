@@ -16,5 +16,5 @@ module.exports = {
             fontFamily: { sans: ["Fira Code", "monospace"] }
         }
     },
-    plugins: []
+    plugins: [require("daisyui")]
 };

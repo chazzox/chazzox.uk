@@ -17,6 +17,7 @@
         "astro-diagram": "^0.7.0",
         "classnames": "^2.3.2",
         "copy-to-clipboard": "^3.3.3",
+        "daisyui": "^4.12.12",
         "nanostores": "^0.10.3",
         "rehype-katex": "^7.0.0",
         "remark-math": "^6.0.0",
