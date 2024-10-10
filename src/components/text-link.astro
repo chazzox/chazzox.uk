@@ -1,7 +1,7 @@
 ---
 interface Props {
     href: string;
-    target?: string;
+    target?: astroHTML.JSX.HTMLAttributeAnchorTarget;
 }
 
 const { href, target = "_blank" } = Astro.props;
