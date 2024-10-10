@@ -2,6 +2,10 @@ export function xor(a: boolean, b: boolean): boolean {
     return (a || b) && !(a && b);
 }
 
+function createRandomPrefix() {
+    return "";
+}
+
 class Logger {
     #prefix: string;
     constructor(prefix: string) {
@@ -15,7 +19,7 @@ class Logger {
 export class LoggerFactory {
     #instance: Logger | undefined;
     createInstance(prefix?: string) {
-        return new Logger(prefix || "");
+        return new Logger(prefix || createRandomPrefix());
     }
     getInstance() {
         if (!this.#instance) {

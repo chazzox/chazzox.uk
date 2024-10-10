@@ -1,7 +1,8 @@
 ---
-import MainLayout from "../layouts/index.astro";
-import Footer from "../components/footer.svelte";
-import Project from "../components/project.astro";
+import MainLayout from "@layouts/index.astro";
+import Footer from "@components/footer.svelte";
+import Project from "@components/project.astro";
+import TextLink from "@components/text-link.astro";
 ---
 
 <MainLayout>
@@ -25,28 +26,16 @@ import Project from "../components/project.astro";
             </p>
             <p class="my-3">
                 <span class="hidden sm:inline">-</span>
-                <!-- I'm a full time Computer Science student @<a
-                    class="font-semibold underline"
-                    href="https://www.royalholloway.ac.uk/">RHUL</a
-                    >
-                    while doing freelance full Stack work on the side -->
-                Currently I'm an Innovation Engineer @ <a
-                    class="font-semibold underline"
-                    target="_blank"
-                    href="https://www.matillion.com/">Matillion</a
-                > and im looking to re-continue my studies at <a
-                    class="font-semibold underline"
-                    target="_blank"
-                    href="https://www.royalholloway.ac.uk/">RHUL</a
+                I'm Currently innovating @ <TextLink
+                    href="https://www.matillion.com/">Matillion</TextLink
+                > as well <TextLink href="/blogs?slug=university"
+                    >studying computer science</TextLink
+                > at <TextLink href="https://www.royalholloway.ac.uk/">RHUL</TextLink
                 > next year.
                 <p class="my-3">
                     <span class="hidden sm:inline">-</span>
                     In the past, I've done work for companies such as
-                    <a
-                        class="font-semibold underline"
-                        target="_blank"
-                        href="https://ukrepmed.com/">UKRepMed</a
-                    >
+                    <TextLink href="https://ukrepmed.com/">UKRepMed</TextLink>
                 </p>
                 <p class="my-3">
                     <span class="hidden sm:inline">-</span>
@@ -58,7 +47,7 @@ import Project from "../components/project.astro";
                 <div>
                     <Project
                         name="Order of St lazarus"
-                        url="/blogs?slug=order-of-st-lazarus"
+                        url="/blogs?slug=ostl"
                         description="A game development project im currently working on, currently learning godot!"
                     />
                     <Project

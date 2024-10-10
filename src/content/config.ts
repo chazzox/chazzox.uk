@@ -14,21 +14,10 @@ const authorSchema = defineCollection({
     })
 });
 
-export const folderSchema = z.object({
-    name: z.string(),
-    description: z.string(),
-    link: z.string().url().optional()
-});
-const folderCollection = defineCollection({
-    type: "data",
-    schema: folderSchema
-});
-
 export const blogSchema = z.object({
     title: z.string(),
     description: z.string(),
     author: reference("authors"),
-    folder: reference("folders"),
     tags: z.array(reference("tags")).optional(),
     date: z.date(),
     released: z.boolean(),
@@ -47,12 +36,6 @@ const tagSchema = defineCollection({
     })
 });
 
-const note_schema = z.object({
-    title: z.string(),
-    description: z.string(),
-    order: z.number()
-});
-
 const module_schema = z.object({
     name: z.string(),
     code: z.string(),
@@ -60,10 +43,6 @@ const module_schema = z.object({
     moodleURL: z.string(),
     description: z.string(),
     lectures: z.array(z.string())
-});
-
-const moduleCollection = defineCollection({
-    schema: note_schema
 });
 
 const moduleInformation = defineCollection({
@@ -74,8 +53,6 @@ const moduleInformation = defineCollection({
 export const collections = {
     blogs: blogCollection,
     authors: authorSchema,
-    folders: folderCollection,
     tags: tagSchema,
-    moduleCollection,
     moduleInformation
 };

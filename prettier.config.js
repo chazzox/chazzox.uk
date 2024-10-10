@@ -1,4 +1,3 @@
- 
 /**
  * @type {import('@types/prettier').Options}
  */
@@ -9,7 +8,11 @@ export default {
     trailingComma: "none",
     proseWrap: "always",
     printWidth: 85,
-    plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro", 'prettier-plugin-svelte'],
+    plugins: [
+        "prettier-plugin-astro",
+        "prettier-plugin-svelte",
+        "prettier-plugin-tailwindcss"
+    ],
     overrides: [
         {
             files: "*.astro",

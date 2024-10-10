@@ -17,7 +17,6 @@
         "astro-diagram": "^0.7.0",
         "classnames": "^2.3.2",
         "copy-to-clipboard": "^3.3.3",
-        "daisyui": "^4.12.12",
         "nanostores": "^0.10.3",
         "rehype-katex": "^7.0.0",
         "remark-math": "^6.0.0",
@@ -26,6 +25,7 @@
         "typescript": "^5.3.3"
     },
     "devDependencies": {
+        "@tailwindcss/typography": "^0.5.15",
         "prettier": "^3.2.5",
         "prettier-plugin-astro": "^0.13.0",
         "prettier-plugin-svelte": "^3.2.3",
