@@ -4,7 +4,7 @@ import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
 import { default as rehypeKatex } from "rehype-katex";
 import { default as remarkMath } from "remark-math";
-import remarkMermaid from "astro-diagram/remark-mermaid";
+import remarkMermaid from "remark-mermaidjs";
 
 export default defineConfig({
     integrations: [svelte(), tailwind(), mdx()],
@@ -13,7 +13,10 @@ export default defineConfig({
         port: 3000
     },
     markdown: {
-        remarkPlugins: [remarkMermaid, remarkMath],
+        remarkPlugins: [
+            [remarkMermaid, { mermaidConfig: { theme: "neutral" } }],
+            remarkMath
+        ],
         rehypePlugins: [rehypeKatex]
     },
     devToolbar: {

@@ -15,18 +15,22 @@ export async function getStaticPaths() {
         },
         props: {
             title: body.data.title,
-            text: body.body
+            render: body.render
         }
     }));
 }
 
-const { title, text } = Astro.props;
+const { title, render } = Astro.props;
+
+const { Content } = await render();
 ---
 
 <MainLayout>
     <div class="mx-auto w-fit p-10 dark:text-white">
         <h2 class="w-fit">{title}</h2>
-        <div class="my-3 w-fit min-w-[50vw] whitespace-pre-line">{text}</div>
+        <div class="prose my-3 w-fit min-w-[50vw] dark:prose-invert">
+            <Content />
+        </div>
         <GenericLink link="/notes">
             <h2 class="font-bold underline">Back to notes...</h2>
             <p>click here to go back to more</p>

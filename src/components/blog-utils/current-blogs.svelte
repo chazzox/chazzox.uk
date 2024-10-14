@@ -13,9 +13,19 @@
             class="block max-w-2xl border-1 border-black p-3 shadow-lg transition-colors hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
         >
             <h2 class="font-semibold">{blog.data.title}</h2>
-            <h3>description: {blog.data.description}</h3>
-            <h4>tags: {getBlogTags(blog).join(", ")}</h4>
-            <h4>author: {blog.data.author.id}</h4>
+            <h3>
+                <span class="underline">description:</span>
+                {blog.data.description}
+            </h3>
+            <h4>
+                <span class="underline">tags:</span>
+                {#each getBlogTags(blog) as tag, index}
+                    <span>{tag}</span
+                    >{#if index + 1 !== getBlogTags(blog).length},{" "}
+                    {/if}
+                {/each}
+            </h4>
+            <h4><span class="underline">author:</span> {blog.data.author.id}</h4>
         </a>
     {:else}
         <p class="dark:text-white">not much to see here...</p>

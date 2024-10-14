@@ -39,15 +39,15 @@ Trencavel, and basically 80% of the stuff in 28 Mag (links below).
 
 <div class='!text-sm'>
     
-    ## References:
+## References:
 
-    -   [Trunip28](https://www.kickstarter.com/projects/turnip28/turnip28-the-forlorn-hope)
-    -   [Gardens of Hecate](https://gardensofhecate.com/)
-    -   [Trench Crusade](https://www.kickstarter.com/projects/brassmonkeygames/trench-crusade-communicant-anti-tank-hunter)
-    -   [Mike Franchina](https://www.artstation.com/sirfrancisdrake)
-    -   [Saint Decent](https://www.myminifactory.com/users/SaintDecent)
-    -   [Maison Trencavel](https://maison-trencavel.com/)
-    -   [28 Mag](https://28-mag.com/)
+-   [Trunip28](https://www.kickstarter.com/projects/turnip28/turnip28-the-forlorn-hope)
+-   [Gardens of Hecate](https://gardensofhecate.com/)
+-   [Trench Crusade](https://www.kickstarter.com/projects/brassmonkeygames/trench-crusade-communicant-anti-tank-hunter)
+-   [Mike Franchina](https://www.artstation.com/sirfrancisdrake)
+-   [Saint Decent](https://www.myminifactory.com/users/SaintDecent)
+-   [Maison Trencavel](https://maison-trencavel.com/)
+-   [28 Mag](https://28-mag.com/)
 
 </div>
 
