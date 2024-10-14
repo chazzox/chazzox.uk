@@ -1,0 +1,18 @@
+---
+import TextLink from "@components/text-link.astro";
+import MainLayout from "@layouts/index.astro";
+---
+
+<MainLayout title="Page not found">
+    <div class="flex h-screen w-screen items-center justify-center">
+        <div
+            class="border-1 border-black px-5 py-3 text-center dark:border-white dark:text-white"
+        >
+            <h3>it appears you've reached a site that does not exist</h3>
+            <p>
+                <TextLink target="_self" href="/">click here</TextLink> to navigate back
+                to landing
+            </p>
+        </div>
+    </div>
+</MainLayout>
