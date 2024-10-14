@@ -36,23 +36,8 @@ const tagSchema = defineCollection({
     })
 });
 
-const module_schema = z.object({
-    name: z.string(),
-    code: z.string(),
-    url: z.string(),
-    moodleURL: z.string(),
-    description: z.string(),
-    lectures: z.array(z.string())
-});
-
-const moduleInformation = defineCollection({
-    schema: module_schema,
-    type: "data"
-});
-
 export const collections = {
     blogs: blogCollection,
     authors: authorSchema,
-    tags: tagSchema,
-    moduleInformation
+    tags: tagSchema
 };

@@ -1,8 +1,0 @@
-{
-    "name": "Operating Systems",
-    "code": "cs2850",
-    "url": "/notes/cs2850",
-    "moodleURL": "https://moodle.royalholloway.ac.uk/course/view.php?id=1464",
-    "description": "The principles of the function and architecture of operating systems.",
-    "lectures": ["Matteo Sammartino", "Nicolo colombo"]
-}
