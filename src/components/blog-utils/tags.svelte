@@ -13,10 +13,10 @@
     {#each Object.entries($tags) as [key, isActive]}
         <div
             class={clsx(
-                "cursor-pointer select-none border-1 border-black px-1 text-base shadow-2xl shadow-black transition-colors duration-150 dark:border-white dark:text-white",
-                {
-                    "bg-black text-white dark:bg-white dark:!text-black": isActive
-                }
+                "cursor-pointer select-none border-1 border-black px-1 text-base shadow-2xl shadow-black transition-colors duration-150 hover:underline dark:border-white",
+                isActive
+                    ? "bg-black text-white dark:bg-white dark:text-black"
+                    : "dark:text-white"
             )}
             role="button"
             tabindex="0"
