@@ -35,8 +35,27 @@ interface Props {
                 box-sizing: border-box !important;
             }
         </style>
+        <script is:inline>
+            if (localStorage.getItem("theme") === null) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else
+                document.documentElement.setAttribute(
+                    "data-theme",
+                    localStorage.getItem("theme")
+                );
+        </script>
+        <script>
+            import { themeChange } from "theme-change";
+            themeChange();
+            // 👆 you could import the CDN directly instead of these two lines
+        </script>
     </head>
     <body>
         <slot />
+        <button
+            data-toggle-theme="dark,light"
+            class="bottom-0 right-0 hidden px-3 py-1 underline sm:fixed sm:block dark:text-white"
+            >toggle theme</button
+        >
     </body>
 </html>
