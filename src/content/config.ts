@@ -14,7 +14,7 @@ const authorSchema = defineCollection({
     })
 });
 
-export const blogSchema = z.object({
+export const noteSchema = z.object({
     title: z.string(),
     description: z.string(),
     author: reference("authors"),
@@ -24,9 +24,9 @@ export const blogSchema = z.object({
     archived: z.boolean().optional().default(false)
 });
 
-const blogCollection = defineCollection({
+const noteCollection = defineCollection({
     type: "content",
-    schema: blogSchema
+    schema: noteSchema
 });
 
 const tagSchema = defineCollection({
@@ -37,7 +37,7 @@ const tagSchema = defineCollection({
 });
 
 export const collections = {
-    blogs: blogCollection,
+    notes: noteCollection,
     authors: authorSchema,
     tags: tagSchema
 };

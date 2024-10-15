@@ -74,3 +74,11 @@ flowchart LR
 
 -   in this configuration multiple instructions can be fetched, decoded independently
     and simultaneously, stored temporarily, the picked up by a free execution unit
+
+-   CPUs for decades have been following a simple law, the number of transistors will
+    double in an integrated, while cost stays similar. while this isn't a real
+    scientific law. it is something that we observe to be true and has held true for
+    a very long time. This is known as `moore's law`. and was first observed in 1965.
+
+-   this is only starting to slow down know, as transistors are starting to reach the
+    size where if we try to go any smaller, quantum effects start to appear

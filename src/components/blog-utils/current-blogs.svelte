@@ -2,7 +2,7 @@
     import { type CollectionEntry } from "astro:content";
     import { posts, tags } from "../state/svelte-state";
 
-    const getBlogTags = (b: CollectionEntry<"blogs">) =>
+    const getBlogTags = (b: CollectionEntry<"notes">) =>
         b.data.tags?.map((t) => t.id) || [];
 </script>
 
@@ -20,7 +20,9 @@
             <h4>
                 <span class="underline">tags:</span>
                 {#each getBlogTags(blog) as tag, index}
-                    <span>{tag}</span
+                    <span
+                        class="border-1 border-black px-1 py-[0.125rem] leading-[1.9]"
+                        >{tag}</span
                     >{#if index + 1 !== getBlogTags(blog).length},{" "}
                     {/if}
                 {/each}
