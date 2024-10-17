@@ -13,5 +13,3 @@ tags:
     - university
     - operating-systems
 ---
-
-a

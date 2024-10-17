@@ -82,3 +82,23 @@ flowchart LR
 
 -   this is only starting to slow down know, as transistors are starting to reach the
     size where if we try to go any smaller, quantum effects start to appear
+
+### memory
+
+memory is made up of different layers and is located at various points on a computer
+
+when can roughly seperate the catagories of memory into a couple segments
+
+| Access Time     | Name         | Capacity                            | Location              |
+| --------------- | ------------ | ----------------------------------- | --------------------- |
+| 1 nanosecond    | registers    | less then a kilobyte                | CPU                   |
+| 2 nanoseconds   | Cache        | 4mb                                 | CPU/Motherboard       |
+| 10 nanoseconds  | Main Memory  | 1 - 32GBs                           | RAM                   |
+| 10 milliseconds | Disk storage | 1 - however many terabytes you want | SATA/PCIE connections |
+
+each segment of memory has its own specialty and use pros and cons
+
+for caches we can even divide this into different types
+
+-   L1 - inside the CPU very limited
+-   L2 - shared across cores/per core allocation
