@@ -10,7 +10,7 @@
     {#each $posts.filter((p) => (p.data.tags || []).filter((v) => $tags[v.id]).length > 0) as blog}
         <a
             href={`/notes/${blog.slug}`}
-            class="block max-w-2xl border-1 border-black p-3 shadow-lg transition-colors hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
+            class="group block max-w-2xl border-1 border-black p-3 shadow-lg transition-colors hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
         >
             <h2 class="font-semibold">{blog.data.title}</h2>
             <h3>
@@ -21,7 +21,7 @@
                 <span class="underline">tags:</span>
                 {#each getBlogTags(blog) as tag, index}
                     <span
-                        class="border-1 border-black px-1 py-[0.125rem] leading-[1.9]"
+                        class="border-1 border-black px-1 py-[0.125rem] leading-[1.9] transition-[border-color] dark:border-white dark:group-hover:border-black"
                         >{tag}</span
                     >{#if index + 1 !== getBlogTags(blog).length},{" "}
                     {/if}
