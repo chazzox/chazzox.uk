@@ -7,7 +7,9 @@ type TagType = {
 
 export const tags = atom<TagType>({});
 
-export const posts = atom(await getCollection("notes"));
+export const posts = atom(
+    await getCollection("notes", (c) => c.data.released === true)
+);
 
 export const toggleTag = (tagName: string) => {
     const currentTags = tags.get();
