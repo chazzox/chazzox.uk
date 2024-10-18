@@ -10,6 +10,5 @@ date: 2024-10-14
 author: chazzox
 released: true
 tags:
-    - university
     - operating-systems
 ---

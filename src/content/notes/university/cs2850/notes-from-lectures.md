@@ -7,7 +7,6 @@ date: 2023-01-26
 author: chazzox
 released: true
 tags:
-    - university
     - operating-systems
     - lecture-notes
 ---
@@ -74,3 +73,120 @@ char *str = "hello world"
 ```
 
 all strings are terminated with `\0` this is known as the null terminator char
+
+### general experiment implementing the peterson's algorithm on processes
+
+followed most of the code from the textbook, this does not work as it requires shared
+memory.
+
+after the `fork()` call the new process may have the same virtual memory addresses
+and identical memory image, but its physical location has changed so when we are
+calling and mutating the variable states from either processes, we are only changing
+the variable state for that processes memory image
+
+```c
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+#define FALSE 0
+#define TRUE 1
+
+#define N 2
+
+int turn;
+int interested[N];
+int finished = 0;
+
+void enter_region(int process)
+{
+    int other;
+
+    other = 1 - process;
+    interested[process] = TRUE;
+    turn = process;
+
+    while (turn == process && interested[other] == TRUE)
+        ;
+}
+
+void leave_region(int process)
+{
+    interested[process] = FALSE;
+}
+
+void process_a()
+{
+    enter_region(0);
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 2)
+        {
+            printf("sleeping in crit loop a at %d\n", i);
+            sleep(1);
+        }
+        printf("crit loop a is at: %d\n", i);
+    }
+    leave_region(0);
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 5)
+        {
+            printf("sleeping from parent process in non crit at %d\n", i);
+            sleep(2);
+        }
+        printf("non crit loop a is at: %d\n", i);
+    }
+}
+
+void process_b()
+{
+    enter_region(1);
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 4)
+        {
+            printf("sleeping in crit loop b at %d\n", i);
+            sleep(1);
+        }
+        printf("crit loop b is at: %d\n", i);
+    }
+    leave_region(1);
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 2)
+        {
+            printf("non crit sleeping from child process at %d\n", i);
+            sleep(4);
+        }
+        printf("non crit loop b is at: %d\n", i);
+    }
+}
+
+int main()
+{
+    if (fork() == 0)
+    {
+        process_b();
+        finished++;
+    }
+    else
+    {
+        process_a();
+        finished++;
+    }
+
+    printf("process finished\n\n");
+    while (finished < 2)
+    {
+        printf("finished: %i\n", finished);
+        sleep(5);
+    }
+    printf("program exit\n\n");
+    return 0;
+}
+```
