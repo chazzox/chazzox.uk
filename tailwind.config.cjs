@@ -8,7 +8,7 @@ module.exports = {
                 1: "1px"
             },
             colors: {
-                "content-background": "#121317"
+                "content-background": "#e8e8e8"
             },
             fontFamily: { sans: ["Fira Code", "monospace"] }
         }

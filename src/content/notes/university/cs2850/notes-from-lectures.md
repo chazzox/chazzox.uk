@@ -82,7 +82,7 @@ memory.
 after the `fork()` call the new process may have the same virtual memory addresses
 and identical memory image, but its physical location has changed so when we are
 calling and mutating the variable states from either processes, we are only changing
-the variable state for that processes memory image
+the variable state for that process's memory image
 
 ```c
 #include <stdio.h>

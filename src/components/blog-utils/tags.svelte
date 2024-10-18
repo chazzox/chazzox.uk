@@ -9,7 +9,9 @@
     });
 </script>
 
-<div class="mr-3 flex min-h-7 flex-wrap gap-3 sm:mx-0">
+<div
+    class="sticky top-0 mr-3 flex min-h-7 w-full flex-wrap gap-3 bg-content-background px-10 py-5 dark:bg-black"
+>
     {#each Object.entries($tags) as [key, isActive]}
         <div
             class={clsx(

@@ -6,7 +6,7 @@
         b.data.tags?.map((t) => t.id) || [];
 </script>
 
-<div class="flex flex-col gap-3 py-5">
+<div class="flex flex-col gap-3 px-10 pb-5">
     {#each $posts.filter((p) => (p.data.tags || []).filter((v) => $tags[v.id]).length > 0) as blog}
         <a
             href={`/notes/${blog.slug}`}
