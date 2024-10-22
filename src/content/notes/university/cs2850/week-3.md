@@ -118,7 +118,6 @@ this example does not assume alternation and although is implemented here for tw
 processes, a solution for N processes does exist
 
 ```c
-
 #define FALSE 0;
 #define TRUE 1;
 
