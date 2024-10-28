@@ -36,8 +36,29 @@ const tagSchema = defineCollection({
     })
 });
 
+const recordSchema = defineCollection({
+    type: "data",
+    schema: z.object({
+        artist: z.string(),
+        rating: z.number(),
+        album: z.string(),
+        description: z.string().optional(),
+        fileName: z.string(),
+        tags: z.array(reference("recordTags")).optional()
+    })
+});
+
+const recordTagsSchema = defineCollection({
+    type: "data",
+    schema: z.object({
+        name: z.string()
+    })
+});
+
 export const collections = {
     notes: noteCollection,
     authors: authorSchema,
-    tags: tagSchema
+    tags: tagSchema,
+    records: recordSchema,
+    recordTags: recordTagsSchema
 };
