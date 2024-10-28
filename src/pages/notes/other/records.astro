@@ -9,6 +9,8 @@ const records = await getCollection("records");
 
 const images = await Astro.glob("../../../assets/records/*.webp");
 
+console.log(images);
+
 if (images.length !== records.length)
     log(
         undefined,
@@ -24,28 +26,33 @@ if (images.length !== records.length)
             class="gap-15 prose my-3 grid w-fit min-w-[50vw] grid-cols-2 gap-10 dark:prose-invert md:grid-cols-4"
         >
             {
-                records.map(({ data }) => (
-                    <div class="flex flex-col">
-                        <h3>{data.artist}</h3>
-                        <Image
-                            src={
-                                images.find((v) =>
-                                    v.default.src.includes(data.fileName)
-                                )!.default as any
-                            }
-                            alt="album cover"
-                            width="200"
-                            height="200"
-                            class="flex-1 object-contain"
-                        />
-                        <h4>{data.album}</h4>
-                        <div>
-                            {Array.from({ length: data.rating }).map((_) => (
-                                <span>⭐</span>
-                            ))}
+                records.map(({ data }) => {
+                    const recordCover = images.find((v) =>
+                        v.default.src.includes("/" + data.fileName + ".")
+                    );
+
+                    if (!!!recordCover) {
+                        throw `could not find ${data.fileName}`;
+                    }
+                    return (
+                        <div class="flex flex-col">
+                            <h3>{data.artist}</h3>
+                            <Image
+                                src={recordCover.default}
+                                alt="album cover"
+                                width="200"
+                                height="200"
+                                class="flex-1 object-contain"
+                            />
+                            <h4>{data.album}</h4>
+                            <div>
+                                {Array.from({ length: data.rating }).map((_) => (
+                                    <span>⭐</span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))
+                    );
+                })
             }
             {
                 images.length - records.length && (
