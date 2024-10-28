@@ -1,0 +1,62 @@
+---
+import MainLayout from "@layouts/index.astro";
+import { Image } from "astro:assets";
+
+import { getCollection } from "astro:content";
+
+import { log } from "src/utils";
+const records = await getCollection("records");
+
+const images = await Astro.glob("../../../assets/records/*.webp");
+
+if (images.length !== records.length)
+    log(
+        undefined,
+        "metadata",
+        `you are missing ${images.length - records.length} record metadaata`
+    );
+---
+
+<MainLayout>
+    <div class="mx-auto w-fit p-10 dark:text-white">
+        <h2 class="w-fit">All my beautiful records 😊</h2>
+        <div
+            class="gap-15 prose my-3 grid w-fit min-w-[50vw] grid-cols-2 gap-10 dark:prose-invert md:grid-cols-4"
+        >
+            {
+                records.map(({ data }) => (
+                    <div class="flex flex-col">
+                        <h3>{data.artist}</h3>
+                        <Image
+                            src={
+                                images.find((v) =>
+                                    v.default.src.includes(data.fileName)
+                                )!.default as any
+                            }
+                            alt="album cover"
+                            width="200"
+                            height="200"
+                            class="flex-1 object-contain"
+                        />
+                        <h4>{data.album}</h4>
+                        <div>
+                            {Array.from({ length: data.rating }).map((_) => (
+                                <span>⭐</span>
+                            ))}
+                        </div>
+                    </div>
+                ))
+            }
+            {
+                images.length - records.length && (
+                    <div class="flex items-center text-center text-opacity-75">
+                        <p>
+                            at least {images.length - records.length} more pictures
+                            to come
+                        </p>
+                    </div>
+                )
+            }
+        </div>
+    </div>
+</MainLayout>
