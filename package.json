@@ -10,10 +10,10 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/mdx": "^3.1.7",
-        "@astrojs/svelte": "^5.7.1",
-        "@astrojs/tailwind": "^5.1.1",
-        "astro": "^4.15.10",
+        "@astrojs/mdx": "^3.1.9",
+        "@astrojs/svelte": "^5.7.2",
+        "@astrojs/tailwind": "^5.1.2",
+        "astro": "^4.16.8",
         "classnames": "^2.3.2",
         "copy-to-clipboard": "^3.3.3",
         "nanostores": "^0.10.3",
