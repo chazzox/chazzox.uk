@@ -15,20 +15,14 @@ const LOG_STYLES = {
  * @param style the styles you want the log to
  * @param output data to log
  */
-export function log(style = LOG_STYLES, prefix: string, ...output: any): void {
+export function log(prefix: string, ...output: any): void {
+    if (process.env) {
+        console.log("\x1b[2;37;41m" + prefix + "\x1b[0m", ...output);
+        return;
+    }
     console.log(
         `%c${prefix}`,
-        Object.entries(style)
-            .map(([a, b]) => `${a}:${b};`)
-            .join(""),
-        ...output
-    );
-}
-
-export function warn(style = LOG_STYLES, prefix: string, ...output: any): void {
-    console.warn(
-        `%c${prefix}`,
-        Object.entries(style)
+        Object.entries(LOG_STYLES)
             .map(([a, b]) => `${a}:${b};`)
             .join(""),
         ...output

@@ -1,17 +1,13 @@
 ---
 interface Props {
     link: string;
-    style?: string;
 }
 
-const { link, style = "" } = Astro.props;
+const { link } = Astro.props;
 ---
 
 <a
-    class:list={[
-        "block w-fit border-1 border-black px-2 py-1 shadow-md transition-colors duration-300 hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black",
-        { [style]: style.length > 0 }
-    ]}
+    class="block w-fit border-1 border-black px-2 py-1 shadow-md transition-colors duration-300 hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
     href={link}
 >
     <slot />

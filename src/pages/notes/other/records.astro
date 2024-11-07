@@ -1,4 +1,5 @@
 ---
+import GenericLink from "@components/blog-utils/generic-link.astro";
 import MainLayout from "@layouts/index.astro";
 import { Image } from "astro:assets";
 
@@ -7,52 +8,73 @@ import { getCollection } from "astro:content";
 import { log } from "src/utils";
 const records = await getCollection("records");
 
-const images = await Astro.glob("../../../assets/records/*.webp");
+const images = await Astro.glob<{ default: ImageMetadata }>(
+    "../../../assets/records/*.webp"
+);
 
-console.log(images);
+const getFileName = (metadata: ImageMetadata) => {
+    return metadata.src.split("/").slice(-1)[0]?.split("?")[0];
+};
 
-if (images.length !== records.length)
-    log(
-        undefined,
-        "metadata",
-        `you are missing ${images.length - records.length} record metadaata`
+if (images.length !== records.length) {
+    const imagesNoRecords = images.filter(
+        (i) =>
+            records.filter((r) => i.default.src.includes(r.data.fileName)).length ===
+            0
     );
+    const randomIndex = Math.floor(Math.random() * imagesNoRecords.length);
+
+    log(
+        "record metadata",
+        `you are missing ${imagesNoRecords.length} record metadata entries`
+    );
+    log(
+        "record metadata",
+        "you could start with",
+        getFileName(imagesNoRecords[randomIndex]?.default!)
+    );
+}
 ---
 
 <MainLayout>
-    <div class="mx-auto w-fit p-10 dark:text-white">
+    <div class="mx-auto p-10 dark:text-white">
         <h2 class="w-fit">All my records 😊</h2>
         <div
-            class="gap-15 prose my-3 grid w-fit min-w-[50vw] grid-cols-2 gap-10 dark:prose-invert md:grid-cols-4"
+            class="gap-15 prose my-3 grid w-fit min-w-full grid-cols-2 gap-10 dark:prose-invert md:grid-cols-4 lg:grid-cols-6"
         >
             {
-                records.map(({ data }) => {
-                    const recordCover = images.find((v) =>
-                        v.default.src.includes("/" + data.fileName + ".")
-                    );
+                records
+                    .sort(
+                        (a, b) =>
+                            a.data.artist.charCodeAt(0) - b.data.artist.charCodeAt(0)
+                    )
+                    .map(({ data }) => {
+                        const recordCover = images.find((v) =>
+                            v.default.src.includes("/" + data.fileName + ".")
+                        );
 
-                    if (!!!recordCover) {
-                        throw `could not find ${data.fileName}`;
-                    }
-                    return (
-                        <div class="flex flex-col">
-                            <h3>{data.artist}</h3>
-                            <Image
-                                src={recordCover.default}
-                                alt="album cover"
-                                width="200"
-                                height="200"
-                                class="flex-1 object-contain"
-                            />
-                            <h4>{data.album}</h4>
-                            <div>
-                                {Array.from({ length: data.rating }).map((_) => (
-                                    <span>⭐</span>
-                                ))}
+                        if (!!!recordCover) {
+                            throw `could not find ${data.fileName}`;
+                        }
+                        return (
+                            <div class="flex flex-col">
+                                <h3>{data.artist}</h3>
+                                <Image
+                                    src={recordCover.default}
+                                    alt="album cover"
+                                    width="200"
+                                    height="200"
+                                    class="flex-1 object-contain"
+                                />
+                                <h4>{data.album}</h4>
+                                <div>
+                                    {Array.from({ length: data.rating }).map((_) => (
+                                        <span>⭐</span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    );
-                })
+                        );
+                    })
             }
             {
                 images.length - records.length && (
@@ -64,6 +86,17 @@ if (images.length !== records.length)
                     </div>
                 )
             }
+        </div>
+        <div class="flex flex-col gap-4">
+            <GenericLink link="/notes">
+                <h2 class="font-semibold underline">
+                    Click to go back to rest of notes
+                </h2>
+            </GenericLink>
+
+            <GenericLink link="/">
+                <h2 class="font-semibold underline">Click to go back landing...</h2>
+            </GenericLink>
         </div>
     </div>
 </MainLayout>

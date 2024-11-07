@@ -36,7 +36,7 @@ const postListToTags = (
 
 export const setMatchingTags = (slug: string[]) => {
     if (slug.length == 0) {
-        tags.set(postListToTags(posts.get(), true));
+        tags.set(postListToTags(posts.get(), false));
         return;
     }
     const matchingPosts = posts.get().filter((post) => {
@@ -45,5 +45,5 @@ export const setMatchingTags = (slug: string[]) => {
 
     posts.set(matchingPosts);
 
-    tags.set(postListToTags(matchingPosts, true));
+    tags.set(postListToTags(matchingPosts, false));
 };

@@ -11,16 +11,14 @@ import HideNoSlug from "@components/blog-utils/hide-no-slug.svelte";
         <Tags client:load />
         <CurrentBlogs client:load />
 
-        <div class="flex flex-col gap-4">
+        <div class="ml-10 flex flex-col gap-4">
             <HideNoSlug client:load>
-                <GenericLink link="/notes" style="px-3 py-1 block ml-10">
-                    <h2 class="font-semibold underline">
-                        Click to go back to rest of notes
-                    </h2>
+                <GenericLink link="/notes">
+                    <h2 class="font-semibold underline">see the rest of my notes</h2>
                 </GenericLink>
             </HideNoSlug>
-            <GenericLink link="/" style="px-3 py-1 block ml-10">
-                <h2 class="font-semibold underline">Click to go back landing...</h2>
+            <GenericLink link="/">
+                <h2 class="font-semibold underline">click to go back landing...</h2>
             </GenericLink>
         </div>
     </div>
