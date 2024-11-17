@@ -1,11 +1,6 @@
 ---
-title: week 3 of teaching - inter-process communication
-description:
-    Processes often need to communicate with each other, for instance when
-    collaborating on a complex task. This week we will start looking at Inter-Process
-    Communication (IPC) and at how it can be implemented via busy waiting. The C
-    programming lecture will focus on computer memory and the relationship between
-    strings, arrays, and pointers.
+title: week 3 of teaching - inter-process communication (busy waiting)
+description: This week covers Inter-Process Communication (IPC) with busy waiting.
 date: 2024-10-17
 author: chazzox
 released: true

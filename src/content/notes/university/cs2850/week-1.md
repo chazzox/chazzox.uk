@@ -1,10 +1,8 @@
 ---
 title: Week 1 of teaching - Overview of Operating System Concepts
 description:
-    This week you will learn about the basic ingredients of an Operating System (OS),
-    the hardware components you can find in your computer, and how an OS manages
-    those components. In the lab, you will starting learning about the C programming
-    language and its general features.
+    This week covers the basics of Operating Systems and how they manage computer
+    hardware. In the lab, you'll begin learning the fundamentals of C programming.
 date: 2023-01-26
 author: chazzox
 released: true
