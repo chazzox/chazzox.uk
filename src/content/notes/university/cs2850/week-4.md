@@ -35,7 +35,7 @@ tags:
         operation, it will be woken and allowed to complete down.
 
 -   these instructions are made atomic in two ways. on single core processors,
-    interupts are disabled and on multi cpu systems, the
+    interrupts are disabled and on multi cpu systems, the
     [TSL instruction](./week-3#hardware-solution) is used
 -   semaphores can be used for mutual exclusion and also to force a sequence of
     events
