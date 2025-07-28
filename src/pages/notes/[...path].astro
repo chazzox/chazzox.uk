@@ -1,41 +1,85 @@
 ---
 import { getCollection } from "astro:content";
-import GenericLink from "@components/blog-utils/generic-link.astro";
+// import GenericLink from "@components/blog-utils/generic-link.astro";
 import MainLayout from "@layouts/index.astro";
+import { render } from "astro:content";
 
 export async function getStaticPaths() {
-    const blogs = await getCollection(
-        "notes",
-        (e) => !import.meta.env.PROD || e.data.released === true
-    );
+    // const test = await getCollection("notes");
 
-    return Array.from(Object.entries(blogs)).map(([_, body]) => ({
-        params: {
-            path: body.slug
-        },
-        props: {
-            title: body.data.title,
-            render: body.render
-        }
-    }));
+    const collection = await getCollection("notes");
+
+    const paths = collection
+        .map((e) => e.id)
+        .reduce<string[]>(
+            (acc, pa) => {
+                const pat = pa.split("/").slice(3);
+
+                return [
+                    ...new Set([
+                        ...acc,
+                        ...pat.map((p, pI) =>
+                            pI !== 0 ? pat.slice(0, pI + 1).join("/") : p
+                        )
+                    ])
+                ];
+            },
+            [""]
+        );
+
+    return paths.map((path) => {
+        const entries = collection.filter((e) => {
+            return (
+                e.id.includes(path) &&
+                (!import.meta.env.PROD || e.data.released === true)
+            );
+        });
+
+        return {
+            params: { path },
+            props: {
+                title: path,
+                entries,
+                meta: entries.map((e) => ({
+                    path: e.id.split("/").slice(3).join("/"),
+                    id: e.id,
+                    ...e.data,
+                    rendered: e.rendered
+                }))
+            }
+        };
+    });
 }
 
-const { title, render } = Astro.props;
+const { title, entries, meta } = Astro.props;
 
-const { Content } = await render();
+const { Content } =
+    entries.length === 1 ? await render(entries[0]) : { Content: null };
 ---
 
 <MainLayout>
     <div class="mx-auto w-fit p-10 dark:text-white">
-        <h2 class="my-4 w-fit underline">{title}</h2>
-        <div
-            class="prose my-3 w-fit min-w-[50vw] dark:prose-invert [&_*[aria-hidden='true']]:hidden [&_svg[id^='mermaid']]:mx-auto"
-        >
-            <Content />
-        </div>
-        <GenericLink link="/notes">
-            <h2 class="font-bold underline">Back to notes...</h2>
-            <p>click here to go back to more</p>
-        </GenericLink>
+        <h2 class="my-4 w-fit underline">{title.length == 0 ? "Index" : title}</h2>
+
+        <ul class="list-disc">
+            {
+                meta.length !== 1
+                    ? meta.map((note) => (
+                          <li>
+                              <a
+                                  href={note.path}
+                                  class="text-blue-500 hover:underline"
+                              >
+                                  {note.title}
+                              </a>
+                          </li>
+                      ))
+                    : Content && (
+                          <div class="prose my-3 w-fit min-w-[50vw] dark:prose-invert [&_*[aria-hidden='true']]:hidden [&_svg[id^='mermaid']]:mx-auto">
+                              <Content />
+                          </div>
+                      )
+            }
+        </ul>
     </div>
 </MainLayout>
