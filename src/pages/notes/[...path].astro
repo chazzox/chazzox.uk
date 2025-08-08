@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-// import GenericLink from "@components/blog-utils/generic-link.astro";
+
 import MainLayout from "@layouts/index.astro";
 import { render } from "astro:content";
+import CurrentBlogs from "@components/blog-utils/current-blogs.svelte";
+import GenericLink from "@components/blog-utils/generic-link.astro";
 
 export async function getStaticPaths() {
-    // const test = await getCollection("notes");
-
     const collection = await getCollection("notes");
 
     const paths = collection
@@ -14,7 +14,6 @@ export async function getStaticPaths() {
         .reduce<string[]>(
             (acc, pa) => {
                 const pat = pa.split("/").slice(3);
-
                 return [
                     ...new Set([
                         ...acc,
@@ -24,8 +23,10 @@ export async function getStaticPaths() {
                     ])
                 ];
             },
-            [""]
+            ["/"]
         );
+
+    const PATH_PREFIX_COUNT = 3;
 
     return paths.map((path) => {
         const entries = collection.filter((e) => {
@@ -41,10 +42,9 @@ export async function getStaticPaths() {
                 title: path,
                 entries,
                 meta: entries.map((e) => ({
-                    path: e.id.split("/").slice(3).join("/"),
+                    path: e.id.split("/").slice(PATH_PREFIX_COUNT).join("/"),
                     id: e.id,
-                    ...e.data,
-                    rendered: e.rendered
+                    title: e.data.title
                 }))
             }
         };
@@ -54,32 +54,33 @@ export async function getStaticPaths() {
 const { title, entries, meta } = Astro.props;
 
 const { Content } =
-    entries.length === 1 ? await render(entries[0]) : { Content: null };
+    entries.length === 1 ? await render(entries[0]!) : { Content: null };
 ---
 
 <MainLayout>
     <div class="mx-auto w-fit p-10 dark:text-white">
-        <h2 class="my-4 w-fit underline">{title.length == 0 ? "Index" : title}</h2>
+        <h2 class="my-4 w-fit underline">
+            {entries.length === 1 ? meta[0]!.title : title}
+        </h2>
 
-        <ul class="list-disc">
-            {
-                meta.length !== 1
-                    ? meta.map((note) => (
-                          <li>
-                              <a
-                                  href={note.path}
-                                  class="text-blue-500 hover:underline"
-                              >
-                                  {note.title}
-                              </a>
-                          </li>
-                      ))
-                    : Content && (
-                          <div class="prose my-3 w-fit min-w-[50vw] dark:prose-invert [&_*[aria-hidden='true']]:hidden [&_svg[id^='mermaid']]:mx-auto">
-                              <Content />
-                          </div>
-                      )
-            }
-        </ul>
+        {
+            meta.length !== 1 ? (
+                <CurrentBlogs client:load blogs={entries} />
+            ) : (
+                Content && (
+                    <div class="prose my-3 w-fit min-w-[50vw] dark:prose-invert [&_*[aria-hidden='true']]:hidden [&_svg[id^='mermaid']]:mx-auto">
+                        <Content />
+                    </div>
+                )
+            )
+        }
+        {
+            title !== "/" && (
+                <GenericLink link="/notes">
+                    <h2 class="font-bold underline">Back to notes...</h2>
+                    <p>click here to go back to more</p>
+                </GenericLink>
+            )
+        }
     </div>
 </MainLayout>

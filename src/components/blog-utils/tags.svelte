@@ -1,18 +1,16 @@
 <script lang="ts">
     import clsx from "classnames";
-    import { tags, toggleTag, setMatchingTags } from "../state/svelte-state";
-    import { onMount } from "svelte";
+    interface Props {
+        tags: (readonly [string, boolean])[];
+    }
 
-    onMount(() => {
-        const searchParams = new URLSearchParams(window.location.search);
-        setMatchingTags(searchParams.get("slug")?.split(",") || []);
-    });
+    let { tags = $bindable([]) }: Props = $props();
 </script>
 
 <div
-    class="sticky top-0 mr-3 flex min-h-7 w-full flex-wrap gap-3 bg-content-background px-10 py-5 dark:bg-black"
+    class="sticky top-0 mr-3 flex min-h-7 w-full flex-wrap gap-3 bg-content-background py-5 dark:bg-black"
 >
-    {#each Object.entries($tags) as [key, isActive]}
+    {#each tags as [key, isActive], index}
         <div
             class={clsx(
                 "cursor-pointer select-none border-1 border-black px-1 text-base shadow-2xl shadow-black transition-colors duration-150 hover:underline dark:border-white",
@@ -22,7 +20,13 @@
             )}
             role="button"
             tabindex="0"
-            on:mousedown={() => toggleTag(key)}
+            onmousedown={() => {
+                tags = [
+                    ...tags.slice(0, index),
+                    [key, !isActive],
+                    ...tags.slice(index + 1)
+                ];
+            }}
         >
             {key}
         </div>
