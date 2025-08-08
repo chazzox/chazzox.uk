@@ -7,6 +7,6 @@
 ## todo
 
 - [ ] server side rendering _not sure if needed_
-- [ ] key-term linking (kinda like obsidian)
+- [ ] key-term linking (kinda like obsidian) _cba_
 - [x] better slug page management
 - [ ] p5js remark plugin
