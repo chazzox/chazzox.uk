@@ -6,7 +6,7 @@
 
 ## todo
 
--   [ ] server side rendering
--   [ ] key-term linking (kinda like obsidian)
--   [ ] better slug page management
--   [ ] p5js remark plugin
+- [ ] server side rendering _not sure if needed_
+- [ ] key-term linking (kinda like obsidian)
+- [x] better slug page management
+- [ ] p5js remark plugin
