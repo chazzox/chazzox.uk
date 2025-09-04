@@ -1,6 +1,6 @@
 {
     "artist": "Alice Coltrane",
     "album": "Journey in Satchidananda",
-    "fileName": "alice-coltrane",
+    "file": "./alice-coltrane.webp",
     "rating": 4
 }

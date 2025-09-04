@@ -36,15 +36,16 @@ const tags = defineCollection({
 });
 
 const records = defineCollection({
-    loader: glob({ pattern: "src/content/records/*.json" }),
-    schema: z.object({
-        artist: z.string(),
-        rating: z.number(),
-        album: z.string(),
-        description: z.string().optional(),
-        fileName: z.string(),
-        tags: z.array(reference("recordTags")).optional()
-    })
+    loader: glob({ pattern: "src/content/records/*/data.json" }),
+    schema: ({ image }) =>
+        z.object({
+            artist: z.string(),
+            rating: z.number(),
+            album: z.string(),
+            description: z.string().optional(),
+            file: image(),
+            tags: z.array(reference("recordTags")).optional()
+        })
 });
 
 export const collections = {

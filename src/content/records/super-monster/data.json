@@ -1,6 +1,6 @@
 {
     "artist": "Claud",
     "album": "Super Monster",
-    "fileName": "claud",
-    "rating": 3
+    "file": "./claud.webp",
+    "rating": 2
 }

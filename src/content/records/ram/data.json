@@ -1,6 +1,6 @@
 {
     "artist": "Paul Mccartney",
     "album": "Ram",
-    "fileName": "paul-mcartney",
+    "file": "./paul-mccartney.webp",
     "rating": 5
 }

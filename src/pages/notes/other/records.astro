@@ -1,39 +1,14 @@
 ---
 import GenericLink from "@components/blog-utils/generic-link.astro";
 import MainLayout from "@layouts/index.astro";
-import { Image } from "astro:assets";
 
 import { getCollection } from "astro:content";
-
-import { log } from "src/utils";
+import { Image } from "astro:assets";
 const records = await getCollection("records");
 
-const images = await Astro.glob<{ default: ImageMetadata }>(
+const images = import.meta.glob<{ default: ImageMetadata }>(
     "../../../assets/records/*.webp"
 );
-
-const getFileName = (metadata: ImageMetadata) => {
-    return metadata.src.split("/").slice(-1)[0]?.split("?")[0];
-};
-
-if (images.length !== records.length) {
-    const imagesNoRecords = images.filter(
-        (i) =>
-            records.filter((r) => i.default.src.includes(r.data.fileName)).length ===
-            0
-    );
-    const randomIndex = Math.floor(Math.random() * imagesNoRecords.length);
-
-    log(
-        "record metadata",
-        `you are missing ${imagesNoRecords.length} record metadata entries`
-    );
-    log(
-        "record metadata",
-        "you could start with",
-        getFileName(imagesNoRecords[randomIndex]?.default!)
-    );
-}
 ---
 
 <MainLayout>
@@ -49,18 +24,11 @@ if (images.length !== records.length) {
                             a.data.artist.charCodeAt(0) - b.data.artist.charCodeAt(0)
                     )
                     .map(({ data }) => {
-                        const recordCover = images.find((v) =>
-                            v.default.src.includes("/" + data.fileName + ".")
-                        );
-
-                        if (!!!recordCover) {
-                            throw `could not find ${data.fileName}`;
-                        }
                         return (
                             <div class="flex flex-col">
                                 <h3>{data.artist}</h3>
                                 <Image
-                                    src={recordCover.default}
+                                    src={data.file}
                                     alt="album cover"
                                     width="200"
                                     height="200"
@@ -77,11 +45,11 @@ if (images.length !== records.length) {
                     })
             }
             {
-                images.length - records.length && (
+                Object.keys(images).length && (
                     <div class="flex items-center text-center text-opacity-75">
                         <p>
-                            at least {images.length - records.length} more pictures
-                            to come
+                            at least {Object.keys(images).length} more pictures to
+                            come
                         </p>
                     </div>
                 )
