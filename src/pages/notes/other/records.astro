@@ -21,7 +21,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 records
                     .sort(
                         (a, b) =>
-                            a.data.artist.charCodeAt(0) - b.data.artist.charCodeAt(0)
+                            a.data.artist.toLocaleLowerCase().charCodeAt(0) -
+                            b.data.artist.toLocaleLowerCase().charCodeAt(0)
                     )
                     .map(({ data }) => {
                         return (
