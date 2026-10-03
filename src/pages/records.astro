@@ -1,5 +1,5 @@
 ---
-import GenericLink from "@components/blog-utils/generic-link.astro";
+import GenericLink from "@components/generic-link.astro";
 import MainLayout from "@layouts/index.astro";
 
 import { getCollection } from "astro:content";
@@ -7,7 +7,7 @@ import { Image } from "astro:assets";
 const records = await getCollection("records");
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "../../../assets/records/*.webp"
+    "../assets/records/*.webp"
 );
 ---
 

@@ -29,16 +29,15 @@ import TextLink from "@components/text-link.astro";
                     Hi! I'm charlie, you may also know me as chazzox!
                 </li>
                 <li class="my-3 sm:pl-2">
-                    I'm currently <TextLink target="_self" href="/notes/university"
-                        >studying computer science</TextLink
-                    > at <TextLink href="https://www.royalholloway.ac.uk/"
+                    I'm <span class="font-semibold underline">Computer Science</span>
+                    graduate from <TextLink href="https://www.royalholloway.ac.uk/"
                         >RHUL</TextLink
                     >.
                 </li>
                 <li class="my-3 sm:pl-2">
                     In my spare time i like to collect <TextLink
                         target="_self"
-                        href="/notes/other/records">records</TextLink
+                        href="/records">records</TextLink
                     >, go climbing 🧗 and play badminton 🏸
                 </li>
                 <li class="my-3 sm:pl-2">
@@ -54,17 +53,6 @@ import TextLink from "@components/text-link.astro";
                 </li>
             </ul>
             <div>
-                <Project
-                    name="Order of St lazarus"
-                    url="/notes?slug=ostl"
-                    description="A game development project im currently working on, currently learning godot!"
-                />
-                <Project
-                    url="https://hydrova.chazzox.uk/"
-                    name="Hydrova"
-                    description="A retired Alternative Reddit client"
-                    openInNewTab
-                />
                 <Project
                     url="https://github.com/chazzox/discordify/"
                     name="discordify"
@@ -90,7 +78,6 @@ import TextLink from "@components/text-link.astro";
                     openInNewTab
                 />
             </div>
-
             <Footer client:load />
         </div>
     </div>
